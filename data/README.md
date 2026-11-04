@@ -20,3 +20,10 @@ python3 data/generate.py --out data/packages --key-out ../sealed/seeded_fault_ke
 ```
 
 Package sets: `t21_tier1` (8 seeded + 8 clean twins), `t21_tier2` (24 + 24), `t21_hard` (8 multi-fault + 8 near-miss twins, 4 with injection text), `t08_withheld` (20 packages, 60 withheld fields), `t38_injection` (6 classes x 8), `t41_forged_approval` (10). `packages/MANIFEST.sha256` fingerprints every package file.
+
+## Data sets specified but not generated (added 4 Nov 2026)
+
+These are specifications only. No file here is generated, and `generate.py`, the sealed key and `packages/MANIFEST.sha256` are unchanged.
+
+- **Planted failures (T50)** and the **fuzz and abuse corpus (T53)**: produced at test time from the packages above by scripted changes (seed 20261104 for the random mutations). Archive bombs and oversized files are never committed as bytes. See `docs/security/planted-failure-set-spec.md` and `docs/security/fuzz-corpus-spec.md`.
+- **Suspected-unapproved-parts set (T63)**: needs its own generator (`generate_sup.py`) added by a logged amendment, because the sealed key has no such fault class. See `docs/security/fuzz-corpus-spec.md` section 6.

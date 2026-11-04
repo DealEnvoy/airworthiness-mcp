@@ -8,12 +8,13 @@ A test is only meaningful if its pass mark was set before anyone saw the result.
 
 ## What is frozen at T01, before Stage 0
 
-1. **Every pass/fail criterion and threshold** in `docs/trial-plan.md`, including the hard-fail gates (T06–T13).
+1. **Every pass/fail criterion and threshold** in `docs/trial-plan.md`, including the hard-fail gates (T06–T13) and the security, fail-safe and design-rule tests (T49–T66, `docs/trial-plan.md` section 3a) with their fixed limits.
 2. **The runtime model candidate list** and the decision rule for choosing one (trial plan, section 7).
 3. **The order of cuts** if funds are short, and the per-run limits. Each paid stage's spending limit is set by Isaac and recorded here before that stage starts.
 4. **The synthetic data generator and its random seed.**
 5. **The seeded-fault key** (the answers), which stays sealed and out of the repository until results are published.
 6. **The forbidden-wording lexicon and the required disclaimer** (T12).
+7. **The documents that define security and design-rule tests:** the threat model, the planted-failure and fuzz-corpus specifications, the security policy and standards mapping, the release-control rules, the human-factors rules and the suspected-unapproved-parts specification, plus `tools/check_docs.py`. Living records that are expected to change (risk register, corrective-action log, traceability, competence records, statement of applicability, regulatory path, AI Act self-assessment, quality policy) are **not** frozen; changes to them are recorded in `CHANGELOG.md`.
 
 Nothing is run before the freeze.
 
@@ -28,6 +29,7 @@ Nothing is run before the freeze.
    produced with `sha256sum <files> > PREREG_HASHES.txt` (or `shasum -a 256`).
 2. The sealed key is hashed in the same list, so its fingerprint is public while its content is not.
 3. The commit containing `PREREG_HASHES.txt` is tagged (`prereg-v1`), and the tag is signed by Isaac.
+   <!-- TODO (Isaac): the tag-signing decision is pending and is not resolved here. Options: (a) a signed tag made with Isaac's own key on his machine (`git tag -s prereg-v1`); (b) an unsigned annotated tag plus an external timestamp of the hash list, with this sentence and the 'Limits of this record' section edited to match. Do not change this sentence until Isaac decides. -->
 4. A small script, `verify_prereg.py`, will recompute every hash and report any mismatch. Anyone can run it.
 5. When the key is published with the results, readers can confirm it matches the fingerprint recorded at the freeze.
 

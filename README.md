@@ -6,6 +6,8 @@ airworthiness-mcp is a planned open-source Python [MCP](https://modelcontextprot
 
 Built and verified by Isaac Adekunle (15+ years in aircraft maintenance). Licence: MIT.
 
+**Intended purpose:** Advisory checker of maintenance records and work packages. Read-only. Does not certify, release, or determine airworthiness. A certifying human decides.
+
 AI models are used as build and review tools under a method I designed and ran: separate architect, implementer and independent reviewer roles, with reviewers never the builder and every result checked by deterministic code before I accept it. How I chose and checked those models, including costs, is in [`docs/methods.md`](docs/methods.md).
 
 ## What it will do, in plain words
@@ -52,11 +54,25 @@ Pilot 0 packs are planned to be re-run blind as one test (T22).
 
 All pass/fail criteria are fixed **before** Stage 0 starts and fingerprinted with SHA-256. See:
 
-- [`docs/trial-plan.md`](docs/trial-plan.md): the 48 tests (T01–T48), pass/fail criteria and stages.
+- [`docs/trial-plan.md`](docs/trial-plan.md): the 66 tests (T01–T66), pass/fail criteria and stages. T49–T66 (security, fail-safe, report integrity and design rules) were added before the freeze.
 - [`docs/preregistration.md`](docs/preregistration.md): what is frozen, when, and how fingerprints are recorded and checked.
 - [`docs/methods.md`](docs/methods.md): how I chose the AI models used as build tools, the line-up comparison, the gaps it found and the estimated costs.
 
 Thresholds in the plan are proposals until the freeze. After it, any change is a logged amendment.
+
+## Security, regulatory position and quality
+
+Written before any code, as plans and tests. Nothing here has been built or run, and none of it is a claim of certification, approval or compliance. Regulatory statements are my reading of public sources, not legal advice.
+
+- [`SECURITY.md`](SECURITY.md) and [`docs/security/SECURITY.md`](docs/security/SECURITY.md): how to report a vulnerability (GitHub private security advisories).
+- [`docs/security/threat-model.md`](docs/security/threat-model.md): whole-system threat model (STRIDE, OWASP Top 10 for LLM Applications, MCP-specific risks), each threat with a mitigation and a test.
+- [`docs/security/planted-failure-set-spec.md`](docs/security/planted-failure-set-spec.md) and [`docs/security/fuzz-corpus-spec.md`](docs/security/fuzz-corpus-spec.md): fail-safe and fuzz test specifications. Any failure gives `NOT READY - review incomplete`, never a clean report.
+- [`docs/security/standards-mapping.md`](docs/security/standards-mapping.md): how the design lines up with OWASP, NIST SSDF, SLSA, ISO/IEC 27001 themes and EASA Part-IS. Alignment, not compliance.
+- [`docs/regulatory-path.md`](docs/regulatory-path.md): who may release aircraft (only authorised humans), how tools are accepted (by the adopting organisation), and the staged path. Not legal advice.
+- [`docs/ai-act-self-assessment.md`](docs/ai-act-self-assessment.md): EU AI Act self-assessment (likely not high-risk, with reasons and re-assessment triggers).
+- [`docs/quality/`](docs/quality/): quality policy, risk register, traceability, corrective-action log, release control, reviewer competence records, statement of applicability (ISO/IEC 27001 Annex A groundwork), human-factors note, and suspected-unapproved-parts awareness. Certification is for an organisation and is not claimed.
+
+Design rules: the core is a deterministic rules engine; any language-model module is optional and off by default; reports never give a release or airworthiness conclusion; the tool never scores or ranks people; language-model text is labelled when the module is on; local-first, with no egress and no telemetry. Before any public release of the software, three independent humans review it: a B1 certifying engineer, a CAMO or quality reviewer, and a security reviewer (T56).
 
 ## Repository layout
 
@@ -65,9 +81,15 @@ README.md               this file
 LICENSE                 MIT, Isaac Adekunle
 CHANGELOG.md            dated changes
 docs/methods.md         how I chose the tools
-docs/trial-plan.md      tests T01–T48
+SECURITY.md             how to report a vulnerability
+docs/trial-plan.md      tests T01–T66
 docs/preregistration.md freeze and fingerprint procedure
-data/                   synthetic data (empty for now)
+docs/security/          threat model, test specs, security policy, standards mapping
+docs/quality/           quality groundwork (policy, risks, traceability, release control)
+docs/regulatory-path.md public regulatory summary (not legal advice)
+docs/ai-act-self-assessment.md  EU AI Act self-assessment
+tools/check_docs.py     checks for T49 and T55
+data/                   synthetic data generator, lexicon, 158 generated packages
 results/                results (empty: nothing run)
 ```
 

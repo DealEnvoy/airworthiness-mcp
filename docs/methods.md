@@ -148,7 +148,7 @@ All figures are USD estimates, computed by a small arithmetic script with no mod
 
 | Stage | Tests | Low (USD) | High (USD) |
 |---|---|---|---|
-| 0 | T01–T17, T34, T45, T48 set-up | 0 | 0 |
+| 0 | T01–T17, T34, T45, T48 set-up; T49–T55, T57–T62, T64–T66 set-up | 0 | 0 |
 | 1 | T18, T19, T20 (paid part optional), T21 tier 1, T25, T26, T28, T29, T32, T36, T46, T47 (runtime free tier $0) | 58.96 | 232.45 |
 | 2 | T21 tier 2, T22, T23, T24, T27, T30, runtime paid tier (optional, gated) | 156.36 | 485.04 |
 | 3 | T33 | 1.20 | 19.20 |
@@ -160,7 +160,7 @@ The runtime-tier, T46 and T47 rows were added to the script's output by hand, so
 
 ## 6. Human review
 
-Models do not have the last word. I plan an independent review by licensed humans: one reviewer with a Part-66 B1 / Part-145 certifying background, and one with a CAMO or quality background, each working through a written checklist against synthetic sample reports. Their comments are feedback on a research prototype, not an approval, and are quoted only with their permission. None has taken place yet.
+Models do not have the last word. Before any public release of the software I plan independent review by three humans: one reviewer with a Part-66 B1 / Part-145 certifying background (a B1 certifying engineer), one with a CAMO or quality background, and one **human security reviewer**. The first two work through a written checklist against synthetic sample reports. The security reviewer reviews the threat model (`docs/security/threat-model.md`) and does a code review and penetration test of the record parser, the transport, the audit log, report integrity and the MCP tool manifest. Each reviewer's competence is recorded (`docs/quality/competence-records.md`). Their comments are feedback on a research prototype, not an approval, audit or certification, and are quoted only with their permission. The gate is test T56 in `trial-plan.md`. None has taken place yet.
 
 ## 7. Limits
 

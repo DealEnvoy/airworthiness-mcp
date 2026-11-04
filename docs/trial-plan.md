@@ -2,7 +2,7 @@
 
 Draft of 4 Nov 2026 (Europe/London). Author: Isaac Adekunle.
 
-**Nothing in this plan has been run.** It sets out 48 tests (T01–T48), their pass/fail criteria and the order they run in. Numeric thresholds are proposals until the pre-registration freeze (T01, see `preregistration.md`); after T01 nothing changes without a logged amendment.
+**Nothing in this plan has been run.** It sets out 66 tests (T01–T66), their pass/fail criteria and the order they run in. T01–T48 are the original set; T49–T66 are the security, fail-safe, design-rule and release-control tests added before the freeze (section 3a). Numeric thresholds are proposals until the pre-registration freeze (T01, see `preregistration.md`); after T01 nothing changes without a logged amendment.
 
 ## 0. How to read this plan
 
@@ -18,7 +18,7 @@ Draft of 4 Nov 2026 (Europe/London). Author: Isaac Adekunle.
 * **Served-model logging.** Where a model is used, the model that actually answered is logged (T05); a result from a model other than the one requested is excluded from comparisons.
 * **Roles.** The build uses AI models as tools in separate *roles* (architect, design reviewer, lead implementer, second implementer, engineering, security and regulatory reviewers). How I chose them is in `methods.md`. Tests T18–T20, T23–T25, T27–T30, T32–T34, T36 and T46 check those build-tool choices; the rest check the product.
 * **Third-party figures** are *as reported in the cited source, retrieved/cited 4 Nov 2026; not independently verified*. Prices are list prices as reported at that date (USD per million tokens, input/output; see `methods.md` section 5). Costs are estimates; token volumes are my assumptions (section 9).
-* **Gap IDs** (G01–G36, P1–P3) refer to the gap list in section 11.
+* **Gap IDs** (G01–G47, P1–P3) refer to the gap list in section 11.
 
 ## 1. Summary table
 
@@ -73,12 +73,30 @@ Draft of 4 Nov 2026 (Europe/London). Author: Isaac Adekunle.
 | T46 | Grok 4.7 vs Muse Wonder 1.0 security-reviewer comparison | G36 G20 | HOSTED-FREE + PAID | $1.26–$2.61 | 1 |
 | T47 | Python-only planted-vulnerability subset | G35 | HOSTED-FREE + PAID | $1.26–$2.61 | 1 |
 | T48 | Python safeguards gate in CI | G35 G31 | DET | free | 0 → 3 |
+| T49 | **Whole-system threat model completeness** (gate) | G37 | DET | free | 0 |
+| T50 | **Fail-safe: no clean report on any failure = fail** | G38 | DET | free | 0 → 3 |
+| T51 | **Transport: stdio only, any socket = fail** | G39 | DET | free | 0 → 3 |
+| T52 | HTTP mode blocked until its own tests pass (gate) | G39 | DET | free | 0 → 3 |
+| T53 | **Fuzz and abuse corpus** | G40 | DET | free | 0 → 3 |
+| T54 | **Tamper-evident reports: edited report undetected = fail** | G41 G18 | DET | free | 0 → 3 |
+| T55 | Security documents and standards mapping (gate) | G42 | DET + manual | free | 0 → 3 |
+| T56 | Human reviews before public release: B1, CAMO/quality, security (gate) | G43 G24 | people's time | not priced | 3 |
+| T57 | **Rules-engine core; LLM module optional, off by default** | G44 G23 | DET | free | 0 → 3 |
+| T58 | **Intended-purpose statement in README and every report** | G44 G17 | DET | free | 0 → 3 |
+| T59 | **No release or airworthiness conclusion** (extends T09, T12) | G44 G17 | DET | free | 0 → 3 |
+| T60 | **Never score or rank individual people** | G44 | DET | free | 0 → 3 |
+| T61 | **Machine-readable label on LLM-generated text** (when module on) | G44 | DET | free | 0 → 3 |
+| T62 | **Local-first: no egress, no telemetry** (extends T10, T42) | G44 G23 | DET | free | 0 → 3 |
+| T63 | Suspected-unapproved-part documentary indicators (gate) | G47 | DET | free | 0 → 3 |
+| T64 | **MCP tool-surface integrity** (poisoning, description injection, rug-pull) | G45 | DET | free | 0 → 3 |
+| T65 | **Report human-factors rules** (zero-findings statement = hard fail) | G46 | DET | free | 0 → 3 |
+| T66 | Release gate (extends T35) (gate) | G37 G43 | DET + Isaac | free | 3 |
 
 Costs are estimates (section 9).
 
 ## 2. Fixed acceptance tests (hard fails)
 
-Written first (T06–T12), run inside every evaluation as disqualifiers, and run again on the built release candidate (T35). T13 (hash chain) is an eighth hard gate.
+Written first (T06–T12), run inside every evaluation as disqualifiers, and run again on the built release candidate (T35). T13 (hash chain) is an eighth hard gate. Twelve further hard fails (T50, T51, T53, T54, T57–T62, T64, T65) and six gates (T49, T52, T55, T56, T63, T66) are defined in section 3a.
 
 | Hard fail | Test | Fixed criterion (proposed; frozen at T01) |
 |---|---|---|
@@ -174,6 +192,130 @@ See section 7.3. Runs in Stage 0.
 ### T48 Python safeguards gate in CI
 See section 8. Set up in Stage 0, checked on the release candidate in Stage 3.
 
+## 3a. Security, fail-safe and design-rule tests (Stage 0, deterministic; added before the freeze)
+
+These 18 tests (T49–T66) were added on 4 Nov 2026, before the T01 freeze, with Isaac's approval. They cover whole-system security, fail-safe behaviour, report integrity, the design rules that keep the tool advisory, and release control. All are DET (no model call, free). **Nothing has been built or run.** Numeric limits are proposals until the freeze.
+
+Two classes:
+
+* **HARD FAIL** (T50, T51, T53, T54, T57, T58, T59, T60, T61, T62, T64, T65): one failure = fail. No averaging, no waiver. Same rule as section 2.
+* **GATE** (T49, T52, T55, T56, T63, T66): blocks any public release of the software until it passes; not a safety hard fail in the section 2 sense, but there is no waiver either.
+
+**Fixed report vocabulary (frozen at T01).** A report has exactly two possible status lines:
+
+* `REVIEW COMPLETE - findings for human review` (every check ran and every input was read), or
+* `NOT READY - review incomplete` (anything else).
+
+No other status text is allowed (T59). The required disclaimer ("AI assists, a certifying human decides") and the intended-purpose statement (T58) are in every report.
+
+**Fixed limits (proposals, frozen at T01).** Referred to by T50, T53 and T62.
+
+| Limit | Value |
+|---|---|
+| Input accepted in Stage 0 | plain UTF-8 JSON files inside one package directory; no archives |
+| Maximum size of one record file | 5 MiB |
+| Maximum files in one package | 500 |
+| Maximum total package size | 50 MiB |
+| Maximum nesting depth | 32 |
+| Maximum length of one string value | 64 KiB |
+| Maximum records in one section | 10,000 |
+| Maximum filename length / path depth | 255 bytes / 8 levels |
+| Wall-clock limit per package (rules-only) | 10 s target, 30 s hard watchdog |
+| Peak memory per package | 512 MiB |
+| Exit code for `NOT READY - review incomplete` | 3 (non-zero, distinct from usage errors) |
+
+Anything over a limit is not truncated or "best-efforted": it ends in `NOT READY - review incomplete`.
+
+### T49 Whole-system threat model completeness (GATE)
+* **Checks:** that `docs/security/threat-model.md` covers the whole system and that every threat has a mitigation and a test.
+* **Method:** `tools/check_docs.py threat-model` parses the threat table. The threat model covers STRIDE across ten components (MCP client/host, transport, tool calls, record files, parsers, rules engine, optional LLM module, audit log, reports, build/CI/supply chain), plus all ten OWASP Top 10 for LLM Applications (2025) risks and the MCP-specific risks (tool poisoning, tool-description injection, rug-pull changes, confused deputy, excessive agency).
+* **Pass/fail:** (1) every one of the ten components has at least one threat row; (2) every STRIDE letter is either covered per component or marked "not applicable" with a reason; (3) LLM01–LLM10 and each MCP-specific risk has at least one row; (4) 0 rows with an empty mitigation; (5) 0 rows with no test ID; (6) every cited test ID exists in this plan; (7) every hard-fail test (T06–T13, T50, T51, T53, T54, T57–T62, T64, T65) is cited by at least one row; (8) the checker exits 0. Any failure = fail. The human security reviewer (T56) reviews the model; a script cannot judge whether the threats are the right ones.
+
+### T50 Fail-safe: no clean report on any failure (HARD FAIL)
+* **Checks:** that the tool can never produce a clean-looking report from a failed or partial review.
+* **Method:** run the planted-failure set (`docs/security/planted-failure-set-spec.md`, PF01–PF40 plus controls PC01–PC10): crashes injected at every stage, timeouts, unreadable and malformed records, missing data, bad signatures, hash mismatches (package manifest, audit-log chain, rule-set hash, tool-manifest hash) and environment failures. The failure is injected from outside the production code path (fault-injection harness), so the production code is the code under test.
+* **Pass/fail:** for every PF case: the output contains the exact status line `NOT READY - review incomplete`; exit code 3; the failure class and stage are named; the checks that did not complete are listed; **no finding list, count or summary that could be read as a partial all-clear is presented as complete**; an audit-log entry is written (if the audit write itself is the failure, stderr says so and the status is still `NOT READY`). For every control case PC: normal report, no banner (proves the fail-safe is not simply always on). 40 of 40 PF and 10 of 10 PC. Any PF case that yields `REVIEW COMPLETE` fails the whole test.
+
+### T51 Transport: stdio only, no socket (HARD FAIL)
+* **Checks:** that Stage 0 opens no network listener and no network connection.
+* **Method:** run the full test corpus and the server start-up under `strace -f` (network syscalls: `socket`, `bind`, `listen`, `accept`, `connect`, `sendto`, `sendmsg`) in a network namespace with no interfaces, then check `ss -ltnup` for the process tree during a run. Static check: the server package exposes no host, port or transport option; any attempt to select a non-stdio transport exits with an error.
+* **Pass/fail:** 0 `bind`/`listen`/`accept`/`connect` calls; 0 sockets of family INET, INET6 or PACKET (an unnamed `AF_UNIX` socketpair used internally by the event loop is allowed and logged); 0 listening sockets; non-stdio selection refused (exit non-zero). Any other result = fail.
+
+### T52 HTTP mode blocked until its own tests pass (GATE)
+* **Checks:** that no HTTP (or any network) transport can ship before it is secured.
+* **Method:** static check that the release candidate contains no HTTP server code path and no `streamable-http`/`sse` transport enabled; a build flag attempt to enable it fails in CI. A future HTTP mode may be added only by a logged amendment that (a) requires authentication and authorisation as in the MCP security guidance (token audience validation, no token passthrough, least-privilege scopes with a read-only scope), (b) requires TLS with certificate validation, (c) validates the `Origin` header and binds to loopback by default (exact MCP rule to be verified against the current MCP specification at that time), (d) adds request size and rate limits, and (e) adds its own tests (authentication bypass, authorisation, TLS, DNS rebinding, SSRF, token passthrough) that pass before the feature is enabled.
+* **Pass/fail:** release candidate has 0 enabled network transports; the enable attempt fails. Until the amendment and its tests exist, HTTP mode = not available.
+
+### T53 Fuzz and abuse corpus (HARD FAIL)
+* **Checks:** that hostile or broken input cannot crash the tool, hang it, exhaust memory, escape the package directory, or slip through as a clean report.
+* **Method:** the corpus in `docs/security/fuzz-corpus-spec.md`: targeted classes FZ-A to FZ-I (malformed, oversized, deeply nested, wrong encoding, zip-bomb-like and archive tricks, path-traversal and odd filenames, type confusion, structure abuse, hostile text) with at least 200 targeted cases, plus 10,000 seeded random mutations of the 158 generated packages (seed 20261104). Run in a sandbox with the section 3a limits enforced from outside (timeout, memory cap) and a read-only package mount, with canary files outside the package root and file-access auditing.
+* **Pass/fail:** every case ends in exactly one of two outcomes: a valid report whose findings match the unmutated oracle where the case is "must still parse", or `NOT READY - review incomplete` where the case is "must reject". 0 unhandled exceptions or crashes; 0 cases over the 30 s watchdog or 512 MiB; 0 reads or writes outside the package root and output directory; 0 "must reject" cases that produce `REVIEW COMPLETE` (slip-through). Any single failure = fail.
+
+### T54 Tamper-evident reports (HARD FAIL)
+* **Checks:** that an edited report is detected.
+* **Method:** every report carries `report_sha256` (SHA-256 over the canonical serialisation of the whole report body, including the status line, the label block of T61 and the audit reference) and an `audit_ref` = {log entry index, hash of that entry}. The audit log entry for the run records `report_sha256` and is chained to the previous entry (T13). A reference verifier recomputes both. Tamper cases: change one byte of the body; change the status line (for example from NOT READY to complete); delete or add a finding; edit the fingerprint; edit `audit_ref`; swap in a valid report from a different run; remove the log entry; reorder or truncate the log; change line endings or Unicode normalisation; 2,000 randomised edits. Golden test vectors for canonical serialisation on two Python versions and two operating systems (shared with T13). Also checked: audit-log entries contain identifiers, hashes and rule versions only, never record free text.
+* **Pass/fail:** 100% of tamper cases detected with a non-zero exit and a message naming the check that failed; 0 undetected of 2,000; golden fingerprints identical across platforms. **Stated limit, not a pass criterion:** the fingerprint chain shows a report was changed after the run; it does not show who changed it, and an attacker who can rewrite both the report and the whole log is only caught if an external anchor exists (same warning as T13).
+
+### T55 Security documents and standards mapping present and honest (GATE)
+* **Checks:** that the disclosure policy and the standards mapping exist and do not overclaim.
+* **Method:** `tools/check_docs.py security-docs`. Manual item: private vulnerability reporting is switched on for the repository before any public release (Isaac's checklist).
+* **Pass/fail:** root `SECURITY.md` exists and points to `docs/security/SECURITY.md`; the policy names GitHub private security advisories as the reporting route and contains no e-mail address; `docs/security/standards-mapping.md` has rows for OWASP Top 10 for LLM Applications, NIST SP 800-218, SLSA, ISO/IEC 27001:2022 Annex A themes and EASA Part-IS, each marked "alignment, not compliance"; 0 sentences claiming the tool or project is compliant with, certified to, approved under or accredited against any of them; manual item ticked.
+
+### T56 Human reviews before any public release (GATE)
+* **Checks:** that three independent humans have reviewed the tool before the software is publicly released.
+* **Method:** records per `docs/quality/competence-records.md` and `docs/quality/release-control.md` for: (1) a B1 certifying engineer; (2) a CAMO or quality reviewer; (3) a **human security reviewer**. Security reviewer scope: review of `docs/security/threat-model.md`; code review and penetration test of the record **parser**, the **transport** (T51/T52), the **audit log** and **report integrity** (T13/T54), and the MCP **tool manifest** (T64). The reviewer is independent of the author and of the build tools, works from the frozen release-candidate commit, and writes severity-rated findings. Reviewers' comments are feedback on a research prototype, not an approval, audit or certification, and are quoted only with permission.
+* **Pass/fail:** 3 of 3 review records complete, with competence recorded; 0 open high or critical findings unless Isaac has accepted the risk in writing with a reason; re-test done after fixes. Missing any one reviewer = fail = no public release. (Publishing these planning documents is not a release of the software.)
+
+### T57 Rules-engine core; LLM module optional and off by default (HARD FAIL)
+* **Checks:** that the product is a deterministic rules engine and any language-model module is separate, optional and off by default.
+* **Method:** (a) install the core with no optional extras and run T15; (b) the core dependency tree contains none of a denylist of model packages and clients; (c) the default configuration has the module off; enabling needs an explicit setting in the configuration file (an environment variable alone cannot enable it) and an explicit start-up notice; (d) import graph: nothing in the core imports the module; (e) with the module on, the rule-layer findings and missing-data list are byte-identical to module-off output; module findings can only be added and are labelled advisory (T45, T61).
+* **Pass/fail:** all five checks clean. Any failure = fail.
+
+### T58 Intended-purpose statement everywhere (HARD FAIL)
+* **Checks:** that every reader sees what the tool is for.
+* **Method:** the frozen statement: "Advisory checker of maintenance records and work packages. Read-only. Does not certify, release, or determine airworthiness. A certifying human decides." appears (a) verbatim in `README.md`, (b) verbatim in the header of every report (both statuses), (c) in the MCP server description. Checked by code with the disclaimer check of T12.
+* **Pass/fail:** 100% of reports, the README and the server description contain it verbatim; 0 reports without it.
+
+### T59 No release or airworthiness conclusion (HARD FAIL; extends T09 and T12)
+* **Checks:** that no output can be read as a release, serviceability or airworthiness conclusion.
+* **Method:** the report schema has a status field with exactly the two values in section 3a and no other verdict-like field; free-text fields are scanned with the T12 lexicon; all 158 generated packages (including the 16 clean twins and the near-miss twins) are run and every report validated against the schema.
+* **Pass/fail:** 0 reports with any status other than the two values; 0 verdict-like fields; 0 T12 matches outside the whitelist; a clean twin yields `REVIEW COMPLETE - findings for human review` with the T65 zero-findings statement, never wording that reads as "all clear". Extends T12 and T09; it does not replace them.
+
+### T60 Never score or rank individual people (HARD FAIL, new)
+* **Checks:** that the tool reports on records, tasks and rules, never on named engineers or certifiers. Reason: per-person evaluation could change the legal classification of the tool (`docs/ai-act-self-assessment.md`) and is not its job.
+* **Method:** (a) schema: no field, tool parameter or aggregation keyed by a person identifier (for example the `raised_by` field); (b) on all 158 packages, which contain person identifiers such as "Technician T-nn", count each identifier's occurrences in each report: it may appear only inside a citation of a record where it is a field value; no section groups, counts, rates or orders findings by person; (c) a planted case where one identifier is attached to 30 findings: no per-person summary appears; (d) a wording lexicon (rank, score, league, performance rating, worst performer, "most errors" and similar, applied to people) returns 0 matches.
+* **Pass/fail:** 0 per-person aggregates, scores, rankings or filters in any output, schema or tool. Any one = fail.
+
+### T61 Machine-readable label on language-model text (HARD FAIL when the module is on)
+* **Checks:** that any text written by a language model is labelled for humans and for programs, and that the label cannot be removed by the model.
+* **Method:** with the optional module on: every item or text span produced by the model carries `"generated_by": "llm"`, `"llm_generated": true`, the model id and version, and the module version, set by code, not by the model; the report carries a visible transparency note ("This report contains text generated by an AI language model. It is advisory. AI assists, a certifying human decides."). With the module off: the report states `"llm_module": "off"` and has no label on any item. The label block is inside the T54 fingerprint. A stub hostile model tries to omit, spoof or move the label.
+* **Pass/fail:** 100% of model-derived items labelled; 0 rule-derived items labelled as model text; 0 label removals or spoofs succeed; transparency note present in 100% of reports with the module on.
+
+### T62 Local-first: no egress, no telemetry (HARD FAIL; extends T10, T42)
+* **Checks:** that the tool sends nothing anywhere unless an operator explicitly configures it.
+* **Method:** T10 harness (network namespace, syscall trace) on the whole suite in rules-only mode; static scan for analytics, crash-reporting and update-check libraries and URL literals outside a short allow-list of documentation links; with the module on, the default endpoint is in-process, a loopback address or a Unix socket; a non-local endpoint needs an explicit setting, is refused in offline mode, and puts a visible warning in the report ("record text was sent to a remote service"); file writes only to the configured audit and report directories.
+* **Pass/fail:** 0 connect or DNS attempts in rules-only mode; 0 telemetry, update-check or crash-report code paths; 0 non-local endpoints reachable without explicit configuration; 0 writes outside the two directories.
+
+### T63 Suspected unapproved parts: documentary indicators (GATE)
+* **Checks:** that the parts check raises awareness of suspected unapproved parts (AS9110-style counterfeit awareness) without ever concluding anything.
+* **Method:** the parts check flags documentary indicators for human review: missing or blank release-certificate reference; missing traceability to the manufacturer or supplier; part-number or serial-number format inconsistent with the recorded type; the same serial number on two installed parts; an installation date earlier than the recorded receipt date; a supplier on a user-supplied list. Wording: "Documentation indicator for review: possible suspect part", never an assertion that a part is counterfeit or unapproved. **The current generated set and sealed key contain no such fault class**, so the test set is specified in `docs/security/fuzz-corpus-spec.md` section 6 and is added by a logged amendment before T63 runs. Regulatory references for suspected unapproved parts are to be collected under T02; none is cited here.
+* **Pass/fail:** 100% of planted indicators flagged with a citation; 0 findings that state a part is counterfeit or unapproved as fact; false alarms ≤ 0.5 per clean twin after deduplication.
+
+### T64 MCP tool-surface integrity (HARD FAIL)
+* **Checks:** tool poisoning, tool-description injection, rug-pull changes and excessive agency at the tool surface.
+* **Method:** (a) the tool manifest (names, descriptions, input schemas) is static, built from code, and its SHA-256 is pinned in each release; the server refuses to start if the live manifest hash differs; (b) descriptions contain no text derived from records or configuration: the manifest is byte-identical across all 158 packages and across runs; (c) lint of every description: ≤ 500 characters, plain ASCII except documented symbols, no zero-width or bidirectional control characters, no URLs, no instructions to the model beyond a usage description (denylist of patterns such as "ignore", "always call", "do not tell the user", "first call", "send to"); (d) rug-pull: the server never emits tool-list-changed notifications and never changes its manifest at run time; a changed manifest hash between versions needs a version bump and a CHANGELOG entry (CI check); changing one description in a scratch copy makes both the start-up check and CI fail; (e) tool names carry a fixed prefix; the 40 adversarial prompts of T09 plus 10 description-injection prompts cannot make the server expose or call any tool outside the allow-list (also T45); (f) every tool is read-only and marked as such where the SDK supports the annotation.
+* **Pass/fail:** all six checks clean; the 2 scratch mutations are caught 2 of 2. Any violation = fail.
+
+### T65 Report human-factors rules (HARD FAIL for the zero-findings statement)
+* **Checks:** that a tired reader cannot easily misread a report (`docs/quality/human-factors-note.md`).
+* **Method:** by code on all 158 reports: (a) the status line is the first line; (b) critical findings come before others; (c) a report with zero findings contains the fixed statement "No findings from the checks that ran. This is not an assurance that the records are complete or correct. A certifying human decides." and a list of what the tool does not check; (d) every report lists the checks that ran and the checks that did not run; (e) status never depends on colour alone (text first); (f) no abbreviation or emoji as the only carrier of a status; (g) the missing-data block is never collapsed or hidden.
+* **Pass/fail:** (c) 100% (this is the hard fail: a silent empty report is false assurance); (a), (b), (d)–(g) 100% on all reports.
+
+### T66 Release gate (GATE; extends T35)
+* **Checks:** that nothing is released unless the evidence exists and Isaac has signed off.
+* **Method:** `docs/quality/release-control.md`. A release tag is made only when a release record lists: the commit; the pass records for every hard-fail test (T06–T13, T50, T51, T53, T54, T57–T62, T64, T65) and every gate (T49, T52, T55, T56, T63); the T14 SBOM and signature result; the T56 review records; and Isaac's sign-off note. A script checks the record is complete and that the hashes in it match the commit. The same script checks that CI workflow files pin every third-party action to a commit SHA and request least-privilege token permissions, and that a secret scan (gitleaks, or an equivalent recorded in the record) finds 0 secrets and the sealed key is not in the repository.
+* **Pass/fail:** record complete, hashes match, sign-off present. Any hard fail open = no release, no waiver.
+
 ## 4. Stage 1–2: seeded-fault evaluation
 
 ### T21 Seeded-fault evaluation with clean twins
@@ -204,8 +346,8 @@ See section 8. Set up in Stage 0, checked on the release candidate in Stage 3.
 ## 5. Stage 3: release candidate
 
 ### T35 Final gate run on the release candidate
-* **Method:** after the build, re-run T06–T13 and T14 on the signed release-candidate tag.
-* **Pass/fail:** every hard gate passes. No averaging, no waiver.
+* **Method:** after the build, re-run T06–T13, T14 and the section 3a tests (T49–T66, those that apply to a built release candidate) on the signed release-candidate tag.
+* **Pass/fail:** every hard gate passes. No averaging, no waiver. Section 3a tests (T49–T66) are re-run on the same tag as part of T66.
 
 ### T37 Optional human mini-study
 * **Checks:** whether the report helps human reviewers.
@@ -215,7 +357,7 @@ See section 8. Set up in Stage 0, checked on the release candidate in Stage 3.
 ## 6. Order of execution
 
 1. **Day 0:** T01 freeze, T04 and T05 harness, T34 first step (open the pricing page).
-2. **Day 0–1, no model calls:** T02, T03, T06–T17, T45, T48 set-up.
+2. **Day 0–1, no model calls:** T02, T03, T06–T17, T45, T48 set-up, and the section 3a set-up (T49–T55, T57–T62, T64–T66; T56 and T63 need people's time and a logged data addition respectively).
 3. **Day 1, availability and panel checks:** T18 (decides everything downstream), T19, T20, T36. **Checkpoint 1:** if a role's primary and fallback both fail T18, stop.
 4. **Day 1–3, Stage 1 (Argon work first; starts once I set its spending limit):** T21 tier 1, T25, T26, T28, T29, T32, T46, T47; T38–T44 free tier. **Checkpoint 2:** drop any candidate failing a hard gate, T28 or T29; keep the top 3 for T21 tier 2.
 5. **Day 3–6, Stage 2 (Argon target 20 Nov, hard stop 28 Nov; starts once I set its spending limit):** T21 tier 2, T22, T23, T24, T27, T30, T31; runtime paid tier only under section 7.5 step 4. **Checkpoint 3:** fix the roles with the rules in section 6a and the T20 result.
@@ -427,7 +569,7 @@ Computed by an arithmetic-only script (no model calls). List prices and assumpti
 
 | Stage | Tests included | Low (USD) | High (USD) |
 |---|---|---|---|
-| 0 | T01–T17, T34, T45, T48 set-up | 0 | 0 |
+| 0 | T01–T17, T34, T45, T48 set-up; T49–T55, T57–T62, T64–T66 set-up | 0 | 0 |
 | 1 | T18, T19, T20 (paid optional), T21 tier 1, T25, T26, T28, T29, T32, T36, T46, T47 | 58.96 | 232.45 |
 | 2 | T21 tier 2, T22, T23, T24, T27, T30, runtime paid tier (optional) | 156.36 | 485.04 |
 | 3 | T33 | 1.20 | 19.20 |
@@ -446,7 +588,7 @@ If funds are short, the order of cuts in section 10 applies. Argon rows double i
 
 ## 11. Gap list
 
-Gaps raised in the scoring panel's reports (G01–G32), process gaps I found while merging them (P1–P3) and gaps from the late report (G33–G36).
+Gaps raised in the scoring panel's reports (G01–G32), process gaps I found while merging them (P1–P3), gaps from the late report (G33–G36) and gaps found in the pre-freeze security, quality and regulatory review (G37–G47).
 
 | ID | Gap |
 |---|---|
@@ -486,6 +628,17 @@ Gaps raised in the scoring panel's reports (G01–G32), process gaps I found whi
 | G34 | The runtime model inside the tool is the real injection surface |
 | G35 | Every model reported weakest on Python vulnerabilities |
 | G36 | A second, cross-family security reviewer |
+| G37 | No whole-system threat model (STRIDE, OWASP LLM Top 10, MCP-specific risks) |
+| G38 | Crash, timeout, unreadable or tampered input could yield a clean-looking report |
+| G39 | Transport: network listener or unsecured HTTP mode |
+| G40 | Parser and file handling under malformed, oversized, nested, mis-encoded, archive and path-traversal input |
+| G41 | Reports not tamper-evident (only the audit log was) |
+| G42 | No vulnerability disclosure policy; no standards mapping |
+| G43 | No independent human security review before release |
+| G44 | Design rules that keep the tool advisory and out of the EU AI Act high-risk lane not tested |
+| G45 | MCP tool surface: tool poisoning, description injection, rug-pull changes |
+| G46 | Human factors: a tired reader could misread a report or an empty report |
+| G47 | Suspected unapproved (counterfeit) part awareness missing from parts checks |
 | P1 | Claude Fable 5.1 failed to start three times |
 | P2 | Two panel reports available only as summaries |
 | P3 | Free hosted routes unreliable beyond one model |
@@ -512,5 +665,11 @@ Gaps raised in the scoring panel's reports (G01–G32), process gaps I found whi
 | G16 | T02, T23 | G34 | T38–T45 |
 | G17 | T02, T12 | G35 | T47, T48 |
 | G18 | T13 | G36 | T46 |
+| G37 | T49 | G38 | T50 |
+| G39 | T51, T52 | G40 | T53 |
+| G41 | T54, T13 | G42 | T55 |
+| G43 | T56, T66 | G44 | T57–T62 |
+| G45 | T64 | G46 | T65 |
+| G47 | T63 | | |
 | P1 | T18, T36 | P2 | T20 |
 | P3 | T19, T20 | | |
