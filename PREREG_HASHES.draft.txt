@@ -1,0 +1,10 @@
+# DRAFT - NOT FROZEN. Pending Isaac Adekunle's review of the criteria (T01).
+# Rename to PREREG_HASHES.txt only after approval; regenerate hashes after any edit.
+# Format: <sha256>  <path relative to repo root>. Sealed key is outside the repo.
+c30808a3f18f2c322f6f21439a8ca50a7e0e4c401f3156386c8e27d11958a918  docs/trial-plan.md
+b103512c51a704310e7c503e18f3edc7e3c87764eb307244eb968d53d95d80be  docs/preregistration.md
+de2f9f0b6caba8ebddfc75d7897b2f0d7651dcdd4295728fdd4f6957e77a2735  data/generate.py
+fe10583157713a48b5215110113091eb47a611b7fce03f0fe391cdffc218f623  data/t12_lexicon.json
+c7a76ce61ebe9329e37fef9c12e4a09e33233b2c71413eef5b193063c8eb0b23  data/packages/MANIFEST.sha256
+64b22bbf97af316b1fe2fec6810092c90cb249f2054e339e81bad1a7d0fa6d16  verify_prereg.py
+a058685dcf9d9b49287c4f06e7c894744615c7edd56c50601af8ca7628a10695  ../sealed/seeded_fault_key.json

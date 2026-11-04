@@ -1,0 +1,216 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-YECG",
+    "total_cycles": 11638,
+    "total_hours": 27072,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1817",
+      "compliance_due_date": "2027-04-12",
+      "record_id": "AD-XJCX1A",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-29",
+        "expiry_date": "2027-01-27",
+        "interval_days": 120
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-32",
+      "raised_date": "2026-09-29",
+      "record_id": "DEF-SA0BBW",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-06",
+      "raised_date": "2026-10-18",
+      "record_id": "DEF-MB97VP",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "29",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-09-28",
+      "record_id": "DEF-RCJ9HH",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-06",
+        "expiry_date": "2026-10-16",
+        "interval_days": 10
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-33",
+      "raised_date": "2026-10-06",
+      "record_id": "DEF-926XPK",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-38",
+      "raised_date": "2026-10-13",
+      "record_id": "DEF-SC4MZJ",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-09",
+      "raised_date": "2026-10-08",
+      "record_id": "DEF-7XV2X1",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-24",
+      "raised_date": "2026-10-03",
+      "record_id": "DEF-2R5E00",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 22592,
+      "description": "LP compressor shaft",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-57226",
+      "record_id": "LLP-FY0EBN",
+      "serial_number": "SYN-SN-224675"
+    },
+    {
+      "cycles_since_new": 18101,
+      "description": "Fan disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-80682",
+      "record_id": "LLP-VDCZ4Q",
+      "serial_number": "SYN-SN-939556"
+    },
+    {
+      "cycles_since_new": 13868,
+      "description": "Fan disk",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-20211",
+      "record_id": "LLP-R1W498",
+      "serial_number": "SYN-SN-179501"
+    },
+    {
+      "cycles_since_new": 29673,
+      "description": "LP compressor shaft",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-24323",
+      "record_id": "LLP-4V45MK",
+      "serial_number": "SYN-SN-945486"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-XRHTX7DZ",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 26470,
+      "next_due_hours": 27670,
+      "record_id": "TSK-S0D4CD",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 27007,
+      "next_due_hours": 27207,
+      "record_id": "TSK-8KFTNQ",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 26555,
+      "next_due_hours": 27755,
+      "record_id": "TSK-ZB15KK",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 400,
+      "last_done_hours": 27035,
+      "next_due_hours": 27435,
+      "record_id": "TSK-BWX9CY",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-0T20NK",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-FK0ZS7",
+        "signed_by": "Technician T-27",
+        "signoff_page_present": true,
+        "task_ref": "TSK-S0D4CD"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-PTKDR0",
+        "signed_by": "Technician T-18",
+        "signoff_page_present": true,
+        "task_ref": "TSK-8KFTNQ"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-1FRKC2",
+        "signed_by": null,
+        "signoff_page_present": false,
+        "task_ref": "TSK-ZB15KK"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-GAPS5G",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-BWX9CY"
+      }
+    ]
+  }
+}

@@ -32,3 +32,7 @@ results/raw/
 Thumbs.db
 .idea/
 .vscode/
+
+# Sealed key must never be committed, wherever it is written
+sealed/
+seeded_fault_key*.json

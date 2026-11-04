@@ -1,0 +1,183 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-KQFZ",
+    "total_cycles": 26468,
+    "total_hours": 25487,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1762",
+      "compliance_due_date": "2027-05-06",
+      "record_id": "AD-8KCSVF",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7835",
+      "compliance_due_date": "2027-02-17",
+      "record_id": "AD-CW9BVK",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-36",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-9SCGFV",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-11",
+        "expiry_date": "2027-01-09",
+        "interval_days": 120
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-09-11",
+      "record_id": "DEF-BWDMXF",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 29487,
+      "description": "HP turbine disk",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-69238",
+      "record_id": "LLP-QVDCNH",
+      "serial_number": "SYN-SN-587728"
+    },
+    {
+      "cycles_since_new": 13742,
+      "description": "Starter generator shaft",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-26478",
+      "record_id": "LLP-Q13H45",
+      "serial_number": "SYN-SN-155311"
+    },
+    {
+      "cycles_since_new": 27966,
+      "description": "LP compressor shaft",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-96365",
+      "record_id": "LLP-8D5ZAQ",
+      "serial_number": "SYN-SN-406013"
+    },
+    {
+      "cycles_since_new": 18156,
+      "description": "Propeller hub",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-69443",
+      "record_id": "LLP-3R7B0B",
+      "serial_number": "SYN-SN-966969"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-72PZ7S32",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 200,
+      "last_done_hours": 25382,
+      "next_due_hours": 25582,
+      "record_id": "TSK-1HBJ53",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 25351,
+      "next_due_hours": 25751,
+      "record_id": "TSK-4FKP59",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 25020,
+      "next_due_hours": 25620,
+      "record_id": "TSK-7GJABM",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 200,
+      "last_done_hours": 25460,
+      "next_due_hours": 25660,
+      "record_id": "TSK-5CBHN0",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-F65Y1K",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-JXX18W",
+        "signed_by": "Technician T-18",
+        "signoff_page_present": true,
+        "task_ref": "TSK-1HBJ53"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-P9DJJ2",
+        "signed_by": "Technician T-18",
+        "signoff_page_present": true,
+        "task_ref": "TSK-4FKP59"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-GGV75W",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-7GJABM"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-XCAQXT",
+        "signed_by": "Technician T-09",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5CBHN0"
+      }
+    ]
+  }
+}

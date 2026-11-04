@@ -1,0 +1,175 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator E",
+    "registration": "SYN-MPMD",
+    "total_cycles": 26448,
+    "total_hours": 30585,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-9030",
+      "compliance_due_date": "2027-03-18",
+      "record_id": "AD-CQW46H",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-30",
+      "raised_date": "2026-10-18",
+      "record_id": "DEF-9NQ1V9",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-29",
+        "expiry_date": "2026-11-28",
+        "interval_days": 30
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-11",
+      "raised_date": "2026-10-29",
+      "record_id": "DEF-5EVXFD",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 24647,
+      "description": "LP compressor shaft",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-29197",
+      "record_id": "LLP-AF6JP2",
+      "serial_number": "SYN-SN-327182"
+    },
+    {
+      "cycles_since_new": 17557,
+      "description": "Fan disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-42457",
+      "record_id": "LLP-HR7ZGQ",
+      "serial_number": "SYN-SN-331596"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-3QZZ7SR8",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 30207,
+      "next_due_hours": 30807,
+      "record_id": "TSK-AWC0RJ",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 30142,
+      "next_due_hours": 31342,
+      "record_id": "TSK-NB2RYF",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 30460,
+      "next_due_hours": 30860,
+      "record_id": "TSK-H1MJZ2",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 30260,
+      "next_due_hours": 30860,
+      "record_id": "TSK-EQ4YGY",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 30350,
+      "next_due_hours": 30950,
+      "record_id": "TSK-G3WPFS",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-6ZJ207",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-Z8EVJV",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-AWC0RJ"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-HVH7Q5",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-NB2RYF"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-RT8F9Q",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-H1MJZ2"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-2N24VJ",
+        "signed_by": "Technician T-17",
+        "signoff_page_present": true,
+        "task_ref": "TSK-EQ4YGY"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-64SMFP",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-G3WPFS"
+      }
+    ]
+  }
+}

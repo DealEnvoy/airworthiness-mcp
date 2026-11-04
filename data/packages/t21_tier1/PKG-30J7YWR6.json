@@ -1,0 +1,185 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-XBBG",
+    "total_cycles": 16209,
+    "total_hours": 8259,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0809",
+      "compliance_due_date": "2027-04-29",
+      "record_id": "AD-D0HSDE",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-2235",
+      "compliance_due_date": "2027-02-13",
+      "record_id": "AD-ARV0FB",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1790",
+      "compliance_due_date": "2027-03-11",
+      "record_id": "AD-QGZGVK",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-28",
+        "expiry_date": "2026-11-07",
+        "interval_days": 10
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-33",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-5ZR4A3",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-09",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-1CN93Y",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-30",
+      "raised_date": "2026-09-26",
+      "record_id": "DEF-2WDS92",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-10-15",
+      "record_id": "DEF-AAXCYC",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15546,
+      "description": "Starter generator shaft",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-13797",
+      "record_id": "LLP-CBWHXV",
+      "serial_number": "SYN-SN-774389"
+    },
+    {
+      "cycles_since_new": 15879,
+      "description": "HP turbine disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-70947",
+      "record_id": "LLP-AD4FK0",
+      "serial_number": "SYN-SN-864409"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-30J7YWR6",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 8193,
+      "next_due_hours": 8393,
+      "record_id": "TSK-FZ0H71",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 7977,
+      "next_due_hours": 8377,
+      "record_id": "TSK-HA2ETJ",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 200,
+      "last_done_hours": 8175,
+      "next_due_hours": 8375,
+      "record_id": "TSK-65SJ9P",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 8011,
+      "next_due_hours": 8611,
+      "record_id": "TSK-3JZGWF",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-2JJQ73",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-3GC3FR",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-FZ0H71"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-H02YE1",
+        "signed_by": "Technician T-25",
+        "signoff_page_present": true,
+        "task_ref": "TSK-HA2ETJ"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-32PJTC",
+        "signed_by": "Technician T-24",
+        "signoff_page_present": true,
+        "task_ref": "TSK-65SJ9P"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-PE5NQZ",
+        "signed_by": "Technician T-13",
+        "signoff_page_present": true,
+        "task_ref": "TSK-3JZGWF"
+      }
+    ]
+  }
+}

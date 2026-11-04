@@ -1,0 +1,169 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-WTUV",
+    "total_cycles": 7412,
+    "total_hours": 30710,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-4488",
+      "compliance_due_date": "2027-03-08",
+      "record_id": "AD-GY96WS",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-3189",
+      "compliance_due_date": "2027-01-22",
+      "record_id": "AD-T41JCP",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-08",
+      "raised_date": "2026-10-10",
+      "record_id": "DEF-WAYF7J",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "49",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-10",
+      "raised_date": "2026-09-15",
+      "record_id": "DEF-ZZRWMB",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-27",
+        "expiry_date": "2026-11-06",
+        "interval_days": 10
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-13",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-2MZ0PZ",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 25404,
+      "description": "Main gear axle",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-56889",
+      "record_id": "LLP-EKV266",
+      "serial_number": "SYN-SN-146968"
+    },
+    {
+      "cycles_since_new": 12830,
+      "description": "Main gear axle",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-82385",
+      "record_id": "LLP-GQ4A5Q",
+      "serial_number": "SYN-SN-433721"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-91BGMJR0",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 400,
+      "last_done_hours": 30616,
+      "next_due_hours": 31016,
+      "record_id": "TSK-6JER57",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 30591,
+      "next_due_hours": 31191,
+      "record_id": "TSK-TCKFKD",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 29561,
+      "next_due_hours": 30761,
+      "record_id": "TSK-25A0K1",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 30106,
+      "next_due_hours": 31306,
+      "record_id": "TSK-KA08G0",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-C9F3Z0",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-XPCE00",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-6JER57"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-M1CC6C",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TCKFKD"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-W9D4YA",
+        "signed_by": "Technician T-23",
+        "signoff_page_present": true,
+        "task_ref": "TSK-25A0K1"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-T5NFSC",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-KA08G0"
+      }
+    ]
+  }
+}

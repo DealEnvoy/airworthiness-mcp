@@ -1,0 +1,165 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-QBKQ",
+    "total_cycles": 26971,
+    "total_hours": 18028,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0582",
+      "compliance_due_date": "2027-01-19",
+      "record_id": "AD-E6R7D7",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1343",
+      "compliance_due_date": "2027-02-15",
+      "record_id": "AD-R962C4",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-31",
+      "record_id": "DEF-28YBMY",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-13",
+        "interval_days": 10
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-37",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-97Y53E",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15845,
+      "description": "HP turbine disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-11373",
+      "record_id": "LLP-NGZ6YS",
+      "serial_number": "SYN-SN-780833"
+    },
+    {
+      "cycles_since_new": 23138,
+      "description": "Starter generator shaft",
+      "part_number": "SYN-PN-36357",
+      "record_id": "LLP-59AVD3",
+      "serial_number": "SYN-SN-014729"
+    },
+    {
+      "cycles_since_new": 22133,
+      "description": "Main gear axle",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-09623",
+      "record_id": "LLP-0662EY"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-N898Z28T",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 400,
+      "last_done_hours": 17771,
+      "next_due_hours": 18171,
+      "record_id": "TSK-PGPTS0",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 400,
+      "last_done_hours": 17779,
+      "next_due_hours": 18179,
+      "record_id": "TSK-Z9Y1A6",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 17992,
+      "next_due_hours": 18192,
+      "record_id": "TSK-HCD31G",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 17942,
+      "next_due_hours": 18342,
+      "record_id": "TSK-1J8A1P",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-Q0HMCG",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-A9CG89",
+        "signed_by": "Technician T-33",
+        "signoff_page_present": true,
+        "task_ref": "TSK-PGPTS0"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-P4MQP8",
+        "signed_by": "Technician T-04",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z9Y1A6"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-TFVXC8",
+        "signed_by": "Technician T-17",
+        "signoff_page_present": true,
+        "task_ref": "TSK-HCD31G"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-RGBN8S",
+        "signed_by": "Technician T-03",
+        "signoff_page_present": true,
+        "task_ref": "TSK-1J8A1P"
+      }
+    ]
+  }
+}

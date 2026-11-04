@@ -1,0 +1,179 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-TCBZ",
+    "total_cycles": 17781,
+    "total_hours": 8161,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-5644",
+      "compliance_due_date": "2027-05-17",
+      "record_id": "AD-G7MET5",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-0234",
+      "compliance_due_date": "2027-04-01",
+      "record_id": "AD-177VH0",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-27",
+        "expiry_date": "2026-11-06",
+        "interval_days": 10
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-01",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-61NDPW",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-02",
+        "expiry_date": "2026-11-05",
+        "interval_days": 3
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-07",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-QEW6GK",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 11750,
+      "description": "Fan disk",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-47909",
+      "record_id": "LLP-0HQYNB",
+      "serial_number": "SYN-SN-953089"
+    },
+    {
+      "cycles_since_new": 12102,
+      "description": "LP compressor shaft",
+      "part_number": "SYN-PN-39558",
+      "record_id": "LLP-DTR2TF",
+      "serial_number": "SYN-SN-963210"
+    },
+    {
+      "cycles_since_new": 21443,
+      "description": "Propeller hub",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-84591",
+      "record_id": "LLP-6K517Y",
+      "serial_number": "SYN-SN-924183"
+    },
+    {
+      "cycles_since_new": 14100,
+      "description": "LP compressor shaft",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-91026",
+      "record_id": "LLP-RWMM5F",
+      "serial_number": "SYN-SN-985483"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-TH8STXE7",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 1200,
+      "last_done_hours": 7527,
+      "next_due_hours": 8727,
+      "record_id": "TSK-RCSAG7",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 600,
+      "next_due_hours": 8566,
+      "record_id": "TSK-P7G4DP",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 8112,
+      "next_due_hours": 8512,
+      "record_id": "TSK-TBFY8T",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 7704,
+      "next_due_hours": 8304,
+      "record_id": "TSK-M2Z1PY",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-F2P86E",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-0B5PRH",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-RCSAG7"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-0XFK64",
+        "signed_by": "Technician T-19",
+        "signoff_page_present": true,
+        "task_ref": "TSK-P7G4DP"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-K2HJ89",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TBFY8T"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-MV0QHY",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-M2Z1PY"
+      }
+    ]
+  }
+}

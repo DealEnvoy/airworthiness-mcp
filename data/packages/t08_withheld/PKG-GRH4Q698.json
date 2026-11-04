@@ -1,0 +1,171 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator F",
+    "registration": "SYN-MWQM",
+    "total_cycles": 10050,
+    "total_hours": 33627,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-8528",
+      "record_id": "AD-KG3A7K",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-14",
+        "interval_days": 10
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-08",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-8Q1YKF",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-06",
+        "expiry_date": "2026-11-05",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-10-06",
+      "record_id": "DEF-NZ4J8A",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 19500,
+      "description": "LP compressor shaft",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-24369",
+      "record_id": "LLP-3ZFADY",
+      "serial_number": "SYN-SN-933971"
+    },
+    {
+      "cycles_since_new": 27453,
+      "description": "Fan disk",
+      "part_number": "SYN-PN-30246",
+      "record_id": "LLP-C1QHNP",
+      "serial_number": "SYN-SN-753301"
+    },
+    {
+      "cycles_since_new": 23864,
+      "description": "HP turbine disk",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-71822",
+      "record_id": "LLP-MJ7MM5",
+      "serial_number": "SYN-SN-385368"
+    },
+    {
+      "cycles_since_new": 28966,
+      "description": "Starter generator shaft",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-15992",
+      "record_id": "LLP-QS8YBR",
+      "serial_number": "SYN-SN-897498"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-GRH4Q698",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 1200,
+      "next_due_hours": 34134,
+      "record_id": "TSK-64PYFE",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 33514,
+      "next_due_hours": 34114,
+      "record_id": "TSK-H2S2WX",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 32809,
+      "next_due_hours": 34009,
+      "record_id": "TSK-71RCNW",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 200,
+      "last_done_hours": 33570,
+      "next_due_hours": 33770,
+      "record_id": "TSK-GEJXFB",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-99AND5",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-PWQ99H",
+        "signed_by": "Technician T-38",
+        "signoff_page_present": true,
+        "task_ref": "TSK-64PYFE"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-GH93G8",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-H2S2WX"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-TH2Z5X",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-71RCNW"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-Y80TXF",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GEJXFB"
+      }
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-KBPV",
+    "total_cycles": 14696,
+    "total_hours": 8915,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-7325",
+      "compliance_due_date": "2027-05-23",
+      "record_id": "AD-MFBQJ1",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-3121",
+      "compliance_due_date": "2027-01-16",
+      "record_id": "AD-BTNKM2",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-29",
+      "raised_date": "2026-10-06",
+      "record_id": "DEF-AKNFC6",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-09-28",
+      "record_id": "DEF-Q1AQ4R",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-28",
+        "expiry_date": "2026-11-07",
+        "interval_days": 10
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-11",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-PKWX8R",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-06",
+      "raised_date": "2026-09-17",
+      "record_id": "DEF-EYMDYE",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 22591,
+      "description": "Fan disk",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-54271",
+      "record_id": "LLP-6K454J",
+      "serial_number": "SYN-SN-964308"
+    },
+    {
+      "cycles_since_new": 12576,
+      "description": "Starter generator shaft",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-24520",
+      "record_id": "LLP-RFN4QV"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-PTXPP68W",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 8787,
+      "next_due_hours": 8987,
+      "record_id": "TSK-6G23BB",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 200,
+      "next_due_hours": 8982,
+      "record_id": "TSK-5F5TK2",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 8831,
+      "record_id": "TSK-RJAH5C",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-PMY1V8",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-3NWGRQ",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-6G23BB"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-T1QW1F",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5F5TK2"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-9Q1P3H",
+        "signed_by": "Technician T-16",
+        "signoff_page_present": true,
+        "task_ref": "TSK-RJAH5C"
+      }
+    ]
+  }
+}

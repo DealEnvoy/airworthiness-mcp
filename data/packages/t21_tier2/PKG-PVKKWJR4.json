@@ -1,0 +1,149 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-PBUB",
+    "total_cycles": 24554,
+    "total_hours": 28623,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-7670",
+      "compliance_due_date": "2027-04-05",
+      "record_id": "AD-25BVW6",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-6043",
+      "compliance_due_date": "2026-11-21",
+      "record_id": "AD-KHPFS8",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-9371",
+      "compliance_due_date": "2026-12-11",
+      "record_id": "AD-G3W0BD",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-13",
+        "interval_days": 10
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-18",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-0RJMQ0",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2027-02-27",
+        "interval_days": 120
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-KTG4HD",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 10580,
+      "description": "Propeller hub",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-99363",
+      "record_id": "LLP-2EQEB0",
+      "serial_number": "SYN-SN-734176"
+    },
+    {
+      "cycles_since_new": 23117,
+      "description": "Propeller hub",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-52742",
+      "record_id": "LLP-8Z83V1",
+      "serial_number": "SYN-SN-108004"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-PVKKWJR4",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 200,
+      "last_done_hours": 28473,
+      "next_due_hours": 28673,
+      "record_id": "TSK-PQG0RA",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 28366,
+      "next_due_hours": 28966,
+      "record_id": "TSK-9HTHF5",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 400,
+      "last_done_hours": 28327,
+      "next_due_hours": 28727,
+      "record_id": "TSK-8W9TZY",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-5NW5S1",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-CP0F68",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-PQG0RA"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-6K8WSN",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-9HTHF5"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-T9HQRX",
+        "signed_by": "Technician T-27",
+        "signoff_page_present": true,
+        "task_ref": "TSK-8W9TZY"
+      }
+    ]
+  }
+}

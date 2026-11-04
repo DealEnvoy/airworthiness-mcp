@@ -1,0 +1,222 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-HCNZ",
+    "total_cycles": 24216,
+    "total_hours": 19778,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0155",
+      "compliance_due_date": "2027-02-13",
+      "record_id": "AD-N9S90F",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5363",
+      "compliance_due_date": "2026-12-12",
+      "record_id": "AD-M50750",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-2199",
+      "compliance_due_date": "2027-05-08",
+      "record_id": "AD-RZSAEY",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-29",
+        "expiry_date": "2026-11-08",
+        "interval_days": 10
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-17",
+      "raised_date": "2026-10-29",
+      "record_id": "DEF-0YYNRA",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-26",
+        "expiry_date": "2026-11-05",
+        "interval_days": 10
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-25",
+      "raised_date": "2026-10-26",
+      "record_id": "DEF-WP6TJS",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-39",
+      "raised_date": "2026-09-26",
+      "record_id": "DEF-KR9XGX",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-27",
+        "expiry_date": "2026-11-26",
+        "interval_days": 30
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-TWB96T",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 21834,
+      "description": "Propeller hub",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-13196",
+      "record_id": "LLP-FREM70",
+      "serial_number": "SYN-SN-655934"
+    },
+    {
+      "cycles_since_new": 10224,
+      "description": "Main gear axle",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-84662",
+      "record_id": "LLP-944DKF",
+      "serial_number": "SYN-SN-056553"
+    },
+    {
+      "cycles_since_new": 15314,
+      "description": "Starter generator shaft",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-68665",
+      "record_id": "LLP-9AANRK",
+      "serial_number": "SYN-SN-269221"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-CMHJJW7G",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 19755,
+      "next_due_hours": 19955,
+      "record_id": "TSK-HZGS8H",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 19498,
+      "next_due_hours": 20098,
+      "record_id": "TSK-Z435Y2",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 19268,
+      "next_due_hours": 19868,
+      "record_id": "TSK-MYM3CK",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 19259,
+      "next_due_hours": 19859,
+      "record_id": "TSK-ZBTET9",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 19763,
+      "next_due_hours": 19963,
+      "record_id": "TSK-50ZK0F",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-201F2V",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-KW2DZS",
+        "signed_by": null,
+        "signoff_page_present": false,
+        "task_ref": "TSK-HZGS8H"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-X1A5MT",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z435Y2"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-WCJ07H",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-MYM3CK"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-HT5QB8",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ZBTET9"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          4
+        ],
+        "record_id": "WPC-N5W23C",
+        "signed_by": "Technician T-15",
+        "signoff_page_present": true,
+        "task_ref": "TSK-50ZK0F"
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-WAEM",
+    "total_cycles": 13606,
+    "total_hours": 26838,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-4849",
+      "compliance_due_date": "2027-04-30",
+      "record_id": "AD-MQDH68",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5977",
+      "compliance_due_date": "2026-11-20",
+      "record_id": "AD-WE4GHQ",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "34",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-01",
+      "raised_date": "2026-09-22",
+      "record_id": "DEF-3AFBX3",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2026-11-29",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-YFJX2Y",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-Y2GDF0",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-XW5M8S",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-26",
+      "raised_date": "2026-10-25",
+      "record_id": "DEF-HQYV61",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-13",
+      "raised_date": "2026-10-20",
+      "record_id": "DEF-XEV5F7",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 30645,
+      "description": "Propeller hub",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-97716",
+      "record_id": "LLP-V3F0YH",
+      "serial_number": "SYN-SN-712518"
+    },
+    {
+      "cycles_since_new": 17855,
+      "description": "Fan disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-66909",
+      "record_id": "LLP-2CPX8H",
+      "serial_number": "SYN-SN-756700"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-MJR0PB1B",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 26622,
+      "next_due_hours": 27222,
+      "record_id": "TSK-E654YV",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 26540,
+      "next_due_hours": 27140,
+      "record_id": "TSK-SA888H",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 26576,
+      "next_due_hours": 27776,
+      "record_id": "TSK-HSGG2B",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 26823,
+      "next_due_hours": 27423,
+      "record_id": "TSK-X148Y4",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 26372,
+      "next_due_hours": 26972,
+      "record_id": "TSK-RD60W9",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-TTST8S",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-8GHC1R",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-E654YV"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-HQFK47",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-SA888H"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-46RC75",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-HSGG2B"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-J1M3MY",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-X148Y4"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-CE3VQF",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-RD60W9"
+      }
+    ]
+  }
+}

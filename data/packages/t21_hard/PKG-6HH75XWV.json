@@ -1,0 +1,222 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator H",
+    "registration": "SYN-QCPL",
+    "total_cycles": 18702,
+    "total_hours": 35320,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0339",
+      "compliance_due_date": "2027-02-22",
+      "record_id": "AD-0JQ9FA",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4506",
+      "compliance_due_date": "2027-02-12",
+      "record_id": "AD-TXJWCB",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7308",
+      "compliance_due_date": "2026-11-20",
+      "record_id": "AD-Z464NV",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-27",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-SC2SV5",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-05",
+        "expiry_date": "2026-11-04",
+        "interval_days": 30
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-10-05",
+      "record_id": "DEF-E3XE9Q",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-18",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-5AZMHW",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 11948,
+      "description": "Propeller hub",
+      "limit_cycles": 15000,
+      "part_number": "SYN-PN-75226",
+      "record_id": "LLP-E1GH8E",
+      "serial_number": "SYN-SN-274762"
+    },
+    {
+      "cycles_since_new": 29999,
+      "description": "LP compressor shaft",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-31379",
+      "record_id": "LLP-1XGBV2",
+      "serial_number": "SYN-SN-379168"
+    },
+    {
+      "cycles_since_new": 17564,
+      "description": "Propeller hub",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-23419",
+      "record_id": "LLP-NHE6WJ",
+      "serial_number": "SYN-SN-197617"
+    },
+    {
+      "cycles_since_new": 17706,
+      "description": "Fan disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-23000",
+      "record_id": "LLP-3QMRBG",
+      "serial_number": "SYN-SN-411626"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-6HH75XWV",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 35138,
+      "next_due_hours": 35738,
+      "record_id": "TSK-P9RETJ",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 35198,
+      "next_due_hours": 36398,
+      "record_id": "TSK-V9GXF5",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 35227,
+      "next_due_hours": 35427,
+      "record_id": "TSK-RH0VBG",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 600,
+      "last_done_hours": 34721,
+      "next_due_hours": 35321,
+      "record_id": "TSK-PS3HEQ",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 1200,
+      "last_done_hours": 34581,
+      "next_due_hours": 35781,
+      "record_id": "TSK-YZW9GX",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-XDVVGC",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-AFP87J",
+        "signed_by": "Technician T-13",
+        "signoff_page_present": true,
+        "task_ref": "TSK-P9RETJ"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-CT51AY",
+        "signed_by": "Technician T-09",
+        "signoff_page_present": true,
+        "task_ref": "TSK-V9GXF5"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-XDNBWH",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-RH0VBG"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-FSGQK3",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-PS3HEQ"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-3ADWXS",
+        "signed_by": "Technician T-15",
+        "signoff_page_present": true,
+        "task_ref": "TSK-YZW9GX"
+      }
+    ]
+  }
+}

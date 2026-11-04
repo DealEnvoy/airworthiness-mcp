@@ -1,0 +1,190 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-RJJJ",
+    "total_cycles": 28555,
+    "total_hours": 30952,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1205",
+      "compliance_due_date": "2027-04-29",
+      "record_id": "AD-DQZNN2",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-3404",
+      "compliance_due_date": "2027-05-20",
+      "record_id": "AD-0J2WM1",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-20",
+        "expiry_date": "2026-11-19",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-10-20",
+      "record_id": "DEF-8M0HH0",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-09-13",
+      "record_id": "DEF-MDFS9B",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-CS50WH",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2026-11-09",
+        "interval_days": 10
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-33",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-FZDK9N",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 20580,
+      "description": "HP turbine disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-94339",
+      "record_id": "LLP-38VR89",
+      "serial_number": "SYN-SN-996384"
+    },
+    {
+      "cycles_since_new": 16515,
+      "description": "LP compressor shaft",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-04826",
+      "record_id": "LLP-7VGBKE",
+      "serial_number": "SYN-SN-371285"
+    },
+    {
+      "cycles_since_new": 25850,
+      "description": "Propeller hub",
+      "limit_cycles": 30000,
+      "part_number": "SYN-PN-15747",
+      "record_id": "LLP-7QKHWF",
+      "serial_number": "SYN-SN-318227"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-1NZV482Y",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 30685,
+      "next_due_hours": 31285,
+      "record_id": "TSK-327W9C",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 30872,
+      "next_due_hours": 31472,
+      "record_id": "TSK-2AS9WR",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 30384,
+      "next_due_hours": 31584,
+      "record_id": "TSK-0PESFB",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 200,
+      "last_done_hours": 30816,
+      "next_due_hours": 31016,
+      "record_id": "TSK-TXMXJS",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-FBEVEX",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-550851",
+        "signed_by": "Technician T-27",
+        "signoff_page_present": true,
+        "task_ref": "TSK-327W9C"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-J0HX72",
+        "signed_by": "Technician T-20",
+        "signoff_page_present": true,
+        "task_ref": "TSK-2AS9WR"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-70SNQM",
+        "signed_by": "Technician T-33",
+        "signoff_page_present": true,
+        "task_ref": "TSK-0PESFB"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          2,
+          3
+        ],
+        "record_id": "WPC-CMTH82",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TXMXJS"
+      }
+    ]
+  }
+}

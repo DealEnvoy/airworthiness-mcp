@@ -1,0 +1,217 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-BTZX",
+    "total_cycles": 11106,
+    "total_hours": 23932,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-5440",
+      "compliance_due_date": "2027-02-09",
+      "record_id": "AD-P22BRQ",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-2614",
+      "compliance_due_date": "2027-02-05",
+      "record_id": "AD-D42B7A",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4740",
+      "compliance_due_date": "2027-02-26",
+      "record_id": "AD-QVR9GB",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-10",
+        "expiry_date": "2027-02-07",
+        "interval_days": 120
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-07",
+      "raised_date": "2026-10-10",
+      "record_id": "DEF-4XS6XG",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-28",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-GD9Q8F",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-12",
+      "raised_date": "2026-10-05",
+      "record_id": "DEF-AE7R78",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-02",
+      "raised_date": "2026-09-30",
+      "record_id": "DEF-NXTEC7",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-30",
+      "raised_date": "2026-09-25",
+      "record_id": "DEF-VP16MF",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 16002,
+      "description": "Fan disk",
+      "limit_cycles": 20000,
+      "part_number": "SYN-PN-04067",
+      "record_id": "LLP-T8VBZH",
+      "serial_number": "SYN-SN-793586"
+    },
+    {
+      "cycles_since_new": 24427,
+      "description": "Fan disk",
+      "limit_cycles": 25000,
+      "part_number": "SYN-PN-48806",
+      "record_id": "LLP-BMFP0M",
+      "serial_number": "SYN-SN-172026"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-VZ41RXV4",
+  "reference_date": "2026-11-04",
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 200,
+      "last_done_hours": 23837,
+      "next_due_hours": 24037,
+      "record_id": "TSK-1XJG8Q",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 1200,
+      "last_done_hours": 23875,
+      "next_due_hours": 25075,
+      "record_id": "TSK-7YH4AF",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 23577,
+      "next_due_hours": 24177,
+      "record_id": "TSK-5PK9TW",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 400,
+      "last_done_hours": 23827,
+      "next_due_hours": 24227,
+      "record_id": "TSK-CW454H",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 23583,
+      "next_due_hours": 24183,
+      "record_id": "TSK-99P9PN",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-B71WYJ",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-2VYC8F",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-1XJG8Q"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-TEJ7H4",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-7YH4AF"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-TSPKRA",
+        "signed_by": "Technician T-06",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5PK9TW"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-WXG59T",
+        "signed_by": null,
+        "signoff_page_present": false,
+        "task_ref": "TSK-CW454H"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-BVNGB5",
+        "signed_by": "Technician T-32",
+        "signoff_page_present": true,
+        "task_ref": "TSK-99P9PN"
+      }
+    ]
+  }
+}
