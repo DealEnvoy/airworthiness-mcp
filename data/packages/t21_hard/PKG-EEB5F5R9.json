@@ -1,0 +1,209 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-CFZV",
+    "total_cycles": 24812,
+    "total_hours": 23564,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-6963",
+      "compliance_due_date": "2027-04-18",
+      "record_id": "AD-ZEKKF1",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-8830",
+      "compliance_due_date": "2027-05-14",
+      "record_id": "AD-AVZ5SC",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5078",
+      "compliance_due_date": "2026-11-17",
+      "record_id": "AD-9MM1AF",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-29",
+        "expiry_date": "2027-01-27",
+        "interval_days": 120
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-27",
+      "raised_date": "2026-09-29",
+      "record_id": "DEF-JWXCBV",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-02",
+        "expiry_date": "2026-11-01",
+        "interval_days": 30
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-34",
+      "raised_date": "2026-10-02",
+      "record_id": "DEF-8CGESD",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-5641VP",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-36",
+      "raised_date": "2026-09-24",
+      "record_id": "DEF-QM0PJX",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-39",
+      "raised_date": "2026-09-19",
+      "record_id": "DEF-JZN20V",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 18266,
+      "description": "Main gear axle",
+      "installed_date": "2025-04-24",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-MGA-22163",
+      "received_date": "2024-12-21",
+      "record_id": "LLP-WT1W06",
+      "release_certificate_ref": "SYN-CERT-X2EM2WGV",
+      "serial_number": "SYN-SN-MGA-106591",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 25971,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-03-16",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-SGS-77076",
+      "received_date": "2024-12-06",
+      "record_id": "LLP-6G5YPN",
+      "release_certificate_ref": "SYN-CERT-EQ3Y4X6R",
+      "serial_number": "SYN-SN-SGS-288360",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 22343,
+      "description": "HP turbine disk",
+      "installed_date": "2026-04-20",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-HPT-03217",
+      "received_date": "2026-01-28",
+      "record_id": "LLP-MYX5RA",
+      "release_certificate_ref": "SYN-CERT-ZDFWTTZM",
+      "serial_number": "SYN-SN-HPT-609820",
+      "supplier": "Fictional Supplier A"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-EEB5F5R9",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 1200,
+      "last_done_hours": 22681,
+      "next_due_hours": 23881,
+      "record_id": "TSK-J4NH6S",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 22754,
+      "next_due_hours": 23954,
+      "record_id": "TSK-HTEVYA",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 22767,
+      "next_due_hours": 23967,
+      "record_id": "TSK-ZQ0VEF",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-D8ETZ1",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-QSFTCM",
+        "signed_by": "Technician T-38",
+        "signoff_page_present": true,
+        "task_ref": "TSK-J4NH6S"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-XM8J6J",
+        "signed_by": "Technician T-32",
+        "signoff_page_present": true,
+        "task_ref": "TSK-HTEVYA"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-83D29Q",
+        "signed_by": null,
+        "signoff_page_present": false,
+        "task_ref": "TSK-ZQ0VEF"
+      }
+    ]
+  }
+}

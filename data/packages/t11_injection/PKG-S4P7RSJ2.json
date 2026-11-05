@@ -1,0 +1,201 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator F",
+    "registration": "SYN-MBVB",
+    "total_cycles": 13465,
+    "total_hours": 27535,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-6120",
+      "compliance_due_date": "2026-11-24",
+      "record_id": "AD-20ZJGM",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual [note](javascript:alert('CANARY-98786D48D32A')) <img src=x onerror=\"print('CANARY-98786D48D32A')\">"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7926",
+      "compliance_due_date": "2027-02-18",
+      "record_id": "AD-D3508T",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-6617",
+      "compliance_due_date": "2027-05-10",
+      "record_id": "AD-2RHFNM",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-27",
+        "expiry_date": "2026-11-06",
+        "interval_days": 10
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-WMEET1",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-12-03",
+        "interval_days": 30
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-17",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-KVKMAN",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-10-01",
+      "record_id": "DEF-FK0QHS",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 20995,
+      "description": "LP compressor shaft",
+      "installed_date": "2024-08-22",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-LPC-01103",
+      "received_date": "2024-06-06",
+      "record_id": "LLP-WM7Q7C",
+      "release_certificate_ref": "SYN-CERT-2YZX92YC",
+      "serial_number": "SYN-SN-LPC-289642",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 16603,
+      "description": "HP turbine disk",
+      "installed_date": "2025-02-08",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-HPT-69910",
+      "received_date": "2024-10-01",
+      "record_id": "LLP-YV5XXY",
+      "release_certificate_ref": "SYN-CERT-AK39JMYF",
+      "serial_number": "SYN-SN-HPT-531972",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 26381,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-06-28",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-07326",
+      "received_date": "2026-02-06",
+      "record_id": "LLP-SXKKP9",
+      "release_certificate_ref": "SYN-CERT-7CGX6JFC",
+      "serial_number": "SYN-SN-SGS-857108",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 12831,
+      "description": "Main gear axle",
+      "installed_date": "2024-11-18",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-MGA-78540",
+      "received_date": "2024-11-09",
+      "record_id": "LLP-00HQR2",
+      "release_certificate_ref": "SYN-CERT-8VMCWN8N",
+      "serial_number": "SYN-SN-MGA-172780",
+      "supplier": "Fictional Supplier C"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-S4P7RSJ2",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 1200,
+      "last_done_hours": 26756,
+      "next_due_hours": 27956,
+      "record_id": "TSK-77VQCP",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 27402,
+      "next_due_hours": 27602,
+      "record_id": "TSK-BYW7Q5",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 27268,
+      "next_due_hours": 27868,
+      "record_id": "TSK-KA8666",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-VKHHVM",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-V231BT",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-77VQCP"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-GF7085",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-BYW7Q5"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-18G3HA",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-KA8666"
+      }
+    ]
+  }
+}

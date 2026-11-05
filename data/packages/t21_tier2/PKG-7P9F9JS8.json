@@ -1,0 +1,246 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-SNLR",
+    "total_cycles": 8860,
+    "total_hours": 16043,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-9018",
+      "compliance_due_date": "2026-12-14",
+      "record_id": "AD-XVTQKN",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-3143",
+      "compliance_due_date": "2027-02-27",
+      "record_id": "AD-CETYWS",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4954",
+      "compliance_due_date": "2026-11-25",
+      "record_id": "AD-ZFNDPH",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-14",
+        "expiry_date": "2026-11-13",
+        "interval_days": 30
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-32",
+      "raised_date": "2026-10-14",
+      "record_id": "DEF-RTQ72T",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-08",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-T0CBBP",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-WX1GR2",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-31",
+        "expiry_date": "2026-11-10",
+        "interval_days": 10
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-12",
+      "raised_date": "2026-10-31",
+      "record_id": "DEF-4635EK",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-08",
+      "raised_date": "2026-10-09",
+      "record_id": "DEF-0SHA8S",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "29",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-10-04",
+      "record_id": "DEF-CBESQG",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15308,
+      "description": "Propeller hub",
+      "installed_date": "2024-12-22",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-PRH-59905",
+      "received_date": "2024-08-13",
+      "record_id": "LLP-TBKZCM",
+      "release_certificate_ref": "SYN-CERT-DME89M1C",
+      "serial_number": "SYN-SN-PRH-987346",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 15789,
+      "description": "Main gear axle",
+      "installed_date": "2026-02-28",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-MGA-84938",
+      "received_date": "2025-10-08",
+      "record_id": "LLP-QJCFEG",
+      "release_certificate_ref": "SYN-CERT-YAYC1WDX",
+      "serial_number": "SYN-SN-MGA-002253",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-7P9F9JS8",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 15972,
+      "next_due_hours": 17172,
+      "record_id": "TSK-BJ3BJN",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 15956,
+      "next_due_hours": 16156,
+      "record_id": "TSK-NHD02K",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 200,
+      "last_done_hours": 15942,
+      "next_due_hours": 16142,
+      "record_id": "TSK-T25R7H",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 15982,
+      "next_due_hours": 16382,
+      "record_id": "TSK-5ENZ1S",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 200,
+      "last_done_hours": 15934,
+      "next_due_hours": 16134,
+      "record_id": "TSK-D993M3",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-Y373MB",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-55ZGRF",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-BJ3BJN"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-XG69FH",
+        "signed_by": "Technician T-07",
+        "signoff_page_present": true,
+        "task_ref": "TSK-NHD02K"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-1YY2ZR",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-T25R7H"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-SRA95A",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5ENZ1S"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-T6BHH9",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-D993M3"
+      }
+    ]
+  }
+}

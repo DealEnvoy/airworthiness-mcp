@@ -1,0 +1,211 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-WHJZ",
+    "total_cycles": 28116,
+    "total_hours": 29150,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0488",
+      "compliance_due_date": "2027-02-06",
+      "record_id": "AD-YYH44E",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5821",
+      "compliance_due_date": "2027-05-23",
+      "record_id": "AD-9Z28DS",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5380",
+      "compliance_due_date": "2026-11-28",
+      "record_id": "AD-MB1C0G",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-28",
+        "expiry_date": "2026-11-27",
+        "interval_days": 30
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-17",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-JKVKYM",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-25",
+        "expiry_date": "2027-02-22",
+        "interval_days": 120
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-10-25",
+      "record_id": "DEF-YFMD89",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 27227,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-01-10",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-LPC-48307",
+      "received_date": "2024-09-22",
+      "record_id": "LLP-1MGJ2E",
+      "release_certificate_ref": "SYN-CERT-99YAQN8H",
+      "serial_number": "SYN-SN-LPC-051774",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 18209,
+      "description": "Fan disk",
+      "installed_date": "2025-08-28",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-FND-67772",
+      "received_date": "2025-07-09",
+      "record_id": "LLP-NSB5T8",
+      "release_certificate_ref": "SYN-CERT-WY0G35G2",
+      "serial_number": "SYN-SN-FND-694079",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 19192,
+      "description": "Propeller hub",
+      "installed_date": "2026-06-15",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-70789",
+      "received_date": "2026-02-03",
+      "record_id": "LLP-D62FRH",
+      "release_certificate_ref": "SYN-CERT-JPRK1W4Q",
+      "serial_number": "SYN-SN-PRH-651808",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 15924,
+      "description": "Fan disk",
+      "installed_date": "2025-08-02",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-FND-22097",
+      "received_date": "2025-04-15",
+      "record_id": "LLP-1RJFXZ",
+      "release_certificate_ref": "SYN-CERT-1ZX4T7P0",
+      "serial_number": "SYN-SN-FND-690224",
+      "supplier": "Fictional Supplier F"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-3TDEV91D",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 400,
+      "last_done_hours": 29053,
+      "next_due_hours": 29453,
+      "record_id": "TSK-EV754J",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 400,
+      "last_done_hours": 29061,
+      "next_due_hours": 29461,
+      "record_id": "TSK-FEP3QR",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 29031,
+      "next_due_hours": 29631,
+      "record_id": "TSK-JN0PGQ",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 28275,
+      "next_due_hours": 29475,
+      "record_id": "TSK-QATC0G",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-WHMM5S",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-K6RC6C",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-EV754J"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-11FE28",
+        "signed_by": "Technician T-17",
+        "signoff_page_present": true,
+        "task_ref": "TSK-FEP3QR"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-TJE2DH",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-JN0PGQ"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-199KK3",
+        "signed_by": "Technician T-26",
+        "signoff_page_present": true,
+        "task_ref": "TSK-QATC0G"
+      }
+    ]
+  }
+}

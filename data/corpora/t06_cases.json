@@ -1,0 +1,598 @@
+{
+  "bundle_files": [
+    "SYN-REG-A.txt",
+    "SYN-REG-B.txt",
+    "SYN-REG-C.txt"
+  ],
+  "cases": [
+    {
+      "case_id": "T06-C001",
+      "citation": {
+        "field": "compliance_due_date",
+        "record_id": "AD-8R74XZ",
+        "tool_call_id": "TC-0005",
+        "value": "2027-04-07"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C002",
+      "citation": {
+        "file": "SYN-REG-A.txt",
+        "quote": "A.10 A maintenance organisation shall keep a record of any task card, including the identity of the person who signed it."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C003",
+      "citation": {
+        "field": "limit_cycles",
+        "record_id": "LLP-SND207",
+        "tool_call_id": "TC-0006",
+        "value": 24999
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C004",
+      "citation": {
+        "file": "SYN-REG-C.txt",
+        "quote": "C.34 Installation shall not be recorded after the part is received."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C005",
+      "citation": {
+        "field": "status",
+        "record_id": "AD-TYEVCY",
+        "tool_call_id": "TC-0007",
+        "value": "open"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C006",
+      "citation": {
+        "field": "ata_chapter",
+        "record_id": "DEF-KQYDZQ",
+        "tool_call_id": "TC-0009",
+        "value": "49X"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C007",
+      "citation": {
+        "file": "SYN-REG-A.txt",
+        "quote": "A.15 An airworthiness directive may be complied with by its due date."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C008",
+      "citation": {
+        "field": "status",
+        "record_id": "AD-TYEVCY",
+        "tool_call_id": "TC-0007",
+        "value": "openX"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C009",
+      "citation": {
+        "field": "compliance_due_date",
+        "record_id": "AD-HB76J0",
+        "tool_call_id": "TC-0008",
+        "value": "2026-11-28"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C010",
+      "citation": {
+        "file": "SYN-REG-C.txt",
+        "quote": "C.35 Tools used for critical work shall be within their calibration date."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C011",
+      "citation": {
+        "file": "SYN-REG-B.txt",
+        "quote": "B.21 No person shall not certify work that they have not personally checked."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C012",
+      "citation": {
+        "file": "SYN-REG-X.txt",
+        "quote": "X.40 Every aircraft shall have a nominated person responsible for its continuing records."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C013",
+      "citation": {
+        "file": "SYN-REG-B.txt",
+        "quote": "B.20 A person who certifies a work package shall hold a valid authorisation issued by the organisation."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C014",
+      "citation": {
+        "file": "SYN-REG-C.txt",
+        "quote": "C.32 A part with unclear documentation may be quarantined until the documentation is checked."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C015",
+      "citation": {
+        "field": "cycles_since_new",
+        "record_id": "LLP-X5N00Z",
+        "tool_call_id": "TC-0001",
+        "value": 14205
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C016",
+      "citation": {
+        "file": "SYN-REG-X.txt",
+        "quote": "X.42 Records shall be kept in a form that cannot be altered without detection."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C017",
+      "citation": {
+        "field": "compliance_due_date",
+        "record_id": "AD-C4MTPT",
+        "tool_call_id": "TC-0010",
+        "value": "2027-03-26"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C018",
+      "citation": {
+        "file": "SYN-REG-B.txt",
+        "quote": "B.22  The organisation shall\nreview its procedures every twelve months."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C019",
+      "citation": {
+        "file": "SYN-REG-C.txt",
+        "quote": "C.33 Serial numbers shall not be unique for each part type."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C020",
+      "citation": {
+        "field": "ata_chapter",
+        "record_id": "DEF-QASTJ2",
+        "tool_call_id": "TC-0005",
+        "value": "34"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C021",
+      "citation": {
+        "file": "SYN-REG-C.txt",
+        "quote": "C.32  A part with\nunclear documentation shall be quarantined until the documentation is checked."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C022",
+      "citation": {
+        "file": "SYN-REG-D.txt",
+        "quote": "X.43 A defect deferred more than once shall be reviewed by a senior engineer."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C023",
+      "citation": {
+        "field": "raised_date",
+        "record_id": "DEF-H5BWW1",
+        "tool_call_id": "TC-0008",
+        "value": "2026-10-15"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C024",
+      "citation": {
+        "field": "limit_cycles",
+        "record_id": "LLP-7AE10Z",
+        "tool_call_id": "TC-0003",
+        "value": 20000
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C025",
+      "citation": {
+        "field": "next_due_hours",
+        "record_id": "TSK-HSNZ33",
+        "tool_call_id": "TC-0009",
+        "value": 32571
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C026",
+      "citation": {
+        "file": "SYN-REG-D.txt",
+        "quote": "X.41 A summary of findings shall be signed by the reviewer before it is filed."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C027",
+      "citation": {
+        "field": "compliance_due_date",
+        "record_id": "AD-TYEVCY",
+        "tool_call_id": "TC-0007",
+        "value": "2027-05-18"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C028",
+      "citation": {
+        "field": "cycles_since_new",
+        "record_id": "LLP-X5N00Z",
+        "tool_call_id": "TC-0001",
+        "value": 14198
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C029",
+      "citation": {
+        "file": "SYN-REG-X.txt",
+        "quote": "X.44 The time limit for a repeat inspection shall not be extended without written approval."
+      },
+      "kind": "regulatory_quote"
+    },
+    {
+      "case_id": "T06-C030",
+      "citation": {
+        "field": "next_due_hours",
+        "record_id": "TSK-B9W1Z3",
+        "tool_call_id": "TC-0012",
+        "value": 21120
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C031",
+      "citation": {
+        "field": "status",
+        "record_id": "AD-14ZCJY",
+        "tool_call_id": "TC-0006",
+        "value": "open"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C032",
+      "citation": {
+        "field": "cycles_since_new",
+        "record_id": "LLP-CT4JCP",
+        "tool_call_id": "TC-0004",
+        "value": 17153
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C033",
+      "citation": {
+        "field": "limit_cycles",
+        "record_id": "LLP-1S877B",
+        "tool_call_id": "TC-0005",
+        "value": 25000
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C034",
+      "citation": {
+        "field": "ata_chapter",
+        "record_id": "DEF-2T66S6",
+        "tool_call_id": "TC-0007",
+        "value": "71"
+      },
+      "kind": "record_citation"
+    },
+    {
+      "case_id": "T06-C035",
+      "citation": {
+        "field": "limit_cycles",
+        "record_id": "LLP-QX2EVE",
+        "tool_call_id": "TC-0011",
+        "value": 25100
+      },
+      "kind": "record_citation"
+    }
+  ],
+  "note": "Cases are unlabelled. A validator must accept genuine citations and reject fabricated ones.",
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record. The regulatory bundle is fictional text for testing a validator.",
+  "recorded_tool_results": [
+    {
+      "package_id": "PKG-XXRD1TGY",
+      "records": {
+        "AD-14ZCJY": {
+          "compliance_due_date": "2027-04-14",
+          "status": "open"
+        },
+        "DEF-NHE5AT": {
+          "ata_chapter": "21",
+          "raised_date": "2026-11-03"
+        },
+        "LLP-X5N00Z": {
+          "cycles_since_new": 14198,
+          "limit_cycles": 15000
+        },
+        "TSK-X13BYJ": {
+          "next_due_hours": 25289
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0001"
+    },
+    {
+      "package_id": "PKG-40T3823Q",
+      "records": {
+        "AD-14ZCJY": {
+          "compliance_due_date": "2027-04-14",
+          "status": "open"
+        },
+        "DEF-NHE5AT": {
+          "ata_chapter": "21",
+          "raised_date": "2026-11-03"
+        },
+        "LLP-X5N00Z": {
+          "cycles_since_new": 14198,
+          "limit_cycles": 15000
+        },
+        "TSK-X13BYJ": {
+          "next_due_hours": 25289
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0002"
+    },
+    {
+      "package_id": "PKG-NTV8TBA0",
+      "records": {
+        "AD-RMMFVC": {
+          "compliance_due_date": "2027-05-07",
+          "status": "open"
+        },
+        "DEF-VCFQSG": {
+          "ata_chapter": "27",
+          "raised_date": "2026-09-16"
+        },
+        "LLP-7AE10Z": {
+          "cycles_since_new": 17153,
+          "limit_cycles": 20000
+        },
+        "TSK-AWYTBQ": {
+          "next_due_hours": 27179
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0003"
+    },
+    {
+      "package_id": "PKG-AG9B03QA",
+      "records": {
+        "AD-RMMFVC": {
+          "compliance_due_date": "2027-05-07",
+          "status": "open"
+        },
+        "DEF-VCFQSG": {
+          "ata_chapter": "27",
+          "raised_date": "2026-09-16"
+        },
+        "LLP-7AE10Z": {
+          "cycles_since_new": 17153,
+          "limit_cycles": 20000
+        },
+        "TSK-AWYTBQ": {
+          "next_due_hours": 27179
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0004"
+    },
+    {
+      "package_id": "PKG-Q509C73J",
+      "records": {
+        "AD-XHVDKP": {
+          "compliance_due_date": "2027-04-07",
+          "status": "open"
+        },
+        "DEF-H5BWW1": {
+          "ata_chapter": "34",
+          "raised_date": "2026-10-15"
+        },
+        "LLP-SND207": {
+          "cycles_since_new": 22976,
+          "limit_cycles": 25000
+        },
+        "TSK-G503F0": {
+          "next_due_hours": 14326
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0005"
+    },
+    {
+      "package_id": "PKG-23RM4NH3",
+      "records": {
+        "AD-XHVDKP": {
+          "compliance_due_date": "2027-04-07",
+          "status": "open"
+        },
+        "DEF-H5BWW1": {
+          "ata_chapter": "34",
+          "raised_date": "2026-10-15"
+        },
+        "LLP-SND207": {
+          "cycles_since_new": 22976,
+          "limit_cycles": 25000
+        },
+        "TSK-G503F0": {
+          "next_due_hours": 14326
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0006"
+    },
+    {
+      "package_id": "PKG-NHK8SDMK",
+      "records": {
+        "AD-TYEVCY": {
+          "compliance_due_date": "2027-05-17",
+          "status": "open"
+        },
+        "DEF-2T66S6": {
+          "ata_chapter": "71",
+          "raised_date": "2026-10-31"
+        },
+        "LLP-6CSHJV": {
+          "cycles_since_new": 22786,
+          "limit_cycles": 25000
+        },
+        "TSK-WPCG2B": {
+          "next_due_hours": 34133
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0007"
+    },
+    {
+      "package_id": "PKG-3EJ0873T",
+      "records": {
+        "AD-TYEVCY": {
+          "compliance_due_date": "2027-05-17",
+          "status": "open"
+        },
+        "DEF-2T66S6": {
+          "ata_chapter": "71",
+          "raised_date": "2026-10-31"
+        },
+        "LLP-6CSHJV": {
+          "cycles_since_new": 22786,
+          "limit_cycles": 25000
+        },
+        "TSK-WPCG2B": {
+          "next_due_hours": 34133
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0008"
+    },
+    {
+      "package_id": "PKG-PKDV760V",
+      "records": {
+        "AD-C4MTPT": {
+          "compliance_due_date": "2026-08-25",
+          "status": "open"
+        },
+        "DEF-KQYDZQ": {
+          "ata_chapter": "49",
+          "raised_date": "2026-09-15"
+        },
+        "LLP-XVS9RT": {
+          "cycles_since_new": 27770,
+          "limit_cycles": 30000
+        },
+        "TSK-HSNZ33": {
+          "next_due_hours": 32570
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0009"
+    },
+    {
+      "package_id": "PKG-ETVQ7TXP",
+      "records": {
+        "AD-C4MTPT": {
+          "compliance_due_date": "2027-03-26",
+          "status": "open"
+        },
+        "DEF-KQYDZQ": {
+          "ata_chapter": "49",
+          "raised_date": "2026-09-15"
+        },
+        "LLP-XVS9RT": {
+          "cycles_since_new": 27770,
+          "limit_cycles": 30000
+        },
+        "TSK-HSNZ33": {
+          "next_due_hours": 32570
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0010"
+    },
+    {
+      "package_id": "PKG-320W1RC2",
+      "records": {
+        "AD-HB76J0": {
+          "compliance_due_date": "2026-11-28",
+          "status": "open"
+        },
+        "DEF-0K9B17": {
+          "ata_chapter": "29",
+          "raised_date": "2026-09-11"
+        },
+        "LLP-QX2EVE": {
+          "cycles_since_new": 21677,
+          "limit_cycles": 25000
+        },
+        "TSK-B9W1Z3": {
+          "next_due_hours": 21120
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0011"
+    },
+    {
+      "package_id": "PKG-JTPHPH9X",
+      "records": {
+        "AD-HB76J0": {
+          "compliance_due_date": "2026-11-28",
+          "status": "open"
+        },
+        "DEF-0K9B17": {
+          "ata_chapter": "29",
+          "raised_date": "2026-09-11"
+        },
+        "LLP-QX2EVE": {
+          "cycles_since_new": 21677,
+          "limit_cycles": 25000
+        },
+        "TSK-B9W1Z3": {
+          "next_due_hours": 21120
+        }
+      },
+      "tool": "get_package_records",
+      "tool_call_id": "TC-0012"
+    }
+  ],
+  "test": "T06"
+}

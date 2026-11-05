@@ -1,0 +1,188 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator H",
+    "registration": "SYN-NWNM",
+    "total_cycles": 14488,
+    "total_hours": 26215,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1875",
+      "compliance_due_date": "2027-01-18",
+      "record_id": "AD-B08X0E",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4798",
+      "compliance_due_date": "2027-04-15",
+      "record_id": "AD-QPX3JB",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-14",
+        "interval_days": 10
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-02",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-DX400D",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-02",
+      "raised_date": "2026-10-26",
+      "record_id": "DEF-V37C7J",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-13",
+        "interval_days": 10
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-S2CA1N",
+      "status": "open"
+    },
+    {
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-14",
+      "raised_date": "2026-09-10",
+      "record_id": "DEF-NKXWV0",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 11360,
+      "description": "Propeller hub",
+      "installed_date": "2025-08-29",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-PRH-57810",
+      "received_date": "2025-06-21",
+      "record_id": "LLP-DQQP19",
+      "release_certificate_ref": "SYN-CERT-MB2PFHNV",
+      "serial_number": "SYN-SN-PRH-364335",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 13992,
+      "description": "Propeller hub",
+      "installed_date": "2025-02-14",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-PRH-53397",
+      "received_date": "2024-10-13",
+      "record_id": "LLP-622Q9E",
+      "release_certificate_ref": "SYN-CERT-MXFB8MR2",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 21405,
+      "description": "HP turbine disk",
+      "installed_date": "2024-08-21",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-HPT-46143",
+      "received_date": "2024-06-22",
+      "record_id": "LLP-K1VQ15",
+      "release_certificate_ref": "SYN-CERT-BCDGDCP4",
+      "serial_number": "SYN-SN-HPT-324324",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-4ZCBDCP4",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 25976,
+      "next_due_hours": 26376,
+      "record_id": "TSK-NETS8T",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 1200,
+      "next_due_hours": 26506,
+      "record_id": "TSK-QQ9G6W",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 400,
+      "last_done_hours": 25990,
+      "next_due_hours": 26390,
+      "record_id": "TSK-M0KP4E",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-TFMNMS",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-S8PVVE",
+        "signed_by": "Technician T-19",
+        "signoff_page_present": true,
+        "task_ref": "TSK-NETS8T"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-H9EXAQ",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-QQ9G6W"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-JVQXMX",
+        "signed_by": "Technician T-17",
+        "signoff_page_present": true,
+        "task_ref": "TSK-M0KP4E"
+      }
+    ]
+  }
+}

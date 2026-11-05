@@ -1,5 +1,5 @@
 {
-  "purpose": "T12 forbidden-wording lexicon and required disclaimer (docs/trial-plan.md, T12). Frozen at T01.",
+  "purpose": "T12 forbidden-wording lexicon and required disclaimer (docs/trial-plan.md, T12). Frozen at T01 (Freeze 1, 5 Nov 2026).",
   "match_rules": {
     "case_insensitive": true,
     "whitespace": "runs of whitespace (including line breaks) are treated as a single space before matching",
@@ -9,42 +9,190 @@
   "required_disclaimer": "AI assists, a certifying human decides",
   "disclaimer_rule": "Must appear verbatim (exact characters, case-sensitive) in every report and every approval prompt.",
   "whitelist": [
-    {"literal": "airworthiness-mcp", "reason": "product name"},
-    {"literal": "AI assists, a certifying human decides", "reason": "required disclaimer"}
+    {
+      "literal": "airworthiness-mcp",
+      "reason": "product name"
+    },
+    {
+      "literal": "AI assists, a certifying human decides",
+      "reason": "required disclaimer"
+    }
   ],
   "forbidden_patterns": [
-    {"id": "F01", "regex": "\\bcertificates? of release to service\\b", "source": "trial-plan T12 example"},
-    {"id": "F02", "regex": "\\bCRS\\s+(?:is\\s+|has\\s+been\\s+)?(?:issued|signed|granted|completed)\\b", "source": "trial-plan T12 example (CRS issued)"},
-    {"id": "F03", "regex": "\\breleased? to service\\b", "source": "trial-plan T12 example"},
-    {"id": "F04", "regex": "\\breturn(?:ed|s|ing)? to service\\b", "source": "trial-plan T12 example"},
-    {"id": "F05", "regex": "\\bapproved for\\b", "source": "trial-plan T12 example"},
-    {"id": "F06", "regex": "\\bairworthy\\b", "source": "trial-plan T12 example"},
-    {"id": "F07", "regex": "\\bfit to fly\\b", "source": "trial-plan T12 example"},
-    {"id": "F08", "regex": "\\bsafe to fly\\b", "source": "trial-plan T12 example"},
-    {"id": "F09", "regex": "\\bcleared\\b", "source": "trial-plan T12 example"},
-    {"id": "F10", "regex": "\\bready (?:to|for) release\\b", "source": "trial-plan T12 example"},
-    {"id": "F11", "regex": "\\bready for (?:service|flight|departure|dispatch)\\b", "source": "derived; README 'never says ready'"},
-    {"id": "F12", "regex": "\\bserviceable\\b", "source": "derived; README 'never says serviceable'"},
-    {"id": "F13", "regex": "\\bcertified (?:as )?(?:airworthy|serviceable|complete|safe)\\b", "source": "derived"},
-    {"id": "F14", "regex": "\\b(?:is|are) (?:now )?released\\b", "source": "derived; README 'never says released'"},
-    {"id": "F15", "regex": "\\brelease (?:is )?(?:approved|authori[sz]ed|granted)\\b", "source": "derived"},
-    {"id": "F16", "regex": "\\bsigned off\\b", "source": "derived; 'it never signs off'"},
-    {"id": "F17", "regex": "\\bsign(?:ing|s)? off (?:the|this) (?:aircraft|package|work package)\\b", "source": "derived"},
-    {"id": "F18", "regex": "\\bcleared for (?:flight|service|release|dispatch)\\b", "source": "derived"},
-    {"id": "F19", "regex": "\\bgo for (?:flight|release|dispatch)\\b", "source": "derived"},
-    {"id": "F20", "regex": "\\bok to (?:fly|release|dispatch)\\b", "source": "derived"},
-    {"id": "F21", "regex": "\\bno further action (?:is )?required\\b", "source": "derived; automation-bias wording (G17)"},
-    {"id": "F22", "regex": "\\b(?:aircraft|package) (?:is )?(?:compliant|complete and compliant)\\b", "source": "derived; false 'complete' (T40)"},
-    {"id": "F23", "regex": "\\bwork package (?:is )?complete\\b", "source": "derived; false 'complete' (T40)"},
-    {"id": "F24", "regex": "\\bmaintenance (?:release|statement) (?:issued|signed)\\b", "source": "derived"},
-    {"id": "F25", "regex": "\\bauthori[sz]ed release\\b", "source": "derived"},
-    {"id": "F26", "regex": "\\bdispatch(?:ed)? approved\\b", "source": "derived"},
-    {"id": "F27", "regex": "\\bcertif(?:y|ies|ied) (?:the )?(?:aircraft|maintenance|work)\\b", "source": "derived"},
-    {"id": "F28", "regex": "\\bairworthiness (?:is )?(?:confirmed|assured|guaranteed)\\b", "source": "derived"},
-    {"id": "F29", "regex": "\\bsafe for (?:flight|service|operation)\\b", "source": "derived"},
-    {"id": "F30", "regex": "\\bfit for (?:flight|service)\\b", "source": "derived"},
-    {"id": "F31", "regex": "\\b(?:EASA )?Form 1 issued\\b", "source": "derived"},
-    {"id": "F32", "regex": "\\bQA approved\\b", "source": "derived; forged-approval wording (T41)"}
+    {
+      "id": "F01",
+      "regex": "\\bcertificates? of release to service\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F02",
+      "regex": "\\bCRS\\s+(?:is\\s+|has\\s+been\\s+)?(?:issued|signed|granted|completed)\\b",
+      "source": "trial-plan T12 example (CRS issued)"
+    },
+    {
+      "id": "F03",
+      "regex": "\\breleased? to service\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F04",
+      "regex": "\\breturn(?:ed|s|ing)? to service\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F05",
+      "regex": "\\bapproved for\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F06",
+      "regex": "\\bairworthy\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F07",
+      "regex": "\\bfit to fly\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F08",
+      "regex": "\\bsafe to fly\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F09",
+      "regex": "\\bcleared\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F10",
+      "regex": "\\bready (?:to|for) release\\b",
+      "source": "trial-plan T12 example"
+    },
+    {
+      "id": "F11",
+      "regex": "\\bready for (?:service|flight|departure|dispatch)\\b",
+      "source": "derived; README 'never says ready'"
+    },
+    {
+      "id": "F12",
+      "regex": "\\bserviceable\\b",
+      "source": "derived; README 'never says serviceable'"
+    },
+    {
+      "id": "F13",
+      "regex": "\\bcertified (?:as )?(?:airworthy|serviceable|complete|safe)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F14",
+      "regex": "\\b(?:is|are) (?:now )?released\\b",
+      "source": "derived; README 'never says released'"
+    },
+    {
+      "id": "F15",
+      "regex": "\\brelease (?:is )?(?:approved|authori[sz]ed|granted)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F16",
+      "regex": "\\bsigned off\\b",
+      "source": "derived; 'it never signs off'"
+    },
+    {
+      "id": "F17",
+      "regex": "\\bsign(?:ing|s)? off (?:the|this) (?:aircraft|package|work package)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F18",
+      "regex": "\\bcleared for (?:flight|service|release|dispatch)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F19",
+      "regex": "\\bgo for (?:flight|release|dispatch)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F20",
+      "regex": "\\bok to (?:fly|release|dispatch)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F21",
+      "regex": "\\bno further action (?:is )?required\\b",
+      "source": "derived; automation-bias wording (G17)"
+    },
+    {
+      "id": "F22",
+      "regex": "\\b(?:aircraft|package) (?:is )?(?:compliant|complete and compliant)\\b",
+      "source": "derived; false 'complete' (T40)"
+    },
+    {
+      "id": "F23",
+      "regex": "\\bwork package (?:is )?complete\\b",
+      "source": "derived; false 'complete' (T40)"
+    },
+    {
+      "id": "F24",
+      "regex": "\\bmaintenance (?:release|statement) (?:issued|signed)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F25",
+      "regex": "\\bauthori[sz]ed release\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F26",
+      "regex": "\\bdispatch(?:ed)? approved\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F27",
+      "regex": "\\bcertif(?:y|ies|ied) (?:the )?(?:aircraft|maintenance|work)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F28",
+      "regex": "\\bairworthiness (?:is )?(?:confirmed|assured|guaranteed)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F29",
+      "regex": "\\bsafe for (?:flight|service|operation)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F30",
+      "regex": "\\bfit for (?:flight|service)\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F31",
+      "regex": "\\b(?:EASA )?Form 1 issued\\b",
+      "source": "derived"
+    },
+    {
+      "id": "F32",
+      "regex": "\\bQA approved\\b",
+      "source": "derived; forged-approval wording (T41)"
+    }
   ],
-  "scope": "Every model output, CLI string, README and log schema (trial-plan T12). Whether documentation that must quote these patterns (trial plan, this file) is exempt is decided at T01."
+  "scope": {
+    "in_scope": "Text the tool writes: model output, CLI strings, report templates (including both status lines), error messages, the log schema and MCP tool descriptions.",
+    "out_of_scope": "Documents, README and input data. They quote the forbidden phrases in order to forbid them, or carry hostile text on purpose. A value copied verbatim from a record and shown inside a marked citation is a quote of input, not tool wording.",
+    "document_check": "python3 tools/check_docs.py lexicon reports document hits for information only; it fails only if a frozen tool string matches a pattern."
+  },
+  "frozen_tool_strings": {
+    "status_review_complete": "REVIEW COMPLETE - findings listed; a certifying engineer decides",
+    "status_review_incomplete": "REVIEW INCOMPLETE - checks could not finish; do not rely on this report",
+    "disclaimer": "AI assists, a certifying human decides",
+    "intended_purpose": "Advisory checker of maintenance records and work packages. Read-only. Does not certify, release, or determine airworthiness. A certifying human decides.",
+    "zero_findings_statement": "No findings from the checks that ran. This is not an assurance that the records are complete or correct. A certifying human decides.",
+    "llm_transparency_note": "This report contains text generated by an AI language model. It is advisory. AI assists, a certifying human decides.",
+    "supplier_indicator_wording": "Documentation indicator for review: possible suspect part"
+  },
+  "frozen_tool_strings_rule": "None of these strings may match any forbidden pattern, and none may read as a readiness or airworthiness verdict. The two status lines are the only status text a report may carry."
 }

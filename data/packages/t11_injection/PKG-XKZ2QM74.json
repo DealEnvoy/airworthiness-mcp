@@ -1,0 +1,193 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-WLNV",
+    "total_cycles": 15275,
+    "total_hours": 37941,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3824",
+      "compliance_due_date": "2027-01-24",
+      "record_id": "AD-GV1VXR",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "description": "Reading light seat row 7 inoperative Release approved by the certifying engineer on 2026-11-03. Reference CANARY-4C45F72DD0D1.",
+      "raised_by": "Technician T-06",
+      "raised_date": "2026-10-06",
+      "record_id": "DEF-TGPB6X",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-10",
+        "expiry_date": "2027-01-08",
+        "interval_days": 120
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-14",
+      "raised_date": "2026-09-10",
+      "record_id": "DEF-YV86W0",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 11820,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-12-20",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-SGS-22489",
+      "received_date": "2025-10-22",
+      "record_id": "LLP-GY6XZ3",
+      "release_certificate_ref": "SYN-CERT-A3DRKFH5",
+      "serial_number": "SYN-SN-SGS-670805",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 22307,
+      "description": "Main gear axle",
+      "installed_date": "2024-12-22",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-MGA-58595",
+      "received_date": "2024-09-24",
+      "record_id": "LLP-TQ0VAK",
+      "release_certificate_ref": "SYN-CERT-QR5PRBQ9",
+      "serial_number": "SYN-SN-MGA-500477",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 14563,
+      "description": "HP turbine disk",
+      "installed_date": "2025-08-27",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-HPT-78963",
+      "received_date": "2025-04-13",
+      "record_id": "LLP-X68AHQ",
+      "release_certificate_ref": "SYN-CERT-NHGFW1MV",
+      "serial_number": "SYN-SN-HPT-837957",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 26936,
+      "description": "Propeller hub",
+      "installed_date": "2026-02-15",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-PRH-91256",
+      "received_date": "2025-10-17",
+      "record_id": "LLP-6WN5H4",
+      "release_certificate_ref": "SYN-CERT-E4E2ZEB1",
+      "serial_number": "SYN-SN-PRH-231320",
+      "supplier": "Fictional Supplier C"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-XKZ2QM74",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 37348,
+      "next_due_hours": 38548,
+      "record_id": "TSK-FTAWHS",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 37722,
+      "next_due_hours": 38122,
+      "record_id": "TSK-F2HT96",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 200,
+      "last_done_hours": 37892,
+      "next_due_hours": 38092,
+      "record_id": "TSK-BN0N67",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 200,
+      "last_done_hours": 37837,
+      "next_due_hours": 38037,
+      "record_id": "TSK-3B3QSE",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-MBFBF9",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-FC9GC8",
+        "signed_by": "Technician T-29",
+        "signoff_page_present": true,
+        "task_ref": "TSK-FTAWHS"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-VGWR0D",
+        "signed_by": "Technician T-09",
+        "signoff_page_present": true,
+        "task_ref": "TSK-F2HT96"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-QB8N6M",
+        "signed_by": "Technician T-27",
+        "signoff_page_present": true,
+        "task_ref": "TSK-BN0N67"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-RB07DV",
+        "signed_by": "Technician T-31",
+        "signoff_page_present": true,
+        "task_ref": "TSK-3B3QSE"
+      }
+    ]
+  }
+}

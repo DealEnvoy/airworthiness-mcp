@@ -1,0 +1,154 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-XVRR",
+    "total_cycles": 20885,
+    "total_hours": 24849,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-9906",
+      "compliance_due_date": "2026-12-23",
+      "record_id": "AD-FG713X",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "34",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-12",
+      "raised_date": "2026-09-18",
+      "record_id": "DEF-625FW2",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-25",
+      "raised_date": "2026-09-07",
+      "record_id": "DEF-4N0Q1S",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15918,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-01-02",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-94172",
+      "received_date": "2025-08-11",
+      "record_id": "LLP-ZX2XR1",
+      "release_certificate_ref": "SYN-CERT-8Y7VT5AS",
+      "serial_number": "SYN-SN-SGS-329096",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 28541,
+      "description": "Fan disk",
+      "installed_date": "2025-03-26",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-FND-08147",
+      "received_date": "2025-01-27",
+      "record_id": "LLP-5JKH6N",
+      "release_certificate_ref": "SYN-CERT-R2PEQAHD",
+      "serial_number": "SYN-SN-FND-742424",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 28777,
+      "description": "Fan disk",
+      "installed_date": "2026-03-22",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-FND-07034",
+      "received_date": "2025-11-23",
+      "record_id": "LLP-X4S4RC",
+      "release_certificate_ref": "SYN-CERT-CCS04VD2",
+      "serial_number": "SYN-SN-FND-535790",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-2KJTKRHV",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 24308,
+      "next_due_hours": 24908,
+      "record_id": "TSK-Z4CKT4",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 24787,
+      "next_due_hours": 25387,
+      "record_id": "TSK-BPD3R7",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 200,
+      "last_done_hours": 24706,
+      "next_due_hours": 24906,
+      "record_id": "TSK-4RCF9V",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-JJX124",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-WHHT8P",
+        "signed_by": "Technician T-09",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z4CKT4"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-WM5XPR",
+        "signed_by": "Technician T-20",
+        "signoff_page_present": true,
+        "task_ref": "TSK-BPD3R7"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-GESGQN",
+        "signed_by": "Technician T-13",
+        "signoff_page_present": true,
+        "task_ref": "TSK-4RCF9V"
+      }
+    ]
+  }
+}

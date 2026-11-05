@@ -2,7 +2,7 @@
 
 Date: 4 Nov 2026 (Europe/London). Owner: Isaac Adekunle. Used by T56 and `release-control.md`.
 
-Purpose: to record who reviewed what, with what background, how they were chosen, and that they were independent. **No reviewer has been appointed yet; no review has taken place.** Records are kept only with the reviewer's permission; names and employers are published only if the reviewer agrees.
+Purpose: to record who reviewed what, with what background, how they were chosen, and that they were independent. **No reviewer has been appointed yet; no review has taken place.** The three reviewers are required before any public claim about results or any public release, and are to be funded through grants. Stage 0 proceeds without them. Records are kept only with the reviewer's permission; names and employers are published only if the reviewer agrees.
 
 Reviewers' comments are feedback on a research prototype. They are not an approval, audit or certification.
 

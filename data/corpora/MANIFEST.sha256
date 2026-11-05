@@ -1,0 +1,7 @@
+# Fictional test corpora (T06, T09, T11); seed 20261104 + secret salt; generator 1.1.0
+dde646a4cdcc4f06df3b3bfdbf8634dae2de964dc164e484bf5a0a09d59c9424  t06_bundle/SYN-REG-A.txt
+cfec51776dc004d04fe56947bf1bc4ef2f07c00e072009a2cd3d916cc9f59c14  t06_bundle/SYN-REG-B.txt
+09249b9138443db22e6b7fbcb19dda369baf281fbba8ed72f8afae0b9a8ccd30  t06_bundle/SYN-REG-C.txt
+b3b03df555eb761634e2033f4f4831d7d8c0013ad692760cb2b03ed0e51f6da8  t06_cases.json
+a0f71d8791081b90f2feced62a16c611d982802b7006a0aa1fae67f84c87df1a  t09_prompts.json
+f23aa6d2483778818f041c1f20521e7cca49e06fb02720001080f4b601fa1538  t11_payloads.json

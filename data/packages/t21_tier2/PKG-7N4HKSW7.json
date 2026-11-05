@@ -1,0 +1,178 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-TCDA",
+    "total_cycles": 28634,
+    "total_hours": 28037,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0034",
+      "compliance_due_date": "2027-04-08",
+      "record_id": "AD-1E6RFX",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-6873",
+      "compliance_due_date": "2027-03-24",
+      "record_id": "AD-VE0P5M",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-07",
+        "expiry_date": "2027-02-04",
+        "interval_days": 120
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-11",
+      "raised_date": "2026-10-07",
+      "record_id": "DEF-CX3VC5",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2026-11-29",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-39",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-FBAXPN",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-29",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-B42WQQ",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-09-25",
+      "record_id": "DEF-7T2E0A",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 19523,
+      "description": "Starter generator shaft",
+      "installed_date": "2024-09-19",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-81247",
+      "received_date": "2024-06-21",
+      "record_id": "LLP-TA04KG",
+      "release_certificate_ref": "SYN-CERT-MK4W45YH",
+      "serial_number": "SYN-SN-SGS-454836",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 20721,
+      "description": "Main gear axle",
+      "installed_date": "2024-09-26",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-MGA-66071",
+      "received_date": "2024-06-01",
+      "record_id": "LLP-26EFF7",
+      "release_certificate_ref": "SYN-CERT-G1YPSCST",
+      "serial_number": "SYN-SN-MGA-962889",
+      "supplier": "Fictional Supplier C"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-7N4HKSW7",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 400,
+      "last_done_hours": 27752,
+      "next_due_hours": 28152,
+      "record_id": "TSK-FDTNJY",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 27534,
+      "next_due_hours": 28734,
+      "record_id": "TSK-QKDYPE",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 27953,
+      "next_due_hours": 28553,
+      "record_id": "TSK-JZVY1N",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-89SBS0",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-MJVSSF",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-FDTNJY"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          2
+        ],
+        "record_id": "WPC-G8KBKA",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-QKDYPE"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-NK5P88",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-JZVY1N"
+      }
+    ]
+  }
+}

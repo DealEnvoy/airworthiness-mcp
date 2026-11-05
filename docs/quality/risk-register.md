@@ -6,7 +6,7 @@ Scale. Likelihood: Low = not expected in normal use; Medium = could happen; High
 
 | ID | Category | Risk | Likelihood | Impact | Mitigation | Tests | Owner | Status |
 |---|---|---|---|---|---|---|---|---|
-| R-S01 | Safety | A report is read as an all-clear when the review was incomplete (crash, skipped file, partial parse) | Medium | Critical | Fail-safe `NOT READY - review incomplete`; planted-failure set; fuzz corpus; human-factors rules | T50, T53, T65 | Isaac | Open |
+| R-S01 | Safety | A report is read as an all-clear when the review was incomplete (crash, skipped file, partial parse) | Medium | Critical | Fail-safe `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`; planted-failure set; fuzz corpus; human-factors rules | T50, T53, T65 | Isaac | Open |
 | R-S02 | Safety | A critical record gap (overdue AD, life-limited part over limit, deferral over interval, safety-critical task unsigned) is missed by a rule | Medium | Critical | Seeded-fault evaluation with 100% critical recall; clean twins; independent review by a B1 reviewer | T07, T21, T56 | Isaac | Open |
 | R-S03 | Safety | The tool guesses a missing value and reports false completeness | Low | High | Missing data listed by exact path; no value output for a withheld path | T08, T40 | Isaac | Open |
 | R-S04 | Safety | A reader treats a report as a release or airworthiness conclusion | Medium | Critical | Fixed two-value status; forbidden-wording scan; intended-purpose statement on every report; disclaimer | T12, T58, T59, T65 | Isaac | Open |
@@ -25,12 +25,12 @@ Scale. Likelihood: Low = not expected in normal use; Medium = could happen; High
 | R-C04 | Security | Tool poisoning or rug-pull via changed tool descriptions | Low | High | Pinned manifest hash; description lint; no list-changed notices | T64 | Isaac | Open |
 | R-C05 | Security | Tampering with the audit log or a report is undetected | Low | High | Hash chain; report fingerprint; stated limit about external anchor | T13, T54 | Isaac | Open |
 | R-C06 | Security | Supply-chain compromise (dependency, CI, release artefact) | Medium | High | Pinned hashes; SBOM; signed releases; pinned CI actions; secret scan | T14, T48, T66 | Isaac | Open |
-| R-C07 | Security | The sealed key leaks, or is reconstructable from the public generator | High | Medium | Key kept outside repository; salt option to be decided by Isaac (CA-0004) | T01, T66 | Isaac | Open |
-| R-C08 | Security | No human security review is done before release | Medium | High | T56 gate; release control; no release without three reviews | T56, T66 | Isaac | Open |
+| R-C07 | Security | The sealed key leaks, or is reconstructable from the public generator | High | Medium | Key and secret salt kept outside the repository; only their SHA-256 fingerprints are published at the freeze; salt and key published with the results (CA-0004, closed) | T01, T66 | Isaac | Open |
+| R-C08 | Security | No human security review is done before release | Medium | High | T56 gate; release control; no release without three reviews; reviewers not yet appointed, to be funded through grants (CA-0012) | T56, T66 | Isaac | Open |
 | R-P01 | Project | Single author: no second person to catch errors | High | Medium | Independent model reviewers and three human reviewers; frozen tests; corrective-action log | T16, T56 | Isaac | Open |
 | R-P02 | Project | Build-tool bias or a shared blind spot from using one model family | Medium | Medium | Separate families and roles; mutation and differential testing | T25, T33 | Isaac | Open |
 | R-P03 | Project | Cost or scope growth | Medium | Low | Per-stage spending limits; kill switch; free Stage 0 first | T04 | Isaac | Open |
-| R-P04 | Project | Frozen test files change after the freeze, undermining the preregistration | Low | High | Hash list; verify script; logged amendments only | T01 | Isaac | Open |
+| R-P04 | Project | Frozen test files change after the freeze, undermining the preregistration | Low | High | Hash list; verify script; unsigned annotated tag with an OpenTimestamps proof and a public post; changes only through `docs/amendments.md` | T01 | Isaac | Open |
 | R-P05 | Project | Hosted-model changes (versions, availability, price) between stages | High | Low | Served-model logging; fallback models declared; re-verification | T05, T18, T32 | Isaac | Open |
 | R-P06 | Project | Test data (synthetic) not representative of real records | High | Medium | State the limit; human reviewers; real-record use out of scope until a separate assessment | T21, T56 | Isaac | Open |
 | R-P07 | Project | The ISO-style groundwork is mistaken for certification | Low | Medium | Explicit statements that certification is for an organisation and is not claimed | T55 | Isaac | Open |

@@ -1,0 +1,252 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-CDWC",
+    "total_cycles": 6349,
+    "total_hours": 32090,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-9492",
+      "compliance_due_date": "2027-01-14",
+      "record_id": "AD-MGW86P",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7375",
+      "compliance_due_date": "2027-01-15",
+      "record_id": "AD-QQNS2F",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5016",
+      "compliance_due_date": "2027-05-22",
+      "record_id": "AD-JC4A5C",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "21",
+      "description": "APU start time above limit [note](javascript:alert('CANARY-71FEA120ABD7')) <img src=x onerror=\"print('CANARY-71FEA120ABD7')\">",
+      "raised_by": "Technician T-28",
+      "raised_date": "2026-10-09",
+      "record_id": "DEF-H3F23F",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-22",
+        "expiry_date": "2027-02-19",
+        "interval_days": 120
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-17",
+      "raised_date": "2026-10-22",
+      "record_id": "DEF-A309CT",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-02",
+        "expiry_date": "2026-11-12",
+        "interval_days": 10
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-29",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-Z06A11",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-29",
+        "expiry_date": "2027-02-26",
+        "interval_days": 120
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-34",
+      "raised_date": "2026-10-29",
+      "record_id": "DEF-2Y33FE",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 14419,
+      "description": "HP turbine disk",
+      "installed_date": "2025-10-31",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-HPT-17737",
+      "received_date": "2025-08-19",
+      "record_id": "LLP-VRM8N9",
+      "release_certificate_ref": "SYN-CERT-SB6749EP",
+      "serial_number": "SYN-SN-HPT-488174",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 20967,
+      "description": "HP turbine disk",
+      "installed_date": "2025-02-28",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-HPT-70141",
+      "received_date": "2024-12-23",
+      "record_id": "LLP-H3905P",
+      "release_certificate_ref": "SYN-CERT-NKGQRAGJ",
+      "serial_number": "SYN-SN-HPT-752715",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 14277,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-05-10",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-LPC-69379",
+      "received_date": "2025-03-31",
+      "record_id": "LLP-35GVR2",
+      "release_certificate_ref": "SYN-CERT-DJM3319A",
+      "serial_number": "SYN-SN-LPC-668711",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 17990,
+      "description": "Propeller hub",
+      "installed_date": "2025-01-06",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-PRH-19376",
+      "received_date": "2024-09-19",
+      "record_id": "LLP-KBV2WJ",
+      "release_certificate_ref": "SYN-CERT-961522YF",
+      "serial_number": "SYN-SN-PRH-231300",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-YR5TVQP2",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 400,
+      "last_done_hours": 31863,
+      "next_due_hours": 32263,
+      "record_id": "TSK-ZV4MK7",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 32046,
+      "next_due_hours": 32646,
+      "record_id": "TSK-M2MXGA",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 31284,
+      "next_due_hours": 32484,
+      "record_id": "TSK-JE13B4",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 31711,
+      "next_due_hours": 32311,
+      "record_id": "TSK-NHEJ17",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 31484,
+      "next_due_hours": 32684,
+      "record_id": "TSK-Q0RYTT",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-18B9R7",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-W8V88R",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ZV4MK7"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-K5M51S",
+        "signed_by": "Technician T-27",
+        "signoff_page_present": true,
+        "task_ref": "TSK-M2MXGA"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-YWYXKD",
+        "signed_by": "Technician T-15",
+        "signoff_page_present": true,
+        "task_ref": "TSK-JE13B4"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-PKEX02",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-NHEJ17"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-QRXCR5",
+        "signed_by": "Technician T-23",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Q0RYTT"
+      }
+    ]
+  }
+}

@@ -2,10 +2,11 @@
 """Recompute SHA-256 for every file listed in PREREG_HASHES.txt and report mismatches.
 
 Usage: python3 verify_prereg.py [hash_list]
-Default list: PREREG_HASHES.txt, else PREREG_HASHES.draft.txt.
-Paths are relative to the repository root. The sealed key
-(../sealed/seeded_fault_key.json) is checked when present locally and
-reported as SEALED-ABSENT otherwise (not a failure).
+Default list: PREREG_HASHES.txt.
+Paths are relative to the repository root. The secret salt and the sealed key
+(../sealed/seeded_fault_key.salt, ../sealed/seeded_fault_key.json) are checked
+when present locally and reported as SEALED-ABSENT otherwise (not a failure).
+Their contents are never in the repository; only the fingerprints are listed.
 Exit 0 = all present files match; 1 = mismatch or missing repo file.
 """
 import hashlib
@@ -27,7 +28,7 @@ def sha256(path):
 def main(argv):
     lst = argv[1] if len(argv) > 1 else None
     if lst is None:
-        for cand in ("PREREG_HASHES.txt", "PREREG_HASHES.draft.txt"):
+        for cand in ("PREREG_HASHES.txt",):
             if os.path.exists(os.path.join(ROOT, cand)):
                 lst = cand
                 break

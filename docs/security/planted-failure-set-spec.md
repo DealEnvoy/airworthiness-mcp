@@ -1,29 +1,29 @@
 # Planted-failure set: specification (T50)
 
-Status: **specification only, written before the freeze. Nothing has been built or run.** Author: Isaac Adekunle. Date: 4 Nov 2026 (Europe/London).
+Status: **specification, frozen at T01 (Freeze 1, 5 Nov 2026). Nothing has been built or run.** Author: Isaac Adekunle. Written 4 Nov 2026 (Europe/London).
 
 ## 1. Purpose
 
-T50 (fail-safe, HARD FAIL) requires that the tool never gives a clean-looking result after a failed or partial review. This set is the list of failures to plant. Rule: **any crash, timeout, unreadable or malformed record, missing data, bad signature or hash mismatch gives `NOT READY - review incomplete`, never a clean report.**
+T50 (fail-safe, HARD FAIL) requires that the tool never gives a clean-looking result after a failed or partial review. This set is the list of failures to plant. Rule: **any crash, timeout, unreadable or malformed record, missing data, bad signature or hash mismatch gives `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`, never a clean report.**
 
 ## 2. Expected output for every PF case
 
-1. The status line is exactly `NOT READY - review incomplete` and it is the first line of the report.
+1. The status line is exactly `REVIEW INCOMPLETE - checks could not finish; do not rely on this report` and it is the first line of the report.
 2. Exit code 3.
 3. The failure class and the stage where it happened are named. Classes: INPUT_MISSING, INPUT_UNREADABLE, INPUT_MALFORMED, INTEGRITY, SIGNATURE, INTERNAL_ERROR, TIMEOUT, RESOURCE, AUDIT_WRITE, CONFIG, ENVIRONMENT, LIMIT_EXCEEDED. Stages: START, DISCOVER, MANIFEST, READ, PARSE, VALIDATE, RULES, AUDIT, REPORT, FINGERPRINT, OUTPUT.
 4. The checks that did not complete are listed by name.
 5. No finding list, count or summary appears in a form that could be read as a partial all-clear. A partial list of findings found before the failure may be shown only under a heading saying it is incomplete.
-6. An audit-log entry is written with the failure class and stage. If the audit write is itself the failure (PF06, PF07, PF37), the message goes to standard error, the status is still `NOT READY` and the exit code is still 3.
+6. An audit-log entry is written with the failure class and stage. If the audit write is itself the failure (PF06, PF07, PF37), the message goes to standard error, the status is still `REVIEW INCOMPLETE` and the exit code is still 3.
 7. If the report cannot be delivered (PF08, PF40), standard error carries the message and the exit code is 3.
 8. Error text contains no record free text and no environment or path data beyond the package id.
 
-## 3. Boundary note: missing data versus a finding (open decision for Isaac)
+## 3. Boundary note: missing data versus a finding (confirmed by Isaac, 5 Nov 2026, frozen at T01)
 
-A **finding** is a gap in the maintenance record that the tool exists to detect (for example a task card whose sign-off field is present and empty). The tool reports findings and still finishes with `REVIEW COMPLETE - findings for human review`.
+A **finding** is a gap in the maintenance record that the tool exists to detect (for example a task card whose sign-off field is present and empty). The tool reports findings and still finishes with `REVIEW COMPLETE - findings listed; a certifying engineer decides`.
 
-A **not-run check** is a check that could not run because its input was absent, unreadable or not trustworthy. Any not-run check gives `NOT READY - review incomplete`.
+A **not-run check** is a check that could not run because its input was absent, unreadable or not trustworthy. Any not-run check gives `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`.
 
-Where a package has withheld fields (the T08 set), the rule here treats a field a check depends on as a not-run check, so those packages give `NOT READY` with the exact missing field paths listed, in line with T08 (no guessed value). This boundary is a proposal. Isaac should confirm it before the freeze, because it decides what the T08 packages are expected to output.
+Where a package has withheld fields (the T08 set), the rule here treats a field a check depends on as a not-run check, so those packages give `REVIEW INCOMPLETE` with the exact missing field paths listed, in line with T08 (no guessed value). This boundary is confirmed and frozen at T01: **a gap in the record is a finding; a check that could not run gives `REVIEW INCOMPLETE`.** It decides what the T08 packages must output.
 
 ## 4. Planted failures (40)
 
@@ -74,12 +74,12 @@ The failure is injected from outside the production code path (a fault-injection
 
 ## 5. Controls (10)
 
-Controls prove that the fail-safe is not simply always on. Each must give a normal report and no `NOT READY` banner.
+Controls prove that the fail-safe is not simply always on. Each must give a normal report and no `REVIEW INCOMPLETE` banner.
 
 | ID | Case | Expected |
 |---|---|---|
-| PC01 | A clean twin from the generated Tier-1 set | REVIEW COMPLETE - findings for human review, with the T65 zero-findings statement |
-| PC02 | A faulted package from the Tier-1 set | REVIEW COMPLETE - findings for human review, the seeded critical fault flagged |
+| PC01 | A clean twin from the generated Tier-1 set | REVIEW COMPLETE - findings listed; a certifying engineer decides, with the T65 zero-findings statement |
+| PC02 | A faulted package from the Tier-1 set | REVIEW COMPLETE - findings listed; a certifying engineer decides, the seeded critical fault flagged |
 | PC03 | A Tier-2 package | REVIEW COMPLETE, findings as the oracle states |
 | PC04 | A hard-set package | REVIEW COMPLETE, findings as the oracle states |
 | PC05 | A forged-approval package (T41 set) | REVIEW COMPLETE, forged approval text treated as data, flagged, not accepted |
@@ -91,7 +91,7 @@ Controls prove that the fail-safe is not simply always on. Each must give a norm
 
 ## 6. Pass/fail
 
-40 of 40 PF cases and 10 of 10 PC cases. A single PF case that yields `REVIEW COMPLETE - findings for human review` fails T50 and is a hard fail for the whole project. Cases are run with the section 3a limits of `docs/trial-plan.md` enforced from outside the process.
+40 of 40 PF cases and 10 of 10 PC cases. A single PF case that yields `REVIEW COMPLETE - findings listed; a certifying engineer decides` fails T50 and is a hard fail for the whole project. Cases are run with the section 3a limits of `docs/trial-plan.md` enforced from outside the process.
 
 ## 7. Generation
 

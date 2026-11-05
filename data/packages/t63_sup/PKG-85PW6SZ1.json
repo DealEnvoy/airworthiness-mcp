@@ -1,0 +1,211 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-KHHC",
+    "total_cycles": 16207,
+    "total_hours": 38096,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-8840",
+      "compliance_due_date": "2027-03-06",
+      "record_id": "AD-WK1YDB",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1037",
+      "compliance_due_date": "2027-01-12",
+      "record_id": "AD-JVBA4B",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2026-11-29",
+        "interval_days": 30
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-06",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-1Y8G45",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-1AFD5T",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-31",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-3AHY6Z",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 10371,
+      "description": "Main gear axle",
+      "installed_date": "2025-12-12",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-MGA-41814",
+      "received_date": "2025-11-07",
+      "record_id": "LLP-QQRW9P",
+      "release_certificate_ref": "SYN-CERT-T2VVN477",
+      "serial_number": "SYN-SN-MGA-155853",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 16865,
+      "description": "Main gear axle",
+      "installed_date": "2026-09-10",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-01900",
+      "received_date": "2026-04-16",
+      "record_id": "LLP-C5YDTZ",
+      "release_certificate_ref": "SYN-CERT-T2VVN477",
+      "serial_number": "SYN-SN-MGA-841637",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-85PW6SZ1",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 37972,
+      "next_due_hours": 38572,
+      "record_id": "TSK-ZYDVJ9",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 37977,
+      "next_due_hours": 38177,
+      "record_id": "TSK-77ZN3V",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 37668,
+      "next_due_hours": 38268,
+      "record_id": "TSK-MTM7VF",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 37942,
+      "next_due_hours": 38542,
+      "record_id": "TSK-RPCMDM",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 37687,
+      "next_due_hours": 38287,
+      "record_id": "TSK-XDDAQ0",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-SQYHE7",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-Z9PK0M",
+        "signed_by": "Technician T-23",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ZYDVJ9"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-VB02AG",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-77ZN3V"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-7BQDH9",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-MTM7VF"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-CB3K96",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-RPCMDM"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-DKCACA",
+        "signed_by": "Technician T-19",
+        "signoff_page_present": true,
+        "task_ref": "TSK-XDDAQ0"
+      }
+    ]
+  }
+}

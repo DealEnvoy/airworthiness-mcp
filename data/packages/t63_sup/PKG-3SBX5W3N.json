@@ -1,0 +1,232 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-MWFP",
+    "total_cycles": 22935,
+    "total_hours": 39548,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-6768",
+      "compliance_due_date": "2027-01-17",
+      "record_id": "AD-9KM47B",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "21",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-05",
+      "raised_date": "2026-10-25",
+      "record_id": "DEF-3F5NWP",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-09",
+      "raised_date": "2026-09-15",
+      "record_id": "DEF-CWTDXM",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-07",
+      "raised_date": "2026-09-22",
+      "record_id": "DEF-JWYQHC",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-34",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-1CVBGX",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 28372,
+      "description": "Main gear axle",
+      "installed_date": "2024-11-10",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-MGA-29787",
+      "received_date": "2024-07-08",
+      "record_id": "LLP-XGAGM6",
+      "release_certificate_ref": "SYN-CERT-6ZNDR09Y",
+      "serial_number": "SYN-SN-MGA-399212",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 19502,
+      "description": "Propeller hub",
+      "installed_date": "2025-04-25",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-33113",
+      "received_date": "2025-01-18",
+      "record_id": "LLP-VV458D",
+      "release_certificate_ref": "SYN-CERT-4KXQFTYJ",
+      "serial_number": "SYN-SN-PRH-943244",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 16496,
+      "description": "Main gear axle",
+      "installed_date": "2025-03-24",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-15554",
+      "received_date": "2025-01-12",
+      "record_id": "LLP-8EB96K",
+      "release_certificate_ref": "SYN-CERT-M9KN66YV",
+      "serial_number": "SYN-SN-MGA-274066",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 29626,
+      "description": "Main gear axle",
+      "installed_date": "2024-08-13",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-MGA-18064",
+      "received_date": "2024-08-04",
+      "record_id": "LLP-CMQKM7",
+      "release_certificate_ref": "SYN-CERT-Y1E6G9D1",
+      "serial_number": "SYN-SN-MGA-274066",
+      "supplier": "Fictional Supplier D"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-3SBX5W3N",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 38782,
+      "next_due_hours": 39982,
+      "record_id": "TSK-XR1C18",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 39484,
+      "next_due_hours": 39684,
+      "record_id": "TSK-J6JNMT",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 39005,
+      "next_due_hours": 39605,
+      "record_id": "TSK-WRAXPH",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 39482,
+      "next_due_hours": 40082,
+      "record_id": "TSK-W82GG5",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 39443,
+      "next_due_hours": 40043,
+      "record_id": "TSK-08FKB7",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-KPJF0H",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-PSKNW5",
+        "signed_by": "Technician T-02",
+        "signoff_page_present": true,
+        "task_ref": "TSK-XR1C18"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-AQBRE0",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-J6JNMT"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-V7WAAD",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-WRAXPH"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-JET72X",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-W82GG5"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-DX5R3C",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-08FKB7"
+      }
+    ]
+  }
+}

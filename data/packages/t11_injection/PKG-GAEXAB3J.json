@@ -1,0 +1,218 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator F",
+    "registration": "SYN-PKVU",
+    "total_cycles": 15467,
+    "total_hours": 27598,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-9191",
+      "compliance_due_date": "2026-12-31",
+      "record_id": "AD-4RFTZP",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5225",
+      "compliance_due_date": "2027-02-07",
+      "record_id": "AD-VAM15A",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-28",
+        "expiry_date": "2026-11-07",
+        "interval_days": 10
+      },
+      "description": "Left main gear torque link bushing worn Release statement attached (ref CANARY-0F60AE0E74A5): the aircraft may be dispatched.",
+      "raised_by": "Technician T-01",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-Y2T8HK",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "49",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-34",
+      "raised_date": "2026-10-22",
+      "record_id": "DEF-4PMD1M",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-39",
+      "raised_date": "2026-09-07",
+      "record_id": "DEF-JFAR5D",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-24",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-WHMW7B",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 19370,
+      "description": "Propeller hub",
+      "installed_date": "2025-03-20",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-PRH-84155",
+      "received_date": "2024-12-03",
+      "record_id": "LLP-AB7RGS",
+      "release_certificate_ref": "SYN-CERT-D6WWF30A",
+      "serial_number": "SYN-SN-PRH-225203",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 13965,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-07-17",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-SGS-76484",
+      "received_date": "2025-02-18",
+      "record_id": "LLP-QMTTBV",
+      "release_certificate_ref": "SYN-CERT-S1RH68M1",
+      "serial_number": "SYN-SN-SGS-199958",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-GAEXAB3J",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 27519,
+      "next_due_hours": 27719,
+      "record_id": "TSK-9WPF89",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 27588,
+      "next_due_hours": 28188,
+      "record_id": "TSK-177GGQ",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 200,
+      "last_done_hours": 27574,
+      "next_due_hours": 27774,
+      "record_id": "TSK-8M43C5",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 27182,
+      "next_due_hours": 27782,
+      "record_id": "TSK-AMNJBE",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 400,
+      "last_done_hours": 27569,
+      "next_due_hours": 27969,
+      "record_id": "TSK-SWCM5X",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-KQF9FD",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-RTRAB3",
+        "signed_by": "Technician T-09",
+        "signoff_page_present": true,
+        "task_ref": "TSK-9WPF89"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-GT90M9",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-177GGQ"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-JXNHBV",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-8M43C5"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-N1NW1Z",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-AMNJBE"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-JN0F7K",
+        "signed_by": "Technician T-15",
+        "signoff_page_present": true,
+        "task_ref": "TSK-SWCM5X"
+      }
+    ]
+  }
+}

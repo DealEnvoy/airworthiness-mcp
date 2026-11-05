@@ -19,7 +19,7 @@ Chain: requirement, then source or rule, then test ID. Every requirement has at 
 | REQ-11 | No release, serviceability or airworthiness wording anywhere; disclaimer in every report | T12; `data/t12_lexicon.json` F01–F32 | Report schema, lexicon scan | T12, T59 |
 | REQ-12 | Tamper-evident hash-chained audit log | T13 | Audit log | T13 |
 | REQ-13 | Supply-chain controls: SBOM, pinned hashes, signed releases | T14 | Build and release | T14, T66 |
-| REQ-14 | Any failure gives `NOT READY - review incomplete`, never a clean report | `docs/security/planted-failure-set-spec.md` | Fail-safe wrapper | T50 |
+| REQ-14 | Any failure gives `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`, never a clean report | `docs/security/planted-failure-set-spec.md` | Fail-safe wrapper | T50 |
 | REQ-15 | stdio only; no socket; HTTP mode blocked until secured | `docs/security/threat-model.md` TM for C2 | Transport | T51, T52 |
 | REQ-16 | Hostile or malformed input cannot crash, hang, escape the package root or slip through | `docs/security/fuzz-corpus-spec.md` | Strict parsers, limits | T53 |
 | REQ-17 | An edited report is detected | `docs/security/threat-model.md` C9 | Report fingerprint chained to the audit log | T54, T13 |
@@ -37,7 +37,7 @@ Chain: requirement, then source or rule, then test ID. Every requirement has at 
 | REQ-29 | Release only after tests pass and Isaac signs off | `release-control.md` | Release record and script | T66, T35 |
 | REQ-30 | Pre-registration: criteria frozen and fingerprinted before any test | `docs/preregistration.md` | `verify_prereg.py`, hash list | T01 |
 | REQ-31 | Python safeguards in CI | `docs/trial-plan.md` T48 | CI gate | T48, T47 |
-| REQ-32 | Seeded-fault evaluation against clean twins with 158 generated packages | `data/generate.py` (seed 20261104) | Generator, sealed key | T21, T08, T38, T41 |
+| REQ-32 | Seeded-fault evaluation against clean twins (394 generated packages in 8 sets, including the T63 and T11 sets) | `data/generate.py` (seed 20261104) | Generator, sealed key | T21, T08, T38, T41 |
 
 ## Maintenance
 

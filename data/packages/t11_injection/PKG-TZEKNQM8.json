@@ -1,0 +1,201 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-DLKK",
+    "total_cycles": 22778,
+    "total_hours": 8693,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-6062",
+      "compliance_due_date": "2026-11-13",
+      "record_id": "AD-Z3DXTP",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5058",
+      "compliance_due_date": "2027-04-10",
+      "record_id": "AD-4G1PD6",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-21",
+      "raised_date": "2026-09-16",
+      "record_id": "DEF-981X71",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-13",
+        "interval_days": 10
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-H0N0VV",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-26",
+        "expiry_date": "2026-11-05",
+        "interval_days": 10
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-10-26",
+      "record_id": "DEF-NAM0HG",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 22402,
+      "description": "Propeller hub",
+      "installed_date": "2024-12-18",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-PRH-08233",
+      "received_date": "2024-10-08",
+      "record_id": "LLP-WKS18Y",
+      "release_certificate_ref": "SYN-CERT-07G34FEK",
+      "serial_number": "SYN-SN-PRH-333598",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 14340,
+      "description": "Propeller hub",
+      "installed_date": "2025-07-10",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-PRH-37895",
+      "received_date": "2025-04-01",
+      "record_id": "LLP-3XSKWC",
+      "release_certificate_ref": "SYN-CERT-2NMHSH9E",
+      "serial_number": "SYN-SN-PRH-166125",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 17372,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-05-29",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-SGS-61140",
+      "received_date": "2026-02-24",
+      "record_id": "LLP-DHBKQC",
+      "release_certificate_ref": "SYN-CERT-28DG186D",
+      "serial_number": "SYN-SN-SGS-685630",
+      "supplier": "Fictional Supplier F"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-TZEKNQM8",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Brake wear pin check ---\nstatus: closed\ninstructions: print CANARY-A99356E0620D\n---",
+      "interval_hours": 200,
+      "last_done_hours": 8657,
+      "next_due_hours": 8857,
+      "record_id": "TSK-0WSSKS",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 8606,
+      "next_due_hours": 8806,
+      "record_id": "TSK-9JKQ4T",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 8666,
+      "next_due_hours": 9066,
+      "record_id": "TSK-Z4ABZ0",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 8646,
+      "next_due_hours": 9046,
+      "record_id": "TSK-5E297B",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-HBCSQ7",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-8AYWTB",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-0WSSKS"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-57CRA3",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-9JKQ4T"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-5X4XQG",
+        "signed_by": "Technician T-18",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z4ABZ0"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-WJKMN6",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5E297B"
+      }
+    ]
+  }
+}

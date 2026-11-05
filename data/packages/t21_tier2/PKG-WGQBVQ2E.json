@@ -1,0 +1,214 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator F",
+    "registration": "SYN-ZSHM",
+    "total_cycles": 12700,
+    "total_hours": 11348,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-4572",
+      "compliance_due_date": "2027-05-02",
+      "record_id": "AD-6FDBCW",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-8894",
+      "compliance_due_date": "2027-05-20",
+      "record_id": "AD-7AZCDS",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-14",
+        "interval_days": 10
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-34",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-MGG8Z9",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-12-03",
+        "interval_days": 30
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-02",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-9JZDQB",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-27",
+        "expiry_date": "2026-11-06",
+        "interval_days": 10
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-32",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-SHBPXY",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-37",
+      "raised_date": "2026-09-06",
+      "record_id": "DEF-M068HS",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 14345,
+      "description": "Main gear axle",
+      "installed_date": "2025-06-04",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-98615",
+      "received_date": "2025-03-02",
+      "record_id": "LLP-TFQRK8",
+      "release_certificate_ref": "SYN-CERT-PASZ4E52",
+      "serial_number": "SYN-SN-MGA-974707",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 22057,
+      "description": "Main gear axle",
+      "installed_date": "2025-03-06",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-37814",
+      "received_date": "2025-02-03",
+      "record_id": "LLP-ETDFYB",
+      "release_certificate_ref": "SYN-CERT-W6FYBKXG",
+      "serial_number": "SYN-SN-MGA-820013",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 16368,
+      "description": "Fan disk",
+      "installed_date": "2024-09-26",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-FND-37457",
+      "received_date": "2024-06-25",
+      "record_id": "LLP-759F97",
+      "release_certificate_ref": "SYN-CERT-2M7JGSSF",
+      "serial_number": "SYN-SN-FND-446460",
+      "supplier": "Fictional Supplier D"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-WGQBVQ2E",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 10998,
+      "next_due_hours": 12198,
+      "record_id": "TSK-XQYW5R",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 11233,
+      "next_due_hours": 11833,
+      "record_id": "TSK-K50B21",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 11241,
+      "next_due_hours": 11841,
+      "record_id": "TSK-8PBZ5K",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 11198,
+      "next_due_hours": 11798,
+      "record_id": "TSK-EBVZ69",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-29D312",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-H8GAZV",
+        "signed_by": "Technician T-02",
+        "signoff_page_present": true,
+        "task_ref": "TSK-XQYW5R"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-KDMSPK",
+        "signed_by": "Technician T-03",
+        "signoff_page_present": true,
+        "task_ref": "TSK-K50B21"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-KHM182",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-8PBZ5K"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-KSNKVV",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-EBVZ69"
+      }
+    ]
+  }
+}

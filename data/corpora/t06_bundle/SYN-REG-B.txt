@@ -1,0 +1,8 @@
+FICTIONAL TEXT for testing a citation validator. Not a real regulation.
+
+B.20 A person who certifies a work package shall hold a valid authorisation issued by the organisation.
+B.21 No person shall certify work that they have not personally checked.
+B.22 The organisation shall review its procedures every twelve months.
+B.23 A repeat defect shall be reported to the quality department within seven days.
+B.24 Missing pages in a task card shall be recorded as a finding.
+B.25 A record that cannot be read shall be treated as not present.

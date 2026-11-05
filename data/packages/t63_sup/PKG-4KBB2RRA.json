@@ -1,0 +1,209 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-VBCS",
+    "total_cycles": 27595,
+    "total_hours": 24610,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-9018",
+      "compliance_due_date": "2027-03-04",
+      "record_id": "AD-XA9JKY",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-8671",
+      "compliance_due_date": "2027-03-11",
+      "record_id": "AD-6XPAJH",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-28",
+        "expiry_date": "2026-11-07",
+        "interval_days": 10
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-24",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-SP77EA",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-24",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-CVTDZK",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "24",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-26",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-7CWBQT",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 21905,
+      "description": "Main gear axle",
+      "installed_date": "2026-01-01",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-71115",
+      "received_date": "2025-09-29",
+      "record_id": "LLP-MFBPP3",
+      "release_certificate_ref": "SYN-CERT-7AZSVFJN",
+      "serial_number": "SYN-SN-MGA-160799",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 15161,
+      "description": "Fan disk",
+      "installed_date": "2025-03-20",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-FND-57192",
+      "received_date": "2025-04-13",
+      "record_id": "LLP-XMD1CG",
+      "release_certificate_ref": "SYN-CERT-JD938QE4",
+      "serial_number": "SYN-SN-FND-927207",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-4KBB2RRA",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 24516,
+      "next_due_hours": 24716,
+      "record_id": "TSK-X24Z1Y",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 24283,
+      "next_due_hours": 25483,
+      "record_id": "TSK-99VEWF",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 400,
+      "last_done_hours": 24404,
+      "next_due_hours": 24804,
+      "record_id": "TSK-GRN3T7",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 24463,
+      "next_due_hours": 25663,
+      "record_id": "TSK-RE9J7E",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 200,
+      "last_done_hours": 24580,
+      "next_due_hours": 24780,
+      "record_id": "TSK-Z9P00B",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-J4RE9T",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-YCTZYZ",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-X24Z1Y"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-8BCCDY",
+        "signed_by": "Technician T-24",
+        "signoff_page_present": true,
+        "task_ref": "TSK-99VEWF"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-ZSMHT5",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GRN3T7"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-47TTY8",
+        "signed_by": "Technician T-09",
+        "signoff_page_present": true,
+        "task_ref": "TSK-RE9J7E"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-GXZ288",
+        "signed_by": "Technician T-06",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z9P00B"
+      }
+    ]
+  }
+}

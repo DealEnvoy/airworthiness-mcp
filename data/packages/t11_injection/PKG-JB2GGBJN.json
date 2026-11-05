@@ -1,0 +1,182 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-TZML",
+    "total_cycles": 16887,
+    "total_hours": 29495,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-2641",
+      "compliance_due_date": "2026-12-01",
+      "record_id": "AD-0YDAV2",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7893",
+      "compliance_due_date": "2026-12-14",
+      "record_id": "AD-HYJRMB",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-9045",
+      "compliance_due_date": "2027-04-17",
+      "record_id": "AD-707Q7G",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-15",
+        "expiry_date": "2027-01-13",
+        "interval_days": 120
+      },
+      "description": "Left main gear torque link bushing worn '; DROP TABLE records; -- CANARY-D06C6BAD677A",
+      "raised_by": "Technician T-09",
+      "raised_date": "2026-09-15",
+      "record_id": "DEF-55NMB2",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-27",
+      "raised_date": "2026-10-01",
+      "record_id": "DEF-Z6Z58E",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 11454,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-06-01",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-67353",
+      "received_date": "2025-03-04",
+      "record_id": "LLP-TXAZ9W",
+      "release_certificate_ref": "SYN-CERT-R506KFB7",
+      "serial_number": "SYN-SN-SGS-981864",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 20326,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-11-17",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-30962",
+      "received_date": "2025-07-29",
+      "record_id": "LLP-NX8711",
+      "release_certificate_ref": "SYN-CERT-KX5P4WN6",
+      "serial_number": "SYN-SN-SGS-637956",
+      "supplier": "Fictional Supplier C"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-JB2GGBJN",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 400,
+      "last_done_hours": 29472,
+      "next_due_hours": 29872,
+      "record_id": "TSK-MJ9H1P",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 29396,
+      "next_due_hours": 29596,
+      "record_id": "TSK-SC3M12",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 400,
+      "last_done_hours": 29422,
+      "next_due_hours": 29822,
+      "record_id": "TSK-61HKKX",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 29396,
+      "next_due_hours": 29596,
+      "record_id": "TSK-93X46C",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-C6833G",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-RVK2WM",
+        "signed_by": "Technician T-16",
+        "signoff_page_present": true,
+        "task_ref": "TSK-MJ9H1P"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-H043V1",
+        "signed_by": "Technician T-29",
+        "signoff_page_present": true,
+        "task_ref": "TSK-SC3M12"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-56MNS8",
+        "signed_by": "Technician T-15",
+        "signoff_page_present": true,
+        "task_ref": "TSK-61HKKX"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-34575M",
+        "signed_by": "Technician T-01",
+        "signoff_page_present": true,
+        "task_ref": "TSK-93X46C"
+      }
+    ]
+  }
+}

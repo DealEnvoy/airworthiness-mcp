@@ -1,6 +1,6 @@
 # airworthiness-mcp
 
-**Status: pre-registration. Nothing has been built or run yet. There are no results.**
+**Status: pre-registration (Stage 0 not started). Nothing has been built or run yet. There are no results.** The test criteria, the generated test data and the fingerprints of the sealed answer key and its secret salt are recorded in [`PREREG_HASHES.txt`](PREREG_HASHES.txt) (see [`docs/preregistration.md`](docs/preregistration.md)).
 
 airworthiness-mcp is a planned open-source Python [MCP](https://modelcontextprotocol.io/) server that reads **synthetic** aircraft maintenance records and helps a person prepare for a release decision. It does not make that decision.
 
@@ -20,7 +20,7 @@ Given the (synthetic) records for one aircraft and one work package, it checks f
 4. **Airworthiness directives (ADs)**: AD status and anything overdue.
 5. **Work-package completeness**: are all task cards, sign-offs and pages present?
 
-It then writes a **pre-release readiness report** for a named human to read:
+It then writes a **pre-release review report** for a named human to read:
 
 - **Every finding cites its source**: the exact record, field and value it came from.
 - **Missing data is flagged, never guessed**: if a field is absent, the report lists exactly which one.
@@ -46,7 +46,7 @@ This project builds on [CRS for AI agents, Pilot 0](https://github.com/DealEnvoy
 | What it is | A small, completed evaluation | A planned tool plus a pre-registered test plan |
 | Input | 16 hand-built packs (aviation and software), each fault on the page | Generated synthetic records across five check areas |
 | Who finds faults | The model under test | Deterministic rules first; any AI layer is advisory on top |
-| Main question | Can a model spot unsupported "done" claims? | Can a tool give a cited, gap-flagging readiness report that cannot sign off, resists hostile record text and works offline? |
+| Main question | Can a model spot unsupported "done" claims? | Can a tool give a cited, gap-flagging review report that cannot sign off, resists hostile record text and works offline? |
 
 Pilot 0 packs are planned to be re-run blind as one test (T22).
 
@@ -58,7 +58,7 @@ All pass/fail criteria are fixed **before** Stage 0 starts and fingerprinted wit
 - [`docs/preregistration.md`](docs/preregistration.md): what is frozen, when, and how fingerprints are recorded and checked.
 - [`docs/methods.md`](docs/methods.md): how I chose the AI models used as build tools, the line-up comparison, the gaps it found and the estimated costs.
 
-Thresholds in the plan are proposals until the freeze. After it, any change is a logged amendment.
+Thresholds in the plan are frozen at the T01 freeze (Freeze 1), except those marked "set before that stage". Build-tool tests are frozen in a second logged freeze after the model line-up is chosen. After a freeze, any change is a dated entry in [`docs/amendments.md`](docs/amendments.md).
 
 ## Security, regulatory position and quality
 
@@ -66,13 +66,13 @@ Written before any code, as plans and tests. Nothing here has been built or run,
 
 - [`SECURITY.md`](SECURITY.md) and [`docs/security/SECURITY.md`](docs/security/SECURITY.md): how to report a vulnerability (GitHub private security advisories).
 - [`docs/security/threat-model.md`](docs/security/threat-model.md): whole-system threat model (STRIDE, OWASP Top 10 for LLM Applications, MCP-specific risks), each threat with a mitigation and a test.
-- [`docs/security/planted-failure-set-spec.md`](docs/security/planted-failure-set-spec.md) and [`docs/security/fuzz-corpus-spec.md`](docs/security/fuzz-corpus-spec.md): fail-safe and fuzz test specifications. Any failure gives `NOT READY - review incomplete`, never a clean report.
+- [`docs/security/planted-failure-set-spec.md`](docs/security/planted-failure-set-spec.md) and [`docs/security/fuzz-corpus-spec.md`](docs/security/fuzz-corpus-spec.md): fail-safe and fuzz test specifications. Any failure gives `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`, never a clean report.
 - [`docs/security/standards-mapping.md`](docs/security/standards-mapping.md): how the design lines up with OWASP, NIST SSDF, SLSA, ISO/IEC 27001 themes and EASA Part-IS. Alignment, not compliance.
 - [`docs/regulatory-path.md`](docs/regulatory-path.md): who may release aircraft (only authorised humans), how tools are accepted (by the adopting organisation), and the staged path. Not legal advice.
 - [`docs/ai-act-self-assessment.md`](docs/ai-act-self-assessment.md): EU AI Act self-assessment (likely not high-risk, with reasons and re-assessment triggers).
 - [`docs/quality/`](docs/quality/): quality policy, risk register, traceability, corrective-action log, release control, reviewer competence records, statement of applicability (ISO/IEC 27001 Annex A groundwork), human-factors note, and suspected-unapproved-parts awareness. Certification is for an organisation and is not claimed.
 
-Design rules: the core is a deterministic rules engine; any language-model module is optional and off by default; reports never give a release or airworthiness conclusion; the tool never scores or ranks people; language-model text is labelled when the module is on; local-first, with no egress and no telemetry. Before any public release of the software, three independent humans review it: a B1 certifying engineer, a CAMO or quality reviewer, and a security reviewer (T56).
+Design rules: the core is a deterministic rules engine; any language-model module is optional and off by default; reports never give a release or airworthiness conclusion; the tool never scores or ranks people; language-model text is labelled when the module is on; local-first, with no egress and no telemetry. Before any public release of the software, three independent humans review it: a B1 certifying engineer, a CAMO or quality reviewer, and a security reviewer (T56). The three reviewers are not yet appointed; they are required before any public claim about results and are to be funded through grants. Stage 0 proceeds without them.
 
 ## Repository layout
 
@@ -88,8 +88,12 @@ docs/security/          threat model, test specs, security policy, standards map
 docs/quality/           quality groundwork (policy, risks, traceability, release control)
 docs/regulatory-path.md public regulatory summary (not legal advice)
 docs/ai-act-self-assessment.md  EU AI Act self-assessment
-tools/check_docs.py     checks for T49 and T55
-data/                   synthetic data generator, lexicon, 158 generated packages
+tools/check_docs.py     checks for T49, T55 and the T12 lexicon
+data/                   synthetic data generator, lexicon, 394 generated packages, test corpora
+docs/amendments.md      log of changes after each freeze
+PREREG_HASHES.txt       SHA-256 fingerprints of the frozen files
+verify_prereg.py        recomputes the fingerprints
+tools/check_data.py     checks the generated data against an independent oracle
 results/                results (empty: nothing run)
 ```
 

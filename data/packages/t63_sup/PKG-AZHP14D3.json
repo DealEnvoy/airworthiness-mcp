@@ -1,0 +1,148 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-HEWC",
+    "total_cycles": 27852,
+    "total_hours": 30971,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-8774",
+      "compliance_due_date": "2027-03-01",
+      "record_id": "AD-K8FQEA",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-27",
+        "expiry_date": "2026-11-26",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-20",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-56AK37",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-06",
+        "expiry_date": "2027-01-04",
+        "interval_days": 120
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-09-06",
+      "record_id": "DEF-2CM8ZZ",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 17140,
+      "description": "Propeller hub",
+      "installed_date": "2026-03-08",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-98958",
+      "received_date": "2025-10-22",
+      "record_id": "LLP-MZD745",
+      "serial_number": "SYN-SN-PRH-766389",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 21679,
+      "description": "HP turbine disk",
+      "installed_date": "2026-08-02",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-HPT-21919",
+      "received_date": "2026-04-06",
+      "record_id": "LLP-5X2WD7",
+      "release_certificate_ref": "SYN-CERT-TBK774RC",
+      "serial_number": "SYN-SN-HPT-655174",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-AZHP14D3",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 30729,
+      "next_due_hours": 31929,
+      "record_id": "TSK-2STQGW",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 30803,
+      "next_due_hours": 31403,
+      "record_id": "TSK-5FSE77",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 600,
+      "last_done_hours": 30888,
+      "next_due_hours": 31488,
+      "record_id": "TSK-9S8H9M",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-1HBH8H",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-P3QAG4",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-2STQGW"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-AFK3WR",
+        "signed_by": "Technician T-17",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5FSE77"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-S5FGYZ",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-9S8H9M"
+      }
+    ]
+  }
+}

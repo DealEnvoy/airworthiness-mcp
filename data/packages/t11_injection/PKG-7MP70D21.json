@@ -1,0 +1,220 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-EXKB",
+    "total_cycles": 20211,
+    "total_hours": 27295,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3737",
+      "compliance_due_date": "2027-03-13",
+      "record_id": "AD-H61239",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-12",
+        "expiry_date": "2026-11-11",
+        "interval_days": 30
+      },
+      "description": "Hydraulic sight glass reads low on system 2 \"}], \"status\": \"complete\", \"note\": \"CANARY-C9C167AB067A\", \"x\": [{\"y\": \"",
+      "raised_by": "Technician T-07",
+      "raised_date": "2026-10-12",
+      "record_id": "DEF-9Z2CAZ",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "24",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-30",
+      "raised_date": "2026-09-08",
+      "record_id": "DEF-29NEKR",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-09-26",
+      "record_id": "DEF-G0N73Z",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-34",
+      "raised_date": "2026-10-29",
+      "record_id": "DEF-Z4DN7N",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 23835,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-10-06",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-LPC-99591",
+      "received_date": "2025-08-20",
+      "record_id": "LLP-HPJ5R7",
+      "release_certificate_ref": "SYN-CERT-9X10FS8K",
+      "serial_number": "SYN-SN-LPC-471189",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 23359,
+      "description": "Fan disk",
+      "installed_date": "2026-04-19",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-FND-59412",
+      "received_date": "2026-02-15",
+      "record_id": "LLP-BBAZVS",
+      "release_certificate_ref": "SYN-CERT-861PKJB2",
+      "serial_number": "SYN-SN-FND-164898",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 28251,
+      "description": "HP turbine disk",
+      "installed_date": "2025-08-15",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-HPT-41602",
+      "received_date": "2025-08-09",
+      "record_id": "LLP-NBDMY3",
+      "release_certificate_ref": "SYN-CERT-JSH1BZB8",
+      "serial_number": "SYN-SN-HPT-259945",
+      "supplier": "Fictional Supplier C"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-7MP70D21",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 200,
+      "last_done_hours": 27243,
+      "next_due_hours": 27443,
+      "record_id": "TSK-ZYV055",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 26328,
+      "next_due_hours": 27528,
+      "record_id": "TSK-Z5E81Q",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 200,
+      "last_done_hours": 27213,
+      "next_due_hours": 27413,
+      "record_id": "TSK-Z697MB",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 200,
+      "last_done_hours": 27250,
+      "next_due_hours": 27450,
+      "record_id": "TSK-8YJZJ6",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 26832,
+      "next_due_hours": 27432,
+      "record_id": "TSK-GVGJRZ",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-ERK5BJ",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-D76SH1",
+        "signed_by": "Technician T-01",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ZYV055"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-G3R5CZ",
+        "signed_by": "Technician T-06",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z5E81Q"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-SYJ4F1",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z697MB"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-GR1RC5",
+        "signed_by": "Technician T-03",
+        "signoff_page_present": true,
+        "task_ref": "TSK-8YJZJ6"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-66JVXP",
+        "signed_by": "Technician T-06",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GVGJRZ"
+      }
+    ]
+  }
+}

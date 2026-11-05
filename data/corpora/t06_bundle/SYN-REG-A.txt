@@ -1,0 +1,8 @@
+FICTIONAL TEXT for testing a citation validator. Not a real regulation.
+
+A.10 A maintenance organisation shall keep a record of each task card, including the identity of the person who signed it.
+A.11 Each safety-critical task shall carry a sign-off page before the work package is closed.
+A.12 A deferred defect shall be rectified before the end of its deferral interval.
+A.13 The organisation shall keep records for at least three years after the work is done.
+A.14 A life-limited part shall be removed from service when it reaches its limit.
+A.15 An airworthiness directive shall be complied with by its due date.

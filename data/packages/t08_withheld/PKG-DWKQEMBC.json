@@ -1,0 +1,204 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator H",
+    "registration": "SYN-PUDZ",
+    "total_cycles": 13403,
+    "total_hours": 38778,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-5995",
+      "compliance_due_date": "2026-11-29",
+      "record_id": "AD-H2XQ3C",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-08",
+        "expiry_date": "2027-02-05",
+        "interval_days": 120
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-01",
+      "raised_date": "2026-10-08",
+      "record_id": "DEF-A67RPN",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "49",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-09-16",
+      "record_id": "DEF-2WM9Y1",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-13",
+      "record_id": "DEF-506FMN",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 10683,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-03-25",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-SGS-36551",
+      "received_date": "2025-11-18",
+      "record_id": "LLP-1JY6F6",
+      "release_certificate_ref": "SYN-CERT-2Z7263N8",
+      "serial_number": "SYN-SN-SGS-655719",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 18010,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-11-18",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-LPC-78755",
+      "received_date": "2025-08-04",
+      "record_id": "LLP-88ZDGQ",
+      "release_certificate_ref": "SYN-CERT-VYMMN32F",
+      "serial_number": "SYN-SN-LPC-242858",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 29206,
+      "description": "LP compressor shaft",
+      "installed_date": "2024-12-20",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-LPC-73982",
+      "received_date": "2024-07-25",
+      "record_id": "LLP-CXX6WT",
+      "release_certificate_ref": "SYN-CERT-F1WDWZ4J",
+      "serial_number": "SYN-SN-LPC-703616",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-DWKQEMBC",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 400,
+      "next_due_hours": 38966,
+      "record_id": "TSK-QVWYMV",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 38699,
+      "next_due_hours": 39099,
+      "record_id": "TSK-F8APSM",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 38460,
+      "next_due_hours": 39060,
+      "record_id": "TSK-D9P5W7",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 38553,
+      "record_id": "TSK-K8CTHJ",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 200,
+      "last_done_hours": 38657,
+      "next_due_hours": 38857,
+      "record_id": "TSK-3TACXP",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-THFFW2",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-20GXX4",
+        "signed_by": "Technician T-03",
+        "signoff_page_present": true,
+        "task_ref": "TSK-QVWYMV"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-XVBYTG",
+        "signed_by": "Technician T-16",
+        "signoff_page_present": true,
+        "task_ref": "TSK-F8APSM"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-MR26GV",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-D9P5W7"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-72EEP3",
+        "signed_by": "Technician T-38",
+        "signoff_page_present": true,
+        "task_ref": "TSK-K8CTHJ"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-ZTSV3T",
+        "signed_by": "Technician T-18",
+        "signoff_page_present": true,
+        "task_ref": "TSK-3TACXP"
+      }
+    ]
+  }
+}

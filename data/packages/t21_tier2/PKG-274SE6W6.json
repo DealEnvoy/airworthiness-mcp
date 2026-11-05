@@ -1,0 +1,231 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-FSYJ",
+    "total_cycles": 16578,
+    "total_hours": 10694,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-5188",
+      "compliance_due_date": "2027-04-02",
+      "record_id": "AD-QGZPY3",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-05",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-H1Q47S",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-01",
+        "expiry_date": "2027-01-29",
+        "interval_days": 120
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-29",
+      "raised_date": "2026-10-01",
+      "record_id": "DEF-B97YRC",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-25",
+        "expiry_date": "2026-11-24",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-06",
+      "raised_date": "2026-10-25",
+      "record_id": "DEF-HQEGFK",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 25638,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-09-30",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-SGS-98786",
+      "received_date": "2025-06-30",
+      "record_id": "LLP-VVQQQW",
+      "release_certificate_ref": "SYN-CERT-X9JWWNH3",
+      "serial_number": "SYN-SN-SGS-899340",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 24337,
+      "description": "Fan disk",
+      "installed_date": "2026-01-12",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-FND-00320",
+      "received_date": "2025-09-02",
+      "record_id": "LLP-86CDCJ",
+      "release_certificate_ref": "SYN-CERT-0KJDH40D",
+      "serial_number": "SYN-SN-FND-530261",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 16179,
+      "description": "Starter generator shaft",
+      "installed_date": "2024-11-03",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-SGS-86270",
+      "received_date": "2024-08-06",
+      "record_id": "LLP-TYPSCE",
+      "release_certificate_ref": "SYN-CERT-EA30S8Z1",
+      "serial_number": "SYN-SN-SGS-519828",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 23640,
+      "description": "HP turbine disk",
+      "installed_date": "2024-12-15",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-HPT-77610",
+      "received_date": "2024-08-25",
+      "record_id": "LLP-K34HEH",
+      "release_certificate_ref": "SYN-CERT-5BCBJ1K5",
+      "serial_number": "SYN-SN-HPT-433063",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-274SE6W6",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 400,
+      "last_done_hours": 10503,
+      "next_due_hours": 10903,
+      "record_id": "TSK-N4BW2Q",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 10479,
+      "next_due_hours": 11079,
+      "record_id": "TSK-09MD14",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 1200,
+      "last_done_hours": 10371,
+      "next_due_hours": 11571,
+      "record_id": "TSK-9V7ZEG",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 10325,
+      "next_due_hours": 11525,
+      "record_id": "TSK-TPTZD9",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 10547,
+      "next_due_hours": 10747,
+      "record_id": "TSK-TTT98M",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-T0R478",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-BXAAJC",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-N4BW2Q"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-EK8VGK",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-09MD14"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-83S2KA",
+        "signed_by": "Technician T-20",
+        "signoff_page_present": true,
+        "task_ref": "TSK-9V7ZEG"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-7DKZW6",
+        "signed_by": "Technician T-02",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TPTZD9"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-VPGRPS",
+        "signed_by": "Technician T-16",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TTT98M"
+      }
+    ]
+  }
+}

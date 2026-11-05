@@ -1,0 +1,159 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-UDVQ",
+    "total_cycles": 16690,
+    "total_hours": 8358,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-7541",
+      "compliance_due_date": "2026-11-19",
+      "record_id": "AD-6GSGGV",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-22",
+        "expiry_date": "2026-11-21",
+        "interval_days": 30
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-36",
+      "raised_date": "2026-10-22",
+      "record_id": "DEF-7R5C7F",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-29",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-T6CJP3",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-12",
+        "expiry_date": "2026-10-22",
+        "interval_days": 10
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-10",
+      "raised_date": "2026-10-12",
+      "record_id": "DEF-B97M2C",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 27206,
+      "description": "Fan disk",
+      "installed_date": "2025-02-21",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-FND-27209",
+      "received_date": "2024-12-16",
+      "record_id": "LLP-VQCQDR",
+      "release_certificate_ref": "SYN-CERT-9NYY5Q5X",
+      "serial_number": "SYN-SN-FND-142456",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 28196,
+      "description": "Main gear axle",
+      "installed_date": "2025-09-28",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-93994",
+      "received_date": "2025-08-04",
+      "record_id": "LLP-C5DKV2",
+      "release_certificate_ref": "SYN-CERT-C57AVWP2",
+      "serial_number": "SYN-SN-MGA-532109",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-96BSZ1VJ",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 400,
+      "last_done_hours": 8273,
+      "next_due_hours": 8673,
+      "record_id": "TSK-9TJ7TA",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 8245,
+      "next_due_hours": 8845,
+      "record_id": "TSK-EJ4W7W",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 8037,
+      "next_due_hours": 9237,
+      "record_id": "TSK-5JQS34",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-HAE06W",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-9HETYJ",
+        "signed_by": "Technician T-37",
+        "signoff_page_present": true,
+        "task_ref": "TSK-9TJ7TA"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-6Q9KH3",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-EJ4W7W"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-RT24WN",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5JQS34"
+      }
+    ]
+  }
+}

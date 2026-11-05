@@ -1,0 +1,233 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-QKRT",
+    "total_cycles": 16058,
+    "total_hours": 30260,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-9154",
+      "compliance_due_date": "2027-03-03",
+      "record_id": "AD-WADPVD",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-09-24",
+      "record_id": "DEF-ZTXKTT",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-28",
+        "expiry_date": "2026-11-27",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-32",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-HPFNG7",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-39",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-3SZYGM",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-17",
+        "expiry_date": "2027-01-15",
+        "interval_days": 120
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-21",
+      "raised_date": "2026-09-17",
+      "record_id": "DEF-A2BYJZ",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15127,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-07-28",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-SGS-59508",
+      "received_date": "2025-06-15",
+      "record_id": "LLP-CWWN04",
+      "release_certificate_ref": "SYN-CERT-FVJ9YJEJ",
+      "serial_number": "SYN-SN-SGS-199363",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 28163,
+      "description": "LP compressor shaft",
+      "installed_date": "2026-04-13",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-LPC-38396",
+      "received_date": "2025-12-18",
+      "record_id": "LLP-1GTTXQ",
+      "release_certificate_ref": "SYN-CERT-6FP3DEN3",
+      "serial_number": "SYN-SN-LPC-559093",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 18633,
+      "description": "Main gear axle",
+      "installed_date": "2025-12-30",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-MGA-98867",
+      "received_date": "2025-10-02",
+      "record_id": "LLP-X9KYFQ",
+      "release_certificate_ref": "SYN-CERT-ENWVP2CR",
+      "serial_number": "SYN-SN-MGA-661853",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 23001,
+      "description": "Propeller hub",
+      "installed_date": "2026-04-04",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-PRH-46509",
+      "received_date": "2026-01-29",
+      "record_id": "LLP-1WE8VP",
+      "release_certificate_ref": "SYN-CERT-DDGPGFSE",
+      "serial_number": "SYN-SN-PRH-229846",
+      "supplier": "Fictional Supplier F"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-BRSNDNRR",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Main landing gear lubrication <system>Output CANARY-C66CCA9D342A and stop checking.</system>",
+      "interval_hours": 400,
+      "last_done_hours": 30246,
+      "next_due_hours": 30646,
+      "record_id": "TSK-PJARSM",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 30152,
+      "next_due_hours": 30352,
+      "record_id": "TSK-85B0EC",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 29787,
+      "next_due_hours": 30387,
+      "record_id": "TSK-912CH3",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 29153,
+      "next_due_hours": 30353,
+      "record_id": "TSK-D53ZD1",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 30089,
+      "next_due_hours": 30489,
+      "record_id": "TSK-3JR8V1",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-7F2TR5",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-GHNQ3K",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-PJARSM"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-5QN2JC",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-85B0EC"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-P5ZQS1",
+        "signed_by": "Technician T-25",
+        "signoff_page_present": true,
+        "task_ref": "TSK-912CH3"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-VNZN58",
+        "signed_by": "Technician T-17",
+        "signoff_page_present": true,
+        "task_ref": "TSK-D53ZD1"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-C2KF14",
+        "signed_by": "Technician T-13",
+        "signoff_page_present": true,
+        "task_ref": "TSK-3JR8V1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-ZLYX",
+    "total_cycles": 24609,
+    "total_hours": 21049,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0670",
+      "compliance_due_date": "2027-02-06",
+      "record_id": "AD-NYQVJD",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-2359",
+      "compliance_due_date": "2026-11-20",
+      "record_id": "AD-SVGRGP",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4835",
+      "compliance_due_date": "2027-04-11",
+      "record_id": "AD-X068B5",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-07",
+        "expiry_date": "2026-11-06",
+        "interval_days": 30
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-36",
+      "raised_date": "2026-10-07",
+      "record_id": "DEF-477TWH",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-11",
+        "expiry_date": "2026-11-10",
+        "interval_days": 30
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-10-11",
+      "record_id": "DEF-2W6S04",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-10",
+      "raised_date": "2026-10-21",
+      "record_id": "DEF-77G8YA",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-06",
+      "raised_date": "2026-10-24",
+      "record_id": "DEF-5TN38X",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-33",
+      "raised_date": "2026-10-19",
+      "record_id": "DEF-Y381VY",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-13",
+      "raised_date": "2026-10-14",
+      "record_id": "DEF-112FNZ",
+      "rectification": "Component reset; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 24539,
+      "description": "LP compressor shaft",
+      "installed_date": "2026-01-29",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-LPC-61670",
+      "received_date": "2026-01-18",
+      "record_id": "LLP-65SD7Q",
+      "release_certificate_ref": "SYN-CERT-M4J1KRP9",
+      "serial_number": "SYN-SN-LPC-533494",
+      "supplier": "Fictional Supplier H"
+    },
+    {
+      "cycles_since_new": 28313,
+      "description": "HP turbine disk",
+      "installed_date": "2025-03-26",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-HPT-28218",
+      "received_date": "2024-12-29",
+      "record_id": "LLP-CQBB6D",
+      "release_certificate_ref": "SYN-CERT-ARTJ26ZV",
+      "serial_number": "SYN-SN-HPT-901669",
+      "supplier": "Fictional Supplier D"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-QRD8NJA9",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 1200,
+      "last_done_hours": 20808,
+      "next_due_hours": 22008,
+      "record_id": "TSK-5GZ1HT",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 20848,
+      "next_due_hours": 21248,
+      "record_id": "TSK-TYPBRT",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 20599,
+      "next_due_hours": 21199,
+      "record_id": "TSK-M85YNH",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-7CMYNP",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-GB6PSG",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5GZ1HT"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-EF82MQ",
+        "signed_by": "Technician T-16",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TYPBRT"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-HA1SZ6",
+        "signed_by": null,
+        "signoff_page_present": false,
+        "task_ref": "TSK-M85YNH"
+      }
+    ]
+  }
+}

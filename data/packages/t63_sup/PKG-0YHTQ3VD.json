@@ -1,0 +1,254 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator F",
+    "registration": "SYN-BBSA",
+    "total_cycles": 21191,
+    "total_hours": 24692,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-7120",
+      "compliance_due_date": "2026-11-28",
+      "record_id": "AD-N82517",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5938",
+      "compliance_due_date": "2027-03-30",
+      "record_id": "AD-TT2K2B",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1200",
+      "compliance_due_date": "2027-02-24",
+      "record_id": "AD-K42M86",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-13",
+        "interval_days": 10
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-0MN8JS",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-10-06",
+      "record_id": "DEF-TQ0VKF",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-06",
+        "expiry_date": "2027-01-04",
+        "interval_days": 120
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-05",
+      "raised_date": "2026-09-06",
+      "record_id": "DEF-Q21FH1",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-10",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-NKF5JM",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15063,
+      "description": "Main gear axle",
+      "installed_date": "2025-06-27",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-MGA-58316",
+      "received_date": "2025-08-15",
+      "record_id": "LLP-03M2G3",
+      "release_certificate_ref": "SYN-CERT-52MMEB7Z",
+      "serial_number": "SYN-SN-MGA-780584",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 15743,
+      "description": "Propeller hub",
+      "installed_date": "2025-12-29",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-PRH-84795",
+      "received_date": "2025-09-13",
+      "record_id": "LLP-718PQW",
+      "release_certificate_ref": "SYN-CERT-1BFE2X1J",
+      "serial_number": "SYN-SN-PRH-391743",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 20483,
+      "description": "Main gear axle",
+      "installed_date": "2025-09-15",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-MGA-04135",
+      "received_date": "2025-04-18",
+      "record_id": "LLP-5BBD0S",
+      "release_certificate_ref": "SYN-CERT-8KA1YQBS",
+      "serial_number": "SYN-SN-MGA-554726",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 11810,
+      "description": "Propeller hub",
+      "installed_date": "2025-11-05",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-PRH-89224",
+      "received_date": "2025-07-04",
+      "record_id": "LLP-RBC21Z",
+      "release_certificate_ref": "SYN-CERT-W6E423Y2",
+      "serial_number": "SYN-SN-PRH-850876",
+      "supplier": "Fictional Supplier C"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-0YHTQ3VD",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 24585,
+      "next_due_hours": 25185,
+      "record_id": "TSK-96VVD8",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 24617,
+      "next_due_hours": 25217,
+      "record_id": "TSK-VHYKMJ",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 23786,
+      "next_due_hours": 24986,
+      "record_id": "TSK-BEZSK7",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 400,
+      "last_done_hours": 24566,
+      "next_due_hours": 24966,
+      "record_id": "TSK-TQEKV9",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 1200,
+      "last_done_hours": 24620,
+      "next_due_hours": 25820,
+      "record_id": "TSK-FH2T3D",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-RAH8SD",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-6MHYFG",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-96VVD8"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-9PMD9S",
+        "signed_by": "Technician T-02",
+        "signoff_page_present": true,
+        "task_ref": "TSK-VHYKMJ"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-G6EBJ4",
+        "signed_by": "Technician T-18",
+        "signoff_page_present": true,
+        "task_ref": "TSK-BEZSK7"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-X8KJ9F",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TQEKV9"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-XST067",
+        "signed_by": "Technician T-07",
+        "signoff_page_present": true,
+        "task_ref": "TSK-FH2T3D"
+      }
+    ]
+  }
+}

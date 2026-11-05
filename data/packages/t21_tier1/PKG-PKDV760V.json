@@ -1,0 +1,149 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator E",
+    "registration": "SYN-SYRA",
+    "total_cycles": 9320,
+    "total_hours": 32394,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-5965",
+      "compliance_due_date": "2026-08-25",
+      "record_id": "AD-C4MTPT",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-09-15",
+      "record_id": "DEF-KQYDZQ",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-27",
+        "expiry_date": "2026-11-06",
+        "interval_days": 10
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-27",
+      "raised_date": "2026-10-27",
+      "record_id": "DEF-NBFF17",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 27770,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-03-29",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-LPC-34274",
+      "received_date": "2025-02-15",
+      "record_id": "LLP-XVS9RT",
+      "release_certificate_ref": "SYN-CERT-ME1SYN7Y",
+      "serial_number": "SYN-SN-LPC-867263",
+      "supplier": "Fictional Supplier H"
+    },
+    {
+      "cycles_since_new": 15158,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-03-22",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-SGS-28740",
+      "received_date": "2024-10-29",
+      "record_id": "LLP-GMPW5Z",
+      "release_certificate_ref": "SYN-CERT-NWQ7V4TP",
+      "serial_number": "SYN-SN-SGS-809033",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-PKDV760V",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 31970,
+      "next_due_hours": 32570,
+      "record_id": "TSK-HSNZ33",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 32038,
+      "next_due_hours": 32638,
+      "record_id": "TSK-S5HJ79",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 31902,
+      "next_due_hours": 32502,
+      "record_id": "TSK-1JW4HT",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-CDGH01",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-8HJ7PX",
+        "signed_by": "Technician T-03",
+        "signoff_page_present": true,
+        "task_ref": "TSK-HSNZ33"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-WEE9G5",
+        "signed_by": "Technician T-17",
+        "signoff_page_present": true,
+        "task_ref": "TSK-S5HJ79"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-W7TQZ8",
+        "signed_by": "Technician T-27",
+        "signoff_page_present": true,
+        "task_ref": "TSK-1JW4HT"
+      }
+    ]
+  }
+}

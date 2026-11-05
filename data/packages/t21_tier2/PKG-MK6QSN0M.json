@@ -1,0 +1,210 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-DYMW",
+    "total_cycles": 6849,
+    "total_hours": 11397,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0045",
+      "compliance_due_date": "2027-03-03",
+      "record_id": "AD-4M1NYY",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-9597",
+      "compliance_due_date": "2026-09-08",
+      "record_id": "AD-RV4M92",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-6066",
+      "compliance_due_date": "2027-04-02",
+      "record_id": "AD-1S9J0C",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-10",
+        "expiry_date": "2026-11-09",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-10-10",
+      "record_id": "DEF-SBWRR8",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-02",
+        "expiry_date": "2026-11-12",
+        "interval_days": 10
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-BAJK90",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 25855,
+      "description": "Propeller hub",
+      "installed_date": "2025-03-26",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-PRH-12644",
+      "received_date": "2025-01-19",
+      "record_id": "LLP-36228Y",
+      "release_certificate_ref": "SYN-CERT-587YFA6T",
+      "serial_number": "SYN-SN-PRH-347246",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 20499,
+      "description": "Main gear axle",
+      "installed_date": "2025-03-09",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-MGA-32660",
+      "received_date": "2025-02-21",
+      "record_id": "LLP-Z2XEQR",
+      "release_certificate_ref": "SYN-CERT-0E9J2S36",
+      "serial_number": "SYN-SN-MGA-965947",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 21532,
+      "description": "Main gear axle",
+      "installed_date": "2026-04-10",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-74913",
+      "received_date": "2026-01-03",
+      "record_id": "LLP-8FN6BE",
+      "release_certificate_ref": "SYN-CERT-1VAXYS7W",
+      "serial_number": "SYN-SN-MGA-474534",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 28045,
+      "description": "HP turbine disk",
+      "installed_date": "2026-02-09",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-HPT-27335",
+      "received_date": "2025-12-10",
+      "record_id": "LLP-V1KMH4",
+      "release_certificate_ref": "SYN-CERT-4JY7Q4JF",
+      "serial_number": "SYN-SN-HPT-345321",
+      "supplier": "Fictional Supplier A"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-MK6QSN0M",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 10282,
+      "next_due_hours": 11482,
+      "record_id": "TSK-6T3TQB",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 11093,
+      "next_due_hours": 12293,
+      "record_id": "TSK-27ZFZ2",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 11171,
+      "next_due_hours": 11571,
+      "record_id": "TSK-189AZC",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 10456,
+      "next_due_hours": 11656,
+      "record_id": "TSK-0VNTKC",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-NYVKZ5",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-E3779B",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-6T3TQB"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-1753B8",
+        "signed_by": "Technician T-03",
+        "signoff_page_present": true,
+        "task_ref": "TSK-27ZFZ2"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-HR57BQ",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-189AZC"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-CEVEYS",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-0VNTKC"
+      }
+    ]
+  }
+}

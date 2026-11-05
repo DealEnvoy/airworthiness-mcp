@@ -1,0 +1,172 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-PYMS",
+    "total_cycles": 29979,
+    "total_hours": 33743,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3414",
+      "compliance_due_date": "2027-02-19",
+      "record_id": "AD-WGT8XB",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1198",
+      "record_id": "AD-R98VBC",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-25",
+      "raised_date": "2026-10-23",
+      "record_id": "DEF-3XJ2QR",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-18",
+        "expiry_date": "2027-02-15",
+        "interval_days": 120
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-18",
+      "raised_date": "2026-10-18",
+      "record_id": "DEF-MT947Y",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-38",
+      "record_id": "DEF-13VKQR",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 23780,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-01-16",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-SGS-75724",
+      "received_date": "2025-12-14",
+      "record_id": "LLP-3ZRPE1",
+      "release_certificate_ref": "SYN-CERT-89H33WN2",
+      "serial_number": "SYN-SN-SGS-769086",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 23835,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-01-01",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-LPC-36602",
+      "received_date": "2024-10-15",
+      "record_id": "LLP-R8D0RQ",
+      "release_certificate_ref": "SYN-CERT-HMCAG3BS",
+      "serial_number": "SYN-SN-LPC-590965",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 25795,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-01-02",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-SGS-73289",
+      "received_date": "2025-08-13",
+      "record_id": "LLP-NJWYC4",
+      "release_certificate_ref": "SYN-CERT-EYBG7G2E",
+      "serial_number": "SYN-SN-SGS-343434",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-CVF52XK5",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 33649,
+      "next_due_hours": 33849,
+      "record_id": "TSK-FW1F82",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 1200,
+      "last_done_hours": 32793,
+      "next_due_hours": 33993,
+      "record_id": "TSK-ESZ2CM",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 33722,
+      "next_due_hours": 33922,
+      "record_id": "TSK-Q4NBFS",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-PH9RGW",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-GAZAPH",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-FW1F82"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-DRKFP1",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ESZ2CM"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-5HTTD9",
+        "signed_by": "Technician T-01",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Q4NBFS"
+      }
+    ]
+  }
+}

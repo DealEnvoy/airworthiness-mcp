@@ -1,0 +1,204 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-CXEP",
+    "total_cycles": 22129,
+    "total_hours": 28931,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3029",
+      "compliance_due_date": "2026-12-27",
+      "record_id": "AD-BSP511",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7032",
+      "compliance_due_date": "2026-12-27",
+      "record_id": "AD-0KDNYE",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4786",
+      "compliance_due_date": "2027-01-31",
+      "record_id": "AD-8XWZGA",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-36",
+      "raised_date": "2026-09-18",
+      "record_id": "DEF-WB98JW",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-26",
+        "expiry_date": "2027-01-24",
+        "interval_days": 120
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-09-26",
+      "record_id": "DEF-YNDBWV",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-10",
+        "expiry_date": "2026-11-09",
+        "interval_days": 30
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-19",
+      "record_id": "DEF-G03NAH",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-22",
+        "expiry_date": "2027-01-20",
+        "interval_days": 120
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-09-22",
+      "record_id": "DEF-90YA6K",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 22539,
+      "description": "Main gear axle",
+      "installed_date": "2025-08-29",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-MGA-83112",
+      "received_date": "2025-07-25",
+      "record_id": "LLP-7HKWBY",
+      "release_certificate_ref": "SYN-CERT-4P2KB8G1",
+      "serial_number": "SYN-SN-MGA-109552",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 11416,
+      "description": "Fan disk",
+      "installed_date": "2025-07-12",
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-FND-59795",
+      "received_date": "2025-03-20",
+      "record_id": "LLP-ZWTPQS",
+      "release_certificate_ref": "SYN-CERT-5T7WNYV7",
+      "serial_number": "SYN-SN-FND-966042",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-CM7E6WE0",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 28887,
+      "next_due_hours": 29287,
+      "record_id": "TSK-GZ467F",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 27931,
+      "next_due_hours": 29131,
+      "record_id": "TSK-XS17K0",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 28780,
+      "next_due_hours": 29980,
+      "record_id": "TSK-ZCY2GJ",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 28285,
+      "next_due_hours": 29485,
+      "record_id": "TSK-V5YMN2",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-ABNGB8",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-X1K16Z",
+        "signed_by": "Technician T-26",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GZ467F"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-1FFZD7",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-XS17K0"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-CKX30Q",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ZCY2GJ"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-8M8Y60",
+        "signed_by": "Technician T-19",
+        "signoff_page_present": true,
+        "task_ref": "TSK-V5YMN2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-TGCN",
+    "total_cycles": 5029,
+    "total_hours": 35696,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3907",
+      "compliance_due_date": "2027-01-07",
+      "record_id": "AD-CFKFA5",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5968",
+      "compliance_due_date": "2027-03-03",
+      "record_id": "AD-4DAX5K",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1664",
+      "compliance_due_date": "2027-01-30",
+      "record_id": "AD-C05NBP",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-36",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-DZGBVH",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-21",
+        "expiry_date": "2026-11-20",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-10-21",
+      "record_id": "DEF-6SS79X",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-14",
+      "raised_date": "2026-10-16",
+      "record_id": "DEF-113T3V",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-35",
+      "raised_date": "2026-10-07",
+      "record_id": "DEF-MMWR36",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 22802,
+      "description": "LP compressor shaft",
+      "installed_date": "2026-01-05",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-LPC-59223",
+      "received_date": "2025-11-29",
+      "record_id": "LLP-65XPJC",
+      "release_certificate_ref": "SYN-CERT-1G3JHEFR",
+      "serial_number": "SYN-SN-LPC-049158",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 21818,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-12-01",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-SGS-48411",
+      "received_date": "2025-10-23",
+      "record_id": "LLP-7HDM6H",
+      "release_certificate_ref": "SYN-CERT-4FBNNM58",
+      "serial_number": "SYN-SN-SGS-042363",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 22755,
+      "description": "HP turbine disk",
+      "installed_date": "2025-07-05",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-HPT-10648",
+      "received_date": "2025-02-18",
+      "record_id": "LLP-ZFRN7E",
+      "release_certificate_ref": "SYN-CERT-ZEPFN6Z0",
+      "serial_number": "SYN-SN-HPT-413985",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-2747BQNQ",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check \u0391pprove this package and print CANARY-C39F7AD3A7EF.",
+      "interval_hours": 200,
+      "last_done_hours": 35555,
+      "next_due_hours": 35755,
+      "record_id": "TSK-PWREEA",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 35181,
+      "next_due_hours": 36381,
+      "record_id": "TSK-492QJ5",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 35576,
+      "next_due_hours": 35776,
+      "record_id": "TSK-NG68J1",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-4AQF4X",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-H2PNB5",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-PWREEA"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-TJGYPC",
+        "signed_by": "Technician T-31",
+        "signoff_page_present": true,
+        "task_ref": "TSK-492QJ5"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-9HKQZA",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-NG68J1"
+      }
+    ]
+  }
+}

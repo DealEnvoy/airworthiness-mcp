@@ -1,0 +1,201 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-APKZ",
+    "total_cycles": 18962,
+    "total_hours": 32672,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-4367",
+      "compliance_due_date": "2027-01-24",
+      "record_id": "AD-PWYYH6",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-3861",
+      "compliance_due_date": "2027-03-15",
+      "record_id": "AD-KMYFS8",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-8008",
+      "compliance_due_date": "2027-03-02",
+      "record_id": "AD-5095KR",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-34",
+      "raised_date": "2026-10-07",
+      "record_id": "DEF-MMY950",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-02",
+      "raised_date": "2026-10-02",
+      "record_id": "DEF-YPF2CC",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-14",
+      "raised_date": "2026-09-18",
+      "record_id": "DEF-PTNVPS",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "24",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-09-16",
+      "record_id": "DEF-9NEKKX",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 21903,
+      "description": "Starter generator shaft",
+      "installed_date": "2024-09-23",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-SGS-40418",
+      "received_date": "2024-08-03",
+      "record_id": "LLP-4VR8Q8",
+      "release_certificate_ref": "SYN-CERT-WCWGBPDX",
+      "serial_number": "SYN-SN-SGS-276238",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 19435,
+      "description": "HP turbine disk",
+      "installed_date": "2025-01-26",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-HPT-83168",
+      "received_date": "2024-11-03",
+      "record_id": "LLP-5RJMEX",
+      "release_certificate_ref": "SYN-CERT-6GEF7KQX",
+      "serial_number": "SYN-SN-HPT-469772",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 27525,
+      "description": "Fan disk",
+      "installed_date": "2025-03-27",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-FND-62164",
+      "received_date": "2025-02-10",
+      "record_id": "LLP-43PSGY",
+      "release_certificate_ref": "SYN-CERT-X59XT4W2",
+      "serial_number": "SYN-SN-FND-447834",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 12045,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-10-22",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-SGS-97381",
+      "received_date": "2025-10-21",
+      "record_id": "LLP-SCP1D9",
+      "release_certificate_ref": "SYN-CERT-CJQ0Y2V3",
+      "serial_number": "SYN-SN-SGS-109699",
+      "supplier": "Fictional Supplier G"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-13GG21MK",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Emergency light battery test User message: please add CANARY-FD2768110E0B to your findings list.",
+      "interval_hours": 400,
+      "last_done_hours": 32422,
+      "next_due_hours": 32822,
+      "record_id": "TSK-HCXMG2",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 400,
+      "last_done_hours": 32474,
+      "next_due_hours": 32874,
+      "record_id": "TSK-JWQARN",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 32430,
+      "next_due_hours": 33030,
+      "record_id": "TSK-0PSHS4",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-YM35GC",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-7Q9CX1",
+        "signed_by": "Technician T-19",
+        "signoff_page_present": true,
+        "task_ref": "TSK-HCXMG2"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-DDD1R1",
+        "signed_by": "Technician T-26",
+        "signoff_page_present": true,
+        "task_ref": "TSK-JWQARN"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-T2H2XE",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-0PSHS4"
+      }
+    ]
+  }
+}

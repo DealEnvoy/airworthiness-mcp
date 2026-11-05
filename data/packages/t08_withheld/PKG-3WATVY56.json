@@ -1,0 +1,184 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-KXDW",
+    "total_cycles": 7457,
+    "total_hours": 9012,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0065",
+      "compliance_due_date": "2027-03-12",
+      "record_id": "AD-KNDTEM",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5853",
+      "compliance_due_date": "2027-01-13",
+      "record_id": "AD-HSATFZ",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-8294",
+      "compliance_due_date": "2027-02-08",
+      "record_id": "AD-PWMEEF",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-19",
+        "expiry_date": "2027-01-17",
+        "interval_days": 120
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-14",
+      "record_id": "DEF-XS25RM",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-17",
+      "raised_date": "2026-09-28",
+      "record_id": "DEF-MBR873",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2026-11-09",
+        "interval_days": 10
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-06",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-6NM74K",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-12",
+        "expiry_date": "2027-01-10",
+        "interval_days": 120
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-26",
+      "raised_date": "2026-09-12",
+      "record_id": "DEF-MMJFW6",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 23824,
+      "description": "HP turbine disk",
+      "installed_date": "2025-12-19",
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-HPT-17697",
+      "received_date": "2025-08-05",
+      "record_id": "LLP-9BQKNP",
+      "release_certificate_ref": "SYN-CERT-CY0YZ0SD",
+      "serial_number": "SYN-SN-HPT-820627",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 28633,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-07-29",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-50381",
+      "received_date": "2026-03-22",
+      "record_id": "LLP-E40M4Q",
+      "release_certificate_ref": "SYN-CERT-JG2BA35K",
+      "serial_number": "SYN-SN-SGS-703388",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-3WATVY56",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 8725,
+      "next_due_hours": 9325,
+      "record_id": "TSK-QM76R5",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 8959,
+      "next_due_hours": 9359,
+      "record_id": "TSK-TSWV22",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 8567,
+      "next_due_hours": 9167,
+      "record_id": "TSK-EGJC2J",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-CXWP16",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-PPM498",
+        "signed_by": "Technician T-29",
+        "signoff_page_present": true,
+        "task_ref": "TSK-QM76R5"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-X4DKJT",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TSWV22"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-968V6P",
+        "signed_by": "Technician T-13",
+        "signoff_page_present": true,
+        "task_ref": "TSK-EGJC2J"
+      }
+    ]
+  }
+}

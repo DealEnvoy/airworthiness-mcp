@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Document checks for trial tests T49 and T55 (and spec sanity for T50, T53).
+"""Document checks for trial tests T49 and T55 (and spec sanity for T50, T53, and the T12 lexicon strings).
 
 Usage:
     python3 tools/check_docs.py threat-model   # T49
     python3 tools/check_docs.py security-docs  # T55 (script part; manual item stays with Isaac)
     python3 tools/check_docs.py specs          # T50 / T53 specification sanity
+    python3 tools/check_docs.py lexicon        # T12: frozen tool strings vs the lexicon; document hits (information only)
     python3 tools/check_docs.py all
 
 Standard library only. Reads files, writes nothing, makes no network call.
 Exit code 0 = all checks pass, 1 = at least one check failed, 2 = usage error.
 """
+import json
 import os
 import re
 import sys
+import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PLAN = os.path.join(ROOT, "docs", "trial-plan.md")
@@ -235,8 +238,70 @@ def check_specs():
     return errs
 
 
+def lexicon_patterns():
+    with open(os.path.join(ROOT, "data", "t12_lexicon.json"), encoding="utf-8") as fh:
+        lex = json.load(fh)
+    return lex, [(p["id"], re.compile(p["regex"], re.I)) for p in lex["forbidden_patterns"]]
+
+
+def norm(text):
+    return unicodedata.normalize("NFKC", " ".join(text.split()))
+
+
+def check_lexicon():
+    """T12 script part. Fails if a frozen tool string matches a forbidden pattern, if the two status
+    lines differ between the lexicon and the trial plan, or if the old status wording is still present.
+    Document hits are printed for information only: documents quote the phrases to forbid them."""
+    errs = []
+    lex, pats = lexicon_patterns()
+    strings = lex.get("frozen_tool_strings", {})
+    need = ("status_review_complete", "status_review_incomplete", "disclaimer", "intended_purpose",
+            "zero_findings_statement")
+    for k in need:
+        if k not in strings:
+            errs.append("lexicon has no frozen string %s" % k)
+    for k, v in strings.items():
+        for pid, rx in pats:
+            if rx.search(norm(v)):
+                errs.append("frozen tool string %s matches %s" % (k, pid))
+    plan = read(PLAN)
+    for k in ("status_review_complete", "status_review_incomplete"):
+        if k in strings and ("`%s`" % strings[k]) not in plan:
+            errs.append("trial-plan.md does not contain the frozen line %s verbatim" % k)
+    if lex.get("required_disclaimer") != strings.get("disclaimer"):
+        errs.append("required_disclaimer differs from the frozen disclaimer string")
+    stale = []
+    for r, _, files in os.walk(ROOT):
+        if os.sep + ".git" in r or os.sep + "packages" in r or os.sep + "corpora" in r:
+            continue
+        for name in files:
+            if name.endswith((".md", ".py", ".json", ".txt")) and name != "check_docs.py":
+                p = os.path.join(r, name)
+                if "NOT READY" in read(p):
+                    stale.append(os.path.relpath(p, ROOT))
+    for p in stale:
+        errs.append("old status wording 'NOT READY' still present in %s" % p)
+    # information only
+    doc_hits = {}
+    for r, _, files in os.walk(ROOT):
+        if os.sep + ".git" in r or os.sep + "packages" in r or os.sep + "corpora" in r:
+            continue
+        for name in files:
+            if name.endswith(".md"):
+                p = os.path.join(r, name)
+                t = norm(read(p))
+                n = sum(1 for _, rx in pats if rx.search(t))
+                if n:
+                    doc_hits[os.path.relpath(p, ROOT)] = n
+    print("lexicon: %d patterns; %d frozen tool strings checked" % (len(pats), len(strings)))
+    print("lexicon: document hits (information only, documents are out of scope): %d file(s) %s"
+          % (len(doc_hits), json.dumps(doc_hits, sort_keys=True)))
+    return errs
+
+
 def main(argv):
-    cmds = {"threat-model": check_threat_model, "security-docs": check_security_docs, "specs": check_specs}
+    cmds = {"threat-model": check_threat_model, "security-docs": check_security_docs, "specs": check_specs,
+            "lexicon": check_lexicon}
     if len(argv) != 2 or (argv[1] != "all" and argv[1] not in cmds):
         print(__doc__)
         return 2

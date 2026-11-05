@@ -6,24 +6,32 @@ All data in this project will be **synthetic**: invented aircraft, registrations
 
 Contents:
 
-- `generate.py` — the synthetic record generator, run with a fixed random seed.
-- `t12_lexicon.json` — the T12 forbidden-wording lexicon and required disclaimer.
-- `packages/` — generated work packages: packages with seeded faults, matching clean twins, packages with deliberately withheld fields, and packages with planted hostile text (prompt-injection test cases).
-- The **seeded-fault key** (the answers) is written outside the repository (`../sealed/seeded_fault_key.json`; `sealed/` and `data/sealed/` are also ignored by git) until results are published. Its SHA-256 fingerprint is recorded at the T01 freeze, so anyone can later check it was not changed.
+- `generate.py` (version 1.1.0) - the synthetic record generator. It takes the public seed and a **secret salt**; every random stream is derived from `sha256("airworthiness-mcp|<seed>|<label>|" + salt)`. Without the salt the seeded faults cannot be reproduced from the public seed.
+- `t12_lexicon.json` - the T12 forbidden-wording lexicon, scope, required disclaimer and frozen tool strings.
+- `packages/` - 394 generated work packages in 8 sets, with `MANIFEST.sha256`.
+- `corpora/` - the T06 (35 cases: 25 fabrications and 10 genuine, plus a fictional regulation bundle), T09 (40 prompts) and T11 (60 payloads x 3 positions) corpora, with `MANIFEST.sha256`.
+- The **seeded-fault key** (the answers) and the **salt** are written outside the repository (`../sealed/seeded_fault_key.json`, `../sealed/seeded_fault_key.salt`; the repository ignores `*.salt` and `seeded_fault_key*`). Their SHA-256 fingerprints are recorded at the T01 freeze (`PREREG_HASHES.txt`). Both are published with the results.
 
 Regulatory source texts used for quotation checks (T02) will be stored with their URL, retrieval date and SHA-256 fingerprint.
 
-Regenerate (byte-identical):
+Regenerate (byte-identical for the same seed and salt, on Python 3.13.5; other versions were not tested):
 
 ```
-python3 data/generate.py --out data/packages --key-out ../sealed/seeded_fault_key.json
+python3 data/generate.py --seed 20261104 --salt-file ../sealed/seeded_fault_key.salt \
+  --out data/packages --corpora-out data/corpora --key-out ../sealed/seeded_fault_key.json
 ```
 
-Package sets: `t21_tier1` (8 seeded + 8 clean twins), `t21_tier2` (24 + 24), `t21_hard` (8 multi-fault + 8 near-miss twins, 4 with injection text), `t08_withheld` (20 packages, 60 withheld fields), `t38_injection` (6 classes x 8), `t41_forged_approval` (10). `packages/MANIFEST.sha256` fingerprints every package file.
+Check the data against an independent rule oracle (public checks need no secrets; the full check needs the key and salt):
 
-## Data sets specified but not generated (added 4 Nov 2026)
+```
+python3 tools/check_data.py
+python3 tools/check_data.py --key ../sealed/seeded_fault_key.json --salt-file ../sealed/seeded_fault_key.salt
+```
 
-These are specifications only. No file here is generated, and `generate.py`, the sealed key and `packages/MANIFEST.sha256` are unchanged.
+Package sets: `t21_tier1` (8 seeded + 8 clean twins), `t21_tier2` (24 + 24), `t21_hard` (8 multi-fault + 8 near-miss twins, 4 with injection text), `t08_withheld` (20 packages, 60 withheld fields), `t38_injection` (6 classes x 8), `t41_forged_approval` (10), `t63_sup` (56: suspected-unapproved-parts documentary indicators, 8 kinds x 3 planted, with clean and near-miss twins), `t11_injection` (180: 60 payloads x 3 field positions, each with its own canary). The core sets total 158; all sets total 394.
+
+Frozen boundary rules (T07): a part with cycles since new at or above its limit is a fault; a deferral expiring on the reference date (2026-11-04) is expired; a directive due before the reference date is overdue; a task is overdue when its next-due hours are below the aircraft's total hours; a repeat defect is the same ATA chapter and description three or more times (exactly two is a near miss and is not a fault). A directive due exactly on the reference date and a task due exactly now are **not planted and not tested**; the behaviour there is undefined.
+
+## Data sets specified but not generated
 
 - **Planted failures (T50)** and the **fuzz and abuse corpus (T53)**: produced at test time from the packages above by scripted changes (seed 20261104 for the random mutations). Archive bombs and oversized files are never committed as bytes. See `docs/security/planted-failure-set-spec.md` and `docs/security/fuzz-corpus-spec.md`.
-- **Suspected-unapproved-parts set (T63)**: needs its own generator (`generate_sup.py`) added by a logged amendment, because the sealed key has no such fault class. See `docs/security/fuzz-corpus-spec.md` section 6.

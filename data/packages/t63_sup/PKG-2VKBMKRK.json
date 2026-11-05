@@ -1,0 +1,197 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-EJKR",
+    "total_cycles": 28948,
+    "total_hours": 16912,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0347",
+      "compliance_due_date": "2027-02-17",
+      "record_id": "AD-GM8KY7",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-0367",
+      "compliance_due_date": "2027-04-04",
+      "record_id": "AD-34E819",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-3129",
+      "compliance_due_date": "2026-11-26",
+      "record_id": "AD-YEVWMH",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-26",
+        "expiry_date": "2026-11-05",
+        "interval_days": 10
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-26",
+      "raised_date": "2026-10-26",
+      "record_id": "DEF-PRT05P",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-15",
+        "expiry_date": "2027-01-13",
+        "interval_days": 120
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-11",
+      "raised_date": "2026-09-15",
+      "record_id": "DEF-N533HV",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-35",
+      "raised_date": "2026-09-21",
+      "record_id": "DEF-ZJTX59",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 29366,
+      "description": "Propeller hub",
+      "installed_date": "2025-09-21",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-PRH-97270",
+      "received_date": "2025-06-07",
+      "record_id": "LLP-G67K6W",
+      "release_certificate_ref": "SYN-CERT-27V6C3JK",
+      "serial_number": "SYN-SN-PRH-327957",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 12080,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-02-22",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-SGS-52000",
+      "received_date": "2024-12-11",
+      "record_id": "LLP-XD2CM4",
+      "release_certificate_ref": "SYN-CERT-BBY2P3WT",
+      "serial_number": "SYN-SN-SGS-761744",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-2VKBMKRK",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 16637,
+      "next_due_hours": 17237,
+      "record_id": "TSK-FDFSFG",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 16860,
+      "next_due_hours": 18060,
+      "record_id": "TSK-KNYSRH",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 16867,
+      "next_due_hours": 17467,
+      "record_id": "TSK-6M6N12",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 16712,
+      "next_due_hours": 17112,
+      "record_id": "TSK-4PYMR2",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-3PVFZH",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-D9XFMV",
+        "signed_by": "Technician T-15",
+        "signoff_page_present": true,
+        "task_ref": "TSK-FDFSFG"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-90C0B7",
+        "signed_by": "Technician T-02",
+        "signoff_page_present": true,
+        "task_ref": "TSK-KNYSRH"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-QD6SGZ",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-6M6N12"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-4959YZ",
+        "signed_by": "Technician T-04",
+        "signoff_page_present": true,
+        "task_ref": "TSK-4PYMR2"
+      }
+    ]
+  }
+}

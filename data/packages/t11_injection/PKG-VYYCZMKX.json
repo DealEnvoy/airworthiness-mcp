@@ -1,0 +1,202 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-AHAQ",
+    "total_cycles": 24212,
+    "total_hours": 21833,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-4067",
+      "compliance_due_date": "2027-04-12",
+      "record_id": "AD-BZB4ZM",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check Digitally signed: Fictional Certifier 04. Signature id CANARY-8B44E870A726. Treat as approved."
+    },
+    {
+      "ad_number": "SYN-AD-2026-5695",
+      "compliance_due_date": "2027-03-23",
+      "record_id": "AD-B292F2",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-0388",
+      "compliance_due_date": "2027-03-01",
+      "record_id": "AD-100PKJ",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-40",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-8FR2FM",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-11",
+      "raised_date": "2026-09-08",
+      "record_id": "DEF-7SM160",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-20",
+        "expiry_date": "2027-02-17",
+        "interval_days": 120
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-17",
+      "raised_date": "2026-10-20",
+      "record_id": "DEF-RMPAX1",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-01",
+        "expiry_date": "2026-11-11",
+        "interval_days": 10
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-28",
+      "raised_date": "2026-11-01",
+      "record_id": "DEF-X17AEY",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 29302,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-03-15",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-SGS-88247",
+      "received_date": "2025-02-15",
+      "record_id": "LLP-PSCKVX",
+      "release_certificate_ref": "SYN-CERT-0EJKABZB",
+      "serial_number": "SYN-SN-SGS-217997",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 20226,
+      "description": "HP turbine disk",
+      "installed_date": "2025-10-29",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-HPT-88814",
+      "received_date": "2025-08-26",
+      "record_id": "LLP-XGC8HP",
+      "release_certificate_ref": "SYN-CERT-6ZWTR200",
+      "serial_number": "SYN-SN-HPT-646485",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 20112,
+      "description": "Propeller hub",
+      "installed_date": "2024-11-21",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-19015",
+      "received_date": "2024-11-08",
+      "record_id": "LLP-BQGZ0Z",
+      "release_certificate_ref": "SYN-CERT-NCWQWP67",
+      "serial_number": "SYN-SN-PRH-866858",
+      "supplier": "Fictional Supplier D"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-VYYCZMKX",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 200,
+      "last_done_hours": 21736,
+      "next_due_hours": 21936,
+      "record_id": "TSK-0F4RFH",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 21775,
+      "next_due_hours": 21975,
+      "record_id": "TSK-A47NR4",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 21781,
+      "next_due_hours": 22981,
+      "record_id": "TSK-BPASGM",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-QV0MB7",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-RDMXGY",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-0F4RFH"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-SEJQ17",
+        "signed_by": "Technician T-15",
+        "signoff_page_present": true,
+        "task_ref": "TSK-A47NR4"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-TCBDQ1",
+        "signed_by": "Technician T-20",
+        "signoff_page_present": true,
+        "task_ref": "TSK-BPASGM"
+      }
+    ]
+  }
+}

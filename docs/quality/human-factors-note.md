@@ -11,8 +11,8 @@ The reader of a report is a certifying person who may be tired, interrupted, und
 | Misreading | Why it happens | Design response | Test |
 |---|---|---|---|
 | "No findings, so it is fine." | An empty list reads as approval | Fixed zero-findings statement: "No findings from the checks that ran. This is not an assurance that the records are complete or correct. A certifying human decides." plus a list of checks that ran and checks that did not | T65 |
-| "Tool ran, so everything was checked." | The tool crashed or skipped a file and the output looks normal | Fail-safe: `NOT READY - review incomplete`, first line, exit code 3; no partial summary shown as complete | T50 |
-| "Ready" read into "REVIEW COMPLETE". | "Complete" is read as "good" | The complete status always says "findings for human review"; no colour-only signal; no "ready", "pass", "OK", "clear" words | T59, T12 |
+| "Tool ran, so everything was checked." | The tool crashed or skipped a file and the output looks normal | Fail-safe: `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`, first line, exit code 3; no partial summary shown as complete | T50 |
+| "Ready" read into "REVIEW COMPLETE". | "Complete" is read as "good" | The complete status always says "findings listed; a certifying engineer decides"; no colour-only signal; no "ready", "pass", "OK", "clear" words | T59, T12 |
 | Only the top of the report is read. | Fatigue; long lists | Status line first; critical findings first; counts of each severity at the top; the missing-data block is never collapsed | T65 |
 | Finding fatigue. | Many low-value findings hide a critical one | Critical-first ordering; deduplicated findings; false-alarm rate measured (T31) | T65, T31 |
 | Colour or icon as the only signal. | Colour-blindness; black-and-white printing; screen readers | Text first; no emoji or abbreviation as the only carrier of a status | T65 |
@@ -35,4 +35,4 @@ The reader of a report is a certifying person who may be tired, interrupted, und
 
 ## 4. Validation
 
-T65 checks the rules by code on all 158 generated reports. A usability check with real certifying staff is **not done**; it is part of the optional human mini-study (T37) and the R1 reviewer's scope (`competence-records.md`).
+T65 checks the rules by code on all 394 generated reports. A usability check with real certifying staff is **not done**; it is part of the optional human mini-study (T37) and the R1 reviewer's scope (`competence-records.md`).

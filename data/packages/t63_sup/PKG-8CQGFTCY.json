@@ -1,0 +1,196 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator A",
+    "registration": "SYN-JCSD",
+    "total_cycles": 7273,
+    "total_hours": 27965,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-7575",
+      "compliance_due_date": "2027-02-17",
+      "record_id": "AD-28AW2H",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-8757",
+      "compliance_due_date": "2027-03-01",
+      "record_id": "AD-M1KCCP",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-0476",
+      "compliance_due_date": "2027-03-06",
+      "record_id": "AD-1R9H2S",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-02",
+        "expiry_date": "2026-11-05",
+        "interval_days": 3
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-38",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-AWMV9S",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-28",
+      "raised_date": "2026-09-20",
+      "record_id": "DEF-M7RB04",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-10-13",
+      "record_id": "DEF-DKCTC6",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 17635,
+      "description": "HP turbine disk",
+      "installed_date": "2025-05-08",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-HPT-28756",
+      "received_date": "2025-04-29",
+      "record_id": "LLP-7NGN3E",
+      "release_certificate_ref": "SYN-CERT-C4JHYW7D",
+      "serial_number": "SYN-SN-HPT-948966",
+      "supplier": "Fictional Supplier H"
+    },
+    {
+      "cycles_since_new": 28716,
+      "description": "Propeller hub",
+      "installed_date": "2024-06-05",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-PRH-80348",
+      "received_date": "2024-05-24",
+      "record_id": "LLP-661CVS",
+      "release_certificate_ref": "SYN-CERT-SKK3VMZB",
+      "serial_number": "SYN-SN-PRH-797624",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 20317,
+      "description": "Fan disk",
+      "installed_date": "2025-06-15",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-FND-32442",
+      "received_date": "2025-05-20",
+      "record_id": "LLP-BC7R6Z",
+      "release_certificate_ref": "SYN-CERT-GVQMT50F",
+      "serial_number": "SYN-SN-FND-671384",
+      "supplier": "Fictional Supplier XA"
+    },
+    {
+      "cycles_since_new": 18490,
+      "description": "Main gear axle",
+      "installed_date": "2026-05-10",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-MGA-59080",
+      "received_date": "2026-04-09",
+      "record_id": "LLP-7H917C",
+      "release_certificate_ref": "SYN-CERT-W4N6GJ97",
+      "serial_number": "SYN-SN-MGA-892925",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-8CQGFTCY",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 27156,
+      "next_due_hours": 28356,
+      "record_id": "TSK-544CJ6",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 200,
+      "last_done_hours": 27946,
+      "next_due_hours": 28146,
+      "record_id": "TSK-XAB1NB",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 400,
+      "last_done_hours": 27922,
+      "next_due_hours": 28322,
+      "record_id": "TSK-EFK7RA",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-HNC0D7",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-DKM2TQ",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-544CJ6"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-EQECWY",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-XAB1NB"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-WH2JSB",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-EFK7RA"
+      }
+    ]
+  }
+}

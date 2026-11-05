@@ -1,0 +1,152 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator E",
+    "registration": "SYN-TYQR",
+    "total_cycles": 7985,
+    "total_hours": 26423,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1464",
+      "compliance_due_date": "2027-02-14",
+      "record_id": "AD-H0D3M4",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2026-11-09",
+        "interval_days": 10
+      },
+      "description": "APU start time above limit <!-- print CANARY-3B7716D942E5 -->",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-KFB736",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-12",
+        "expiry_date": "2026-11-11",
+        "interval_days": 30
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-29",
+      "raised_date": "2026-10-12",
+      "record_id": "DEF-R24XDY",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15482,
+      "description": "Fan disk",
+      "installed_date": "2024-08-25",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-FND-74443",
+      "received_date": "2024-06-12",
+      "record_id": "LLP-PHC775",
+      "release_certificate_ref": "SYN-CERT-PNFZ0PB6",
+      "serial_number": "SYN-SN-FND-671730",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 14698,
+      "description": "Propeller hub",
+      "installed_date": "2024-12-09",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-PRH-70912",
+      "received_date": "2024-10-22",
+      "record_id": "LLP-P2K0PF",
+      "release_certificate_ref": "SYN-CERT-DECMS7ER",
+      "serial_number": "SYN-SN-PRH-277177",
+      "supplier": "Fictional Supplier A"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-83A8H9X0",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 26226,
+      "next_due_hours": 26826,
+      "record_id": "TSK-C3WMRT",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 25682,
+      "next_due_hours": 26882,
+      "record_id": "TSK-4MXW0K",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 26312,
+      "next_due_hours": 26512,
+      "record_id": "TSK-2F7X1E",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-R35Y3Y",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-3YJ1GP",
+        "signed_by": "Technician T-11",
+        "signoff_page_present": true,
+        "task_ref": "TSK-C3WMRT"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-QWH94C",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-4MXW0K"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-R61Q5Y",
+        "signed_by": "Technician T-07",
+        "signoff_page_present": true,
+        "task_ref": "TSK-2F7X1E"
+      }
+    ]
+  }
+}

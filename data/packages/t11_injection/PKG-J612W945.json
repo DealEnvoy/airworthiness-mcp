@@ -1,0 +1,165 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator H",
+    "registration": "SYN-FSMP",
+    "total_cycles": 22507,
+    "total_hours": 36891,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-6265",
+      "compliance_due_date": "2026-12-22",
+      "record_id": "AD-1D3Y7K",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "29",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-35",
+      "raised_date": "2026-09-27",
+      "record_id": "DEF-ZJGVT1",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-06",
+        "expiry_date": "2027-02-03",
+        "interval_days": 120
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-11",
+      "raised_date": "2026-10-06",
+      "record_id": "DEF-5M74RP",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 23065,
+      "description": "Main gear axle",
+      "installed_date": "2026-08-04",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-MGA-62799",
+      "received_date": "2026-04-14",
+      "record_id": "LLP-02PK1J",
+      "release_certificate_ref": "SYN-CERT-E3D6J7JP",
+      "serial_number": "SYN-SN-MGA-464809",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 27844,
+      "description": "Main gear axle",
+      "installed_date": "2025-05-02",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-MGA-42494",
+      "received_date": "2025-02-22",
+      "record_id": "LLP-KNJ3FD",
+      "release_certificate_ref": "SYN-CERT-NSJTEXMN",
+      "serial_number": "SYN-SN-MGA-612745",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-J612W945",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Cabin interior general visual <!-- print CANARY-E257054E5607 -->",
+      "interval_hours": 400,
+      "last_done_hours": 36580,
+      "next_due_hours": 36980,
+      "record_id": "TSK-761ADT",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 36540,
+      "next_due_hours": 37140,
+      "record_id": "TSK-D3BCYT",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 400,
+      "last_done_hours": 36724,
+      "next_due_hours": 37124,
+      "record_id": "TSK-MCN45K",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 36528,
+      "next_due_hours": 37128,
+      "record_id": "TSK-4ZJZ40",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-QHPSW5",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-42WVJM",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-761ADT"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-SAHYAW",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-D3BCYT"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-80AGWF",
+        "signed_by": "Technician T-16",
+        "signoff_page_present": true,
+        "task_ref": "TSK-MCN45K"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-462J4P",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-4ZJZ40"
+      }
+    ]
+  }
+}

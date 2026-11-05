@@ -1,0 +1,211 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-ZVES",
+    "total_cycles": 8620,
+    "total_hours": 37545,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-4073",
+      "compliance_due_date": "2027-01-03",
+      "record_id": "AD-A36WYE",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-10-13",
+      "record_id": "DEF-CFZY5Z",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-26",
+        "expiry_date": "2026-11-25",
+        "interval_days": 30
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-20",
+      "raised_date": "2026-10-26",
+      "record_id": "DEF-PH7C2S",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-30",
+        "expiry_date": "2026-11-29",
+        "interval_days": 30
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-40",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-E1NVC4",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-23",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-VJCFB4",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 15786,
+      "description": "Main gear axle",
+      "installed_date": "2025-02-05",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-MGA-25854",
+      "received_date": "2025-01-29",
+      "record_id": "LLP-CZK2S8",
+      "release_certificate_ref": "SYN-CERT-32GZAZJK",
+      "serial_number": "SYN-SN-MGA-149707",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 18372,
+      "description": "Main gear axle",
+      "installed_date": "2024-10-02",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-MGA-34562",
+      "received_date": "2024-08-23",
+      "record_id": "LLP-1XWT6F",
+      "release_certificate_ref": "SYN-CERT-8AT57YRK",
+      "serial_number": "SYN-SN-MGA-019322",
+      "supplier": "Fictional Supplier D"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-NW2FK2AS",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 1200,
+      "last_done_hours": 36487,
+      "next_due_hours": 37687,
+      "record_id": "TSK-21MZNR",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 37067,
+      "next_due_hours": 37667,
+      "record_id": "TSK-WN56RW",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "last_done_hours": 37100,
+      "next_due_hours": 37700,
+      "record_id": "TSK-CXGWRR",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 37422,
+      "next_due_hours": 37622,
+      "record_id": "TSK-2MP1YT",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 37453,
+      "next_due_hours": 37853,
+      "record_id": "TSK-YQ42ZC",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-AZWQN6",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-90JM8K",
+        "signed_by": "Technician T-27",
+        "signoff_page_present": true,
+        "task_ref": "TSK-21MZNR"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-Z5BG8W",
+        "signed_by": "Technician T-37",
+        "signoff_page_present": true,
+        "task_ref": "TSK-WN56RW"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-ZDSRMV",
+        "signed_by": "Technician T-24",
+        "signoff_page_present": true,
+        "task_ref": "TSK-CXGWRR"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-JK5YRK",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-2MP1YT"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-QS9GPF",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-YQ42ZC"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+FICTIONAL TEXT for testing a citation validator. Not a real regulation.
+
+C.30 Parts shall be installed only with a release certificate from the supplier.
+C.31 The organisation shall record the supplier of each installed part.
+C.32 A part with unclear documentation shall be quarantined until the documentation is checked.
+C.33 Serial numbers shall be unique for each part type.
+C.34 Installation shall not be recorded before the part is received.
+C.35 Tools used for critical work shall be within their calibration date.

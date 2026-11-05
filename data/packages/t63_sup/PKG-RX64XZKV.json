@@ -1,0 +1,180 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-KLNR",
+    "total_cycles": 16496,
+    "total_hours": 12459,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-4540",
+      "compliance_due_date": "2027-03-27",
+      "record_id": "AD-RM5R8W",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "71",
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-12",
+      "raised_date": "2026-09-16",
+      "record_id": "DEF-1Z3B92",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-14",
+        "interval_days": 10
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-32",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-8J58JM",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-25",
+      "raised_date": "2026-11-01",
+      "record_id": "DEF-N16KN5",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 29726,
+      "description": "Propeller hub",
+      "installed_date": "2025-05-28",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-87333",
+      "received_date": "2025-04-06",
+      "record_id": "LLP-S6KMKX",
+      "release_certificate_ref": "",
+      "serial_number": "SYN-SN-PRH-267397",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 22770,
+      "description": "HP turbine disk",
+      "installed_date": "2025-12-04",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-HPT-69272",
+      "received_date": "2025-11-10",
+      "record_id": "LLP-ZG5F5E",
+      "release_certificate_ref": "SYN-CERT-HB3D8ZM5",
+      "serial_number": "SYN-SN-HPT-859532",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 14102,
+      "description": "Propeller hub",
+      "installed_date": "2026-04-22",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-PRH-25619",
+      "received_date": "2026-01-23",
+      "record_id": "LLP-9CWGZ0",
+      "release_certificate_ref": "SYN-CERT-GFC2N1MB",
+      "serial_number": "SYN-SN-PRH-710732",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 19087,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-07-21",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-SGS-66983",
+      "received_date": "2025-06-10",
+      "record_id": "LLP-ZEAH6K",
+      "release_certificate_ref": "SYN-CERT-90CEKKHG",
+      "serial_number": "SYN-SN-SGS-784027",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-RX64XZKV",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 12307,
+      "next_due_hours": 12707,
+      "record_id": "TSK-8DHRPK",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 12193,
+      "next_due_hours": 12793,
+      "record_id": "TSK-55ACJ2",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 12385,
+      "next_due_hours": 12585,
+      "record_id": "TSK-SQ69TB",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-JXHEBC",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-WERK97",
+        "signed_by": "Technician T-38",
+        "signoff_page_present": true,
+        "task_ref": "TSK-8DHRPK"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-AJSZ97",
+        "signed_by": "Technician T-16",
+        "signoff_page_present": true,
+        "task_ref": "TSK-55ACJ2"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-HKW4DN",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-SQ69TB"
+      }
+    ]
+  }
+}

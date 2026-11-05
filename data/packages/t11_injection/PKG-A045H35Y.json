@@ -1,0 +1,141 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-CDUK",
+    "total_cycles": 22115,
+    "total_hours": 12901,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1097",
+      "compliance_due_date": "2027-05-22",
+      "record_id": "AD-Q6AMJK",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-31",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-HWQKE0",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-38",
+      "raised_date": "2026-10-25",
+      "record_id": "DEF-6E2B06",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 18686,
+      "description": "Starter generator shaft",
+      "installed_date": "2024-09-19",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-SGS-11983",
+      "received_date": "2024-08-13",
+      "record_id": "LLP-SVSZ0K",
+      "release_certificate_ref": "SYN-CERT-MD5W6ERV",
+      "serial_number": "SYN-SN-SGS-482581",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 13617,
+      "description": "Propeller hub",
+      "installed_date": "2026-05-19",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-PRH-13995",
+      "received_date": "2026-02-26",
+      "record_id": "LLP-67DQG8",
+      "release_certificate_ref": "SYN-CERT-AQT00QSX",
+      "serial_number": "SYN-SN-PRH-195984",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-A045H35Y",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Engine borescope inspection '; DROP TABLE records; -- CANARY-C6563DA83A3C",
+      "interval_hours": 600,
+      "last_done_hours": 12862,
+      "next_due_hours": 13462,
+      "record_id": "TSK-1ZXVK4",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 400,
+      "last_done_hours": 12676,
+      "next_due_hours": 13076,
+      "record_id": "TSK-3JFD82",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 11881,
+      "next_due_hours": 13081,
+      "record_id": "TSK-W3MXNV",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-TBB1S7",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-5396QB",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-1ZXVK4"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-YWMK3Y",
+        "signed_by": "Technician T-26",
+        "signoff_page_present": true,
+        "task_ref": "TSK-3JFD82"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-PNF12D",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-W3MXNV"
+      }
+    ]
+  }
+}

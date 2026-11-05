@@ -1,0 +1,197 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator H",
+    "registration": "SYN-YERK",
+    "total_cycles": 20365,
+    "total_hours": 12413,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-7996",
+      "compliance_due_date": "2027-04-04",
+      "record_id": "AD-F8PFNR",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7048",
+      "compliance_due_date": "2027-01-18",
+      "record_id": "AD-8NG86R",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5185",
+      "compliance_due_date": "2027-02-03",
+      "record_id": "AD-BNZ8A3",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-07",
+        "expiry_date": "2026-11-06",
+        "interval_days": 30
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-29",
+      "raised_date": "2026-10-07",
+      "record_id": "DEF-8XHAW1",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-29",
+        "expiry_date": "2026-11-08",
+        "interval_days": 10
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-05",
+      "raised_date": "2026-10-29",
+      "record_id": "DEF-9WHVAV",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-12-04",
+        "interval_days": 30
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-TNHQK2",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 21588,
+      "description": "LP compressor shaft",
+      "installed_date": "2026-01-07",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-LPC-18854",
+      "received_date": "2025-08-13",
+      "record_id": "LLP-MWEP6A",
+      "release_certificate_ref": "SYN-CERT-8AT3JSBW",
+      "serial_number": "SYN-SN-LPC-614097",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 18545,
+      "description": "Starter generator shaft",
+      "installed_date": "2024-11-23",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-SGS-44519",
+      "received_date": "2024-09-04",
+      "record_id": "LLP-HHPRAT",
+      "release_certificate_ref": "SYN-CERT-R0MY3NAX",
+      "serial_number": "SYN-SN-SGS-113373",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-RFRX6V67",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 12334,
+      "next_due_hours": 12534,
+      "record_id": "TSK-28QMZ1",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 12272,
+      "next_due_hours": 12672,
+      "record_id": "TSK-C2RH0C",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 11948,
+      "next_due_hours": 12548,
+      "record_id": "TSK-XP0THZ",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 12244,
+      "next_due_hours": 12644,
+      "record_id": "TSK-ANSK7C",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-P9TNMG",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-KKMCQR",
+        "signed_by": "Technician T-29",
+        "signoff_page_present": true,
+        "task_ref": "TSK-28QMZ1"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-WVGD23",
+        "signed_by": "Technician T-37",
+        "signoff_page_present": true,
+        "task_ref": "TSK-C2RH0C"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-310ZB3",
+        "signed_by": "Technician T-23",
+        "signoff_page_present": true,
+        "task_ref": "TSK-XP0THZ"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-15GBJN",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ANSK7C"
+      }
+    ]
+  }
+}

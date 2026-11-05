@@ -1,0 +1,218 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-SPVP",
+    "total_cycles": 17063,
+    "total_hours": 23170,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3162",
+      "compliance_due_date": "2027-03-15",
+      "record_id": "AD-J3XENH",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4256",
+      "compliance_due_date": "2027-05-18",
+      "record_id": "AD-WPTKSV",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-01",
+        "expiry_date": "2026-11-11",
+        "interval_days": 10
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-24",
+      "raised_date": "2026-11-01",
+      "record_id": "DEF-H7S1J5",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-01",
+      "raised_date": "2026-09-07",
+      "record_id": "DEF-GV0E6H",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-09",
+        "expiry_date": "2027-02-06",
+        "interval_days": 120
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-37",
+      "raised_date": "2026-10-09",
+      "record_id": "DEF-N744BK",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 12247,
+      "description": "HP turbine disk",
+      "installed_date": "2026-07-07",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-HPT-31342",
+      "received_date": "2026-02-08",
+      "record_id": "LLP-0B19V9",
+      "release_certificate_ref": "SYN-CERT-A61DMCJQ",
+      "serial_number": "SYN-SN-HPT-902168",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 28031,
+      "description": "Fan disk",
+      "installed_date": "2025-11-01",
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-FND-31115",
+      "received_date": "2025-09-26",
+      "record_id": "LLP-YQYETJ",
+      "release_certificate_ref": "SYN-CERT-BWAEC13W",
+      "serial_number": "SYN-SN-FND-321873",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 13384,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-12-23",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-LPC-96186",
+      "received_date": "2025-08-09",
+      "record_id": "LLP-KQDD7R",
+      "release_certificate_ref": "SYN-CERT-Z1XGKPV4",
+      "serial_number": "SYN-SN-LPC-594924",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-E6JD8Z59",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 200,
+      "last_done_hours": 23025,
+      "next_due_hours": 23225,
+      "record_id": "TSK-F65R46",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 200,
+      "last_done_hours": 23053,
+      "next_due_hours": 23253,
+      "record_id": "TSK-GKBSDW",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 22470,
+      "next_due_hours": 23670,
+      "record_id": "TSK-HW0SK7",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 200,
+      "next_due_hours": 23355,
+      "record_id": "TSK-DJ34ES",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 22698,
+      "next_due_hours": 23298,
+      "record_id": "TSK-31556C",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-7GMSJD",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-E53GS1",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-F65R46"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-9CBCT1",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GKBSDW"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-0WQR8C",
+        "signed_by": "Technician T-07",
+        "signoff_page_present": true,
+        "task_ref": "TSK-HW0SK7"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-XCKFRG",
+        "signed_by": "Technician T-31",
+        "signoff_page_present": true,
+        "task_ref": "TSK-DJ34ES"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-T33TH2",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-31556C"
+      }
+    ]
+  }
+}

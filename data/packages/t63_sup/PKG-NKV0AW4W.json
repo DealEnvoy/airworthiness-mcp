@@ -1,0 +1,195 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-ZXBB",
+    "total_cycles": 27898,
+    "total_hours": 11307,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-5687",
+      "compliance_due_date": "2027-03-23",
+      "record_id": "AD-TC1T2W",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-9223",
+      "compliance_due_date": "2026-12-08",
+      "record_id": "AD-CY3P2V",
+      "status": "open",
+      "subject": "Fictional directive: emergency light battery test"
+    },
+    {
+      "ad_number": "SYN-AD-2026-4879",
+      "compliance_due_date": "2026-12-06",
+      "record_id": "AD-VMQCRS",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-09",
+      "raised_date": "2026-09-17",
+      "record_id": "DEF-4NQ0HN",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-23",
+      "raised_date": "2026-09-20",
+      "record_id": "DEF-VS9FDA",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 13681,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-02-27",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-SGS-74138",
+      "received_date": "2025-01-24",
+      "record_id": "LLP-TEEWS3",
+      "release_certificate_ref": "SYN-CERT-NWH6EJXF",
+      "serial_number": "SYN-SN-SGS-767303",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 29022,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-03-11",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-07229",
+      "received_date": "2024-11-15",
+      "record_id": "LLP-250AJ0",
+      "release_certificate_ref": "SYN-CERT-GC9NXCB4",
+      "serial_number": "SYN-SN-SGS-871181",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-NKV0AW4W",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 200,
+      "last_done_hours": 11201,
+      "next_due_hours": 11401,
+      "record_id": "TSK-YJ4JMV",
+      "safety_critical": true
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 400,
+      "last_done_hours": 11087,
+      "next_due_hours": 11487,
+      "record_id": "TSK-Q7KF70",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 11135,
+      "next_due_hours": 11735,
+      "record_id": "TSK-M6GDF9",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 200,
+      "last_done_hours": 11233,
+      "next_due_hours": 11433,
+      "record_id": "TSK-XKC0PE",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 11208,
+      "next_due_hours": 12408,
+      "record_id": "TSK-WPATAH",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-V1Y0M7",
+    "task_cards": [
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-F4SF10",
+        "signed_by": "Technician T-13",
+        "signoff_page_present": true,
+        "task_ref": "TSK-YJ4JMV"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-79F6AQ",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Q7KF70"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-3DJ936",
+        "signed_by": "Technician T-06",
+        "signoff_page_present": true,
+        "task_ref": "TSK-M6GDF9"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-GF0C07",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-XKC0PE"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-6JMYK2",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-WPATAH"
+      }
+    ]
+  }
+}

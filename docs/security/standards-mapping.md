@@ -86,7 +86,7 @@ Part-IS binds **organisations in scope** (for example Part-145 and Part-CAMO org
 | What does it store? | Audit log of identifiers, hashes and rule versions; no record text | T13, T54 |
 | Who can change it, and how do I know the version? | Signed releases, SBOM, pinned dependencies, manifest and rule-set hashes printed in every report | T14, T64, T66 |
 | How are vulnerabilities handled? | Private advisory route and a corrective-action process | `SECURITY.md`, T55 |
-| What if it fails? | Fail-safe: `NOT READY - review incomplete`, never a clean report | T50 |
+| What if it fails? | Fail-safe: `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`, never a clean report | T50 |
 | Supplier information page | **Planned**: a short page for adopters (data handled, retention, logging, update process) | To complete |
 
 Not claimed: that using the tool makes any organisation meet Part-IS. That is the organisation's responsibility.

@@ -1,0 +1,206 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-VMTR",
+    "total_cycles": 19304,
+    "total_hours": 31865,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-6208",
+      "compliance_due_date": "2027-01-20",
+      "record_id": "AD-V407JD",
+      "status": "open",
+      "subject": "Fictional directive: flight control cable tension check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-6320",
+      "compliance_due_date": "2027-02-14",
+      "record_id": "AD-AH7BWV",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-15",
+      "raised_date": "2026-09-20",
+      "record_id": "DEF-TRKME6",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-28",
+        "expiry_date": "2026-11-07",
+        "interval_days": 10
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-03",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-RPBESP",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 24397,
+      "description": "HP turbine disk",
+      "installed_date": "2025-11-05",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-HPT-80113",
+      "received_date": "2025-11-03",
+      "record_id": "LLP-N0CMCK",
+      "release_certificate_ref": "SYN-CERT-K36JEEH0",
+      "serial_number": "SYN-SN-HPT-231296",
+      "supplier": "Fictional Supplier H"
+    },
+    {
+      "cycles_since_new": 25539,
+      "description": "LP compressor shaft",
+      "installed_date": "2026-01-05",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-LPC-17852",
+      "received_date": "2025-10-19",
+      "record_id": "LLP-8XTZ96",
+      "release_certificate_ref": "SYN-CERT-4JJXX7A3",
+      "serial_number": "SYN-SN-LPC-731351",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 14639,
+      "description": "Main gear axle",
+      "installed_date": "2025-08-27",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-MGA-87899",
+      "received_date": "2025-06-24",
+      "record_id": "LLP-FHW1P2",
+      "release_certificate_ref": "SYN-CERT-CFD6NHFM",
+      "serial_number": "SYN-SN-MGA-873440",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-4XCCYFPN",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 1200,
+      "last_done_hours": 31297,
+      "next_due_hours": 32497,
+      "record_id": "TSK-148XGB",
+      "safety_critical": true
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 1200,
+      "last_done_hours": 31260,
+      "next_due_hours": 32460,
+      "record_id": "TSK-88ZATS",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 31529,
+      "next_due_hours": 31929,
+      "record_id": "TSK-B7EE1Y",
+      "safety_critical": true
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 400,
+      "last_done_hours": 31831,
+      "next_due_hours": 32231,
+      "record_id": "TSK-B8G39N",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 31842,
+      "next_due_hours": 32042,
+      "record_id": "TSK-C9ACRD",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-FRQS4P",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-2T34KC",
+        "signed_by": "Technician T-36",
+        "signoff_page_present": true,
+        "task_ref": "TSK-148XGB"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-4CD7VW",
+        "signed_by": "Technician T-06",
+        "signoff_page_present": true,
+        "task_ref": "TSK-88ZATS"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-H3MBS9",
+        "signed_by": "Technician T-31",
+        "signoff_page_present": true,
+        "task_ref": "TSK-B7EE1Y"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-8FN43A",
+        "signed_by": "Technician T-33",
+        "signoff_page_present": true,
+        "task_ref": "TSK-B8G39N"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-WP09GM",
+        "signed_by": "Technician T-37",
+        "signoff_page_present": true,
+        "task_ref": "TSK-C9ACRD"
+      }
+    ]
+  }
+}

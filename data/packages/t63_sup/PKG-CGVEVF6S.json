@@ -1,0 +1,178 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-RLHB",
+    "total_cycles": 26363,
+    "total_hours": 22756,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3678",
+      "compliance_due_date": "2027-02-28",
+      "record_id": "AD-YSFMC3",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-16",
+        "expiry_date": "2026-11-15",
+        "interval_days": 30
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-22",
+      "raised_date": "2026-10-16",
+      "record_id": "DEF-0KGHG6",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "32",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-20",
+      "raised_date": "2026-10-22",
+      "record_id": "DEF-4N53FS",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "29",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-37",
+      "raised_date": "2026-10-30",
+      "record_id": "DEF-22DDD9",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 29413,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-03-13",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-LPC-74825",
+      "received_date": "2024-10-29",
+      "record_id": "LLP-D5V86B",
+      "release_certificate_ref": "SYN-CERT-W0Q1M4HC",
+      "serial_number": "SYN-SN-LPC-763016",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 27914,
+      "description": "Propeller hub",
+      "installed_date": "2024-09-17",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-PRH-24987",
+      "received_date": "2024-08-13",
+      "record_id": "LLP-Q0A4TV",
+      "release_certificate_ref": "SYN-CERT-YCK23WCJ",
+      "serial_number": "SYN-SN-PRH-014163",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 11758,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-08-30",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-SGS-74498",
+      "received_date": "2025-08-02",
+      "record_id": "LLP-7JNDEK",
+      "release_certificate_ref": "SYN-CERT-DMX2ZDC8",
+      "serial_number": "SYN-SN-SGS-598224",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 15598,
+      "description": "Propeller hub",
+      "installed_date": "2025-01-18",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-91507",
+      "received_date": "2024-11-12",
+      "record_id": "LLP-BAP8Y7",
+      "release_certificate_ref": "SYN-CERT-KEEG0R20",
+      "serial_number": "SYN-SN-PRH-826578",
+      "supplier": "Fictional Supplier F"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-CGVEVF6S",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 22569,
+      "next_due_hours": 23169,
+      "record_id": "TSK-T3E1NS",
+      "safety_critical": true
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 400,
+      "last_done_hours": 22559,
+      "next_due_hours": 22959,
+      "record_id": "TSK-RJ5GN1",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 200,
+      "last_done_hours": 22728,
+      "next_due_hours": 22928,
+      "record_id": "TSK-8TS8S5",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-HBGR3D",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-CNQHXE",
+        "signed_by": "Technician T-29",
+        "signoff_page_present": true,
+        "task_ref": "TSK-T3E1NS"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-S5Y48V",
+        "signed_by": "Technician T-13",
+        "signoff_page_present": true,
+        "task_ref": "TSK-RJ5GN1"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-NJXD8T",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-8TS8S5"
+      }
+    ]
+  }
+}

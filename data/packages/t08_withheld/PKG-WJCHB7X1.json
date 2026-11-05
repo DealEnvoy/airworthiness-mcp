@@ -1,0 +1,228 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator B",
+    "registration": "SYN-APVA",
+    "total_cycles": 11951,
+    "total_hours": 18150,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1030",
+      "compliance_due_date": "2027-05-08",
+      "record_id": "AD-GE9GST",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-9335",
+      "compliance_due_date": "2027-02-28",
+      "record_id": "AD-2Z19EW",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1913",
+      "compliance_due_date": "2027-01-03",
+      "record_id": "AD-J1ZGRY",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-16",
+        "expiry_date": "2026-11-15",
+        "interval_days": 30
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-23",
+      "raised_date": "2026-10-16",
+      "record_id": "DEF-AN4DAA",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-18",
+        "expiry_date": "2026-11-17",
+        "interval_days": 30
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-20",
+      "raised_date": "2026-10-18",
+      "record_id": "DEF-AY845C",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-14",
+        "expiry_date": "2026-11-13",
+        "interval_days": 30
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-29",
+      "record_id": "DEF-0GP075",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-11-06",
+        "interval_days": 3
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-21",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-SMX3G4",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 28912,
+      "description": "Main gear axle",
+      "installed_date": "2025-12-02",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-MGA-66736",
+      "received_date": "2025-09-23",
+      "record_id": "LLP-CBCFQ3",
+      "release_certificate_ref": "SYN-CERT-RNDYQA2K",
+      "serial_number": "SYN-SN-MGA-640015",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 20117,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-08-24",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-SGS-02837",
+      "received_date": "2025-05-24",
+      "record_id": "LLP-CWBSDC",
+      "release_certificate_ref": "SYN-CERT-8H99R12C",
+      "serial_number": "SYN-SN-SGS-165075",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-WJCHB7X1",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 18105,
+      "next_due_hours": 18705,
+      "record_id": "TSK-0VAJ9Y",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "record_id": "TSK-MF9537",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 17764,
+      "next_due_hours": 18364,
+      "record_id": "TSK-TH07VZ",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 17939,
+      "next_due_hours": 18539,
+      "record_id": "TSK-EEAAKY",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 17912,
+      "next_due_hours": 18512,
+      "record_id": "TSK-Z974R4",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-7CY7TD",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-KWXDXT",
+        "signed_by": "Technician T-12",
+        "signoff_page_present": true,
+        "task_ref": "TSK-0VAJ9Y"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-425MD2",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-MF9537"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-NYX1FJ",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-TH07VZ"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-7RQA57",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-EEAAKY"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-DTSZ78",
+        "signed_by": "Technician T-18",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Z974R4"
+      }
+    ]
+  }
+}

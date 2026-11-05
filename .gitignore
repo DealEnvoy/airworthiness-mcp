@@ -36,3 +36,7 @@ Thumbs.db
 # Sealed key must never be committed, wherever it is written
 sealed/
 seeded_fault_key*.json
+
+# Secret salt for the sealed key (only its SHA-256 is published)
+*.salt
+seeded_fault_key*

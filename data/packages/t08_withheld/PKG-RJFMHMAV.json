@@ -1,0 +1,217 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator E",
+    "registration": "SYN-CYBU",
+    "total_cycles": 17693,
+    "total_hours": 23477,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-1054",
+      "compliance_due_date": "2027-05-19",
+      "record_id": "AD-DS9JC8",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-7900",
+      "compliance_due_date": "2027-03-18",
+      "record_id": "AD-HESW5D",
+      "status": "open",
+      "subject": "Fictional directive: propeller blade inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "72",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-22",
+      "record_id": "DEF-GMNF32",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-09",
+        "expiry_date": "2027-02-06",
+        "interval_days": 120
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-02",
+      "raised_date": "2026-10-09",
+      "record_id": "DEF-B7XJYH",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "72",
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-38",
+      "raised_date": "2026-09-21",
+      "record_id": "DEF-V4TFW9",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-09-24",
+        "expiry_date": "2027-01-22",
+        "interval_days": 120
+      },
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-14",
+      "raised_date": "2026-09-24",
+      "record_id": "DEF-90WJPN",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 29325,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-01-23",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-SGS-34583",
+      "received_date": "2024-11-17",
+      "record_id": "LLP-01R3DF",
+      "release_certificate_ref": "SYN-CERT-EYG8G5XJ",
+      "serial_number": "SYN-SN-SGS-509236",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 16764,
+      "description": "Fan disk",
+      "installed_date": "2025-09-01",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-FND-48456",
+      "received_date": "2025-08-22",
+      "record_id": "LLP-FFZKM1",
+      "release_certificate_ref": "SYN-CERT-EDG9APPJ",
+      "serial_number": "SYN-SN-FND-096121",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 18096,
+      "description": "Propeller hub",
+      "installed_date": "2024-11-13",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-PRH-47957",
+      "received_date": "2024-10-16",
+      "record_id": "LLP-6S1ZPP",
+      "release_certificate_ref": "SYN-CERT-4QA2ARK8",
+      "serial_number": "SYN-SN-PRH-833374",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 22896,
+      "description": "Starter generator shaft",
+      "installed_date": "2026-02-21",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-SGS-68757",
+      "received_date": "2025-11-20",
+      "record_id": "LLP-46GDVJ",
+      "release_certificate_ref": "SYN-CERT-AKRFP4Y1",
+      "serial_number": "SYN-SN-SGS-721843",
+      "supplier": "Fictional Supplier B"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-RJFMHMAV",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 400,
+      "next_due_hours": 23745,
+      "record_id": "TSK-STETZ6",
+      "safety_critical": false
+    },
+    {
+      "description": "Main landing gear lubrication",
+      "interval_hours": 600,
+      "last_done_hours": 23111,
+      "next_due_hours": 23711,
+      "record_id": "TSK-JAWYD0",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 23102,
+      "next_due_hours": 23702,
+      "record_id": "TSK-QADJD5",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 600,
+      "next_due_hours": 23756,
+      "record_id": "TSK-MX505M",
+      "safety_critical": true
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-J69CD6",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-H621D5",
+        "signed_by": "Technician T-37",
+        "signoff_page_present": true,
+        "task_ref": "TSK-STETZ6"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-Y24M6Y",
+        "signed_by": "Technician T-29",
+        "signoff_page_present": true,
+        "task_ref": "TSK-JAWYD0"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-SF4JMA",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-QADJD5"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-ZFSRBD",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-MX505M"
+      }
+    ]
+  }
+}

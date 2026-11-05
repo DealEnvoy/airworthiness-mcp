@@ -25,7 +25,7 @@ Wording used in reports: "Documentation indicator for review: possible suspect p
 * A forged document that is internally consistent will not be flagged.
 * The indicator list is not exhaustive and is not an official list.
 * Regulatory and industry references for suspected unapproved parts (for example authority guidance and bulletins) have **not** been collected yet. They are to be gathered under T02 and verified there. None is cited here, to avoid citing something unverified.
-* The current generated data set and the sealed key have no such fault class. T63 needs a logged amendment adding the data set before it can run.
+* The generated data set `t63_sup` (56 packages) and the sealed key carry this fault class from the T01 freeze, so T63 can run in Stage 0. The data are fictional and the faults are non-critical.
 
 ## 4. Review
 

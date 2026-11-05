@@ -1,0 +1,209 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator F",
+    "registration": "SYN-GFND",
+    "total_cycles": 5870,
+    "total_hours": 22177,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-2383",
+      "compliance_due_date": "2027-02-02",
+      "record_id": "AD-FG4QVB",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-1552",
+      "compliance_due_date": "2026-11-11",
+      "record_id": "AD-8WV814",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    },
+    {
+      "ad_number": "SYN-AD-2026-5834",
+      "compliance_due_date": "2027-05-20",
+      "record_id": "AD-MX43EK",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-25",
+      "raised_date": "2026-09-25",
+      "record_id": "DEF-2XRXGZ",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "21",
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-05",
+      "raised_date": "2026-09-27",
+      "record_id": "DEF-00W645",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-08",
+        "expiry_date": "2027-02-05",
+        "interval_days": 120
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-38",
+      "raised_date": "2026-10-08",
+      "record_id": "DEF-EW87W9",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-40",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-K3D2C8",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 17994,
+      "description": "Propeller hub",
+      "installed_date": "2025-03-01",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-16941",
+      "received_date": "2025-02-21",
+      "record_id": "LLP-QGN42T",
+      "release_certificate_ref": "SYN-CERT-G64ANQBH",
+      "serial_number": "SYN-SN-PRH-040963",
+      "supplier": "Fictional Supplier H"
+    },
+    {
+      "cycles_since_new": 19385,
+      "description": "Propeller hub",
+      "installed_date": "2026-01-30",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-40374",
+      "received_date": "2025-12-28",
+      "record_id": "LLP-6JF1MA",
+      "release_certificate_ref": "SYN-CERT-WC00W8E5",
+      "serial_number": "SYN-SN-PRH-044790",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 29516,
+      "description": "HP turbine disk",
+      "installed_date": "2025-10-17",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-HPT-27153",
+      "received_date": "2025-06-17",
+      "record_id": "LLP-GXNMFD",
+      "release_certificate_ref": "SYN-CERT-D9ASVRSB",
+      "serial_number": "SYN-SN-HPT-342526",
+      "supplier": "Fictional Supplier H"
+    },
+    {
+      "cycles_since_new": 15428,
+      "description": "Propeller hub",
+      "installed_date": "2026-05-02",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-PRH-59095",
+      "received_date": "2026-04-01",
+      "record_id": "LLP-7ATGZJ",
+      "release_certificate_ref": "SYN-CERT-VSNR6R9B",
+      "serial_number": "SYN-SN-PRH-637466",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-KCK02P7D",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 21429,
+      "next_due_hours": 22629,
+      "record_id": "TSK-7485T3",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 21662,
+      "next_due_hours": 22262,
+      "record_id": "TSK-ZT1A0G",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 1200,
+      "last_done_hours": 21681,
+      "next_due_hours": 22881,
+      "record_id": "TSK-GN3R4S",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-39CC0H",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-A7X1JT",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-7485T3"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-66VVQ8",
+        "signed_by": "Technician T-09",
+        "signoff_page_present": true,
+        "task_ref": "TSK-ZT1A0G"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-XPK62K",
+        "signed_by": "Technician T-10",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GN3R4S"
+      }
+    ]
+  }
+}

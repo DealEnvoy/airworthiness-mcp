@@ -4,6 +4,16 @@ All notable changes to this repository are recorded here. Dates are in Europe/Lo
 
 ## [Unreleased]
 
+### 2026-11-05 - T01 freeze package (Freeze 1), prepared locally
+- Decisions on the nine open freeze items applied. Freeze 1 covers the product tests; the build-tool tests are frozen separately in Freeze 2 (`docs/amendments.md`).
+- Data: `data/generate.py` 1.1.0 uses a secret salt (the sealed key and salt are outside the repository; only their SHA-256 fingerprints are listed). Twin packages no longer differ on the safety-critical flag. Boundary rules fixed (at or above a limit is a fault; a deferral expiring today is expired; a repeat defect is three or more).
+- Data added: suspected-unapproved-parts set `t63_sup` (56 packages), T11 injection set (180), and the T06 (35 cases), T09 (40 prompts) and T11 (60 payloads) corpora. 394 packages in 8 sets in total.
+- Report vocabulary: the two status lines are now `REVIEW COMPLETE - findings listed; a certifying engineer decides` and `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`. Exit code 3 for incomplete.
+- T12 scope: tool-written text only. `tools/check_docs.py lexicon` added; `tools/check_data.py` added (independent rule oracle).
+- `docs/preregistration.md` rewritten: unsigned annotated tag, OpenTimestamps proof, one fingerprint posted publicly by Isaac. `docs/amendments.md` added. Thresholds and spend caps not yet set are marked "set before that stage".
+- Corrective-action log: CA-0001 to CA-0010 closed; CA-0011 open; CA-0012 to CA-0014 opened. Human reviewers are not appointed; they are required before any public claim about results and are to be funded through grants.
+- `PREREG_HASHES.draft.txt` replaced by `PREREG_HASHES.txt`.
+
 ### 2026-11-04 — Security, regulatory and quality groundwork (before the T01 freeze)
 - `docs/trial-plan.md`: 18 new tests T49–T66 (section 3a) with fixed limits and exact pass/fail criteria. Twelve are hard fails (T50, T51, T53, T54, T57–T62, T64, T65) and six are gates (T49, T52, T55, T56, T63, T66). New gap list entries G37–G47; T35 now re-runs them; Stage 0 cost still 0.
 - Added `docs/security/`: threat model (STRIDE, OWASP Top 10 for LLM Applications, MCP-specific risks), planted-failure set specification (PF01–PF40, PC01–PC10), fuzz and abuse corpus specification (FZ-A to FZ-I, 248 targeted cases plus 10,000 seeded mutations, and the T63 data set specification), `SECURITY.md` and `standards-mapping.md` (alignment, not compliance).

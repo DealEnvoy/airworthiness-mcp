@@ -1,0 +1,201 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator C",
+    "registration": "SYN-XZWA",
+    "total_cycles": 23266,
+    "total_hours": 39938,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-3892",
+      "compliance_due_date": "2027-05-22",
+      "record_id": "AD-5Z32DN",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    },
+    {
+      "ad_number": "SYN-AD-2026-9185",
+      "compliance_due_date": "2027-01-22",
+      "record_id": "AD-RG33TB",
+      "status": "open",
+      "subject": "Fictional directive: main landing gear lubrication"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-05",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-H7MRC5",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "71",
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-32",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-REZXDP",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "27",
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-11",
+      "raised_date": "2026-10-28",
+      "record_id": "DEF-QB8HVS",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "24",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-25",
+      "raised_date": "2026-10-26",
+      "record_id": "DEF-DFTCCM",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 18439,
+      "description": "LP compressor shaft",
+      "installed_date": "2024-08-01",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-LPC-80969",
+      "received_date": "2024-06-15",
+      "record_id": "LLP-P80N5F",
+      "release_certificate_ref": "SYN-CERT-T4W2ZJZ1",
+      "serial_number": "SYN-SN-LPC-875390",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 11350,
+      "description": "Fan disk",
+      "installed_date": "2024-12-03",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-FND-66476",
+      "received_date": "2024-07-14",
+      "record_id": "LLP-EZ4EJE",
+      "release_certificate_ref": "SYN-CERT-FK7GKHBV",
+      "serial_number": "SYN-SN-FND-486976",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 11861,
+      "description": "Propeller hub",
+      "installed_date": "2025-10-12",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-PRH-78330",
+      "received_date": "2025-06-21",
+      "record_id": "LLP-A8PQWQ",
+      "release_certificate_ref": "SYN-CERT-9D5T5E76",
+      "serial_number": "SYN-SN-PRH-623632",
+      "supplier": "Fictional Supplier D"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-J5SWX2MQ",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 600,
+      "last_done_hours": 39760,
+      "next_due_hours": 40360,
+      "record_id": "TSK-A4R9FH",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 600,
+      "last_done_hours": 39729,
+      "next_due_hours": 40329,
+      "record_id": "TSK-QBBGPR",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 39825,
+      "next_due_hours": 40225,
+      "record_id": "TSK-6VTCTA",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 600,
+      "last_done_hours": 39422,
+      "next_due_hours": 40022,
+      "record_id": "TSK-Q8GR15",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-5WC8WK",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-9JQXQV",
+        "signed_by": "Technician T-37",
+        "signoff_page_present": true,
+        "task_ref": "TSK-A4R9FH"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-TJW0M8",
+        "signed_by": "Technician T-33",
+        "signoff_page_present": true,
+        "task_ref": "TSK-QBBGPR"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-GVKR26",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-6VTCTA"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-NP2K8W",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Q8GR15"
+      }
+    ]
+  }
+}

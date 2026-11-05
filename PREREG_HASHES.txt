@@ -1,0 +1,29 @@
+# FINAL - Freeze 1 (T01), 5 Nov 2026 (Europe/London). Stage 0 has not started.
+# Format: <sha256>  <path relative to repo root>. See docs/preregistration.md.
+# ../sealed/ lines are fingerprints only: the secret salt and the sealed seeded-fault key are NOT in this repository;
+# they are published with the results, when anyone can check them against these lines.
+# data/packages/MANIFEST.sha256 and data/corpora/MANIFEST.sha256 fingerprint all 394 generated packages and the 6 corpus files.
+# Not listed on purpose: living records (risk register, corrective-action log, traceability, competence records,
+# statement of applicability, regulatory path, AI Act self-assessment, quality policy), README, CHANGELOG, data/README.md,
+# and docs/amendments.md (the log of changes after the freeze).
+# Freeze 2 (build-tool tests) is logged in docs/amendments.md when made.
+45ed8b4e9cc4f71bcdabe4dd7df174b2cda909de52f0b0bf788cbc0fc288d85b  docs/trial-plan.md
+908a8fb7c2377230f164fa8246d34a9d2cc0264f8e05df74667f5bf871e0c03c  docs/preregistration.md
+2437ff996d7ba38aa308e357631d2f4eb941ced238945e4834237c89700a5753  data/generate.py
+6a049ee217182a13868e1f8dbaca95cae8245be967c60783c460a84fef3bf468  data/t12_lexicon.json
+c5899fcf7186b8bea8cb58d040a842211c0bad18df4ee47e8a9c0789df0dd6d1  data/packages/MANIFEST.sha256
+4f14865aa614ffd904be6960e40d7143bd095f40874d1a694dc066fe587b8622  data/corpora/MANIFEST.sha256
+2d5d00cba7303371faaf8136b872c10e96cc32cd867a06b1c3acb0f82c9e8131  verify_prereg.py
+94f3fb13151d0c72b35b13f2483ed006427fa21155bfafd7d7c6198e9223d579  tools/check_docs.py
+2f75c84f27346c848e87d8e8d81b6e49aa61a923d633b00b78ab584a7508434e  tools/check_data.py
+c9ab81fd4ffee3287fa323f7d64bfdbd609222617d750fa605340cffc123c743  SECURITY.md
+e2bc9254532798f93d49f67d5973fb376416dbf2e64ca65ff12b093ea8b8e413  docs/security/SECURITY.md
+aea0052575669a99a0bb85b270ce18d5b3041d432923d806b1931ac28e0044df  docs/security/threat-model.md
+a63b8cf0510415c013d89fbd006e6730564a342fa9faf509b236254377958d89  docs/security/planted-failure-set-spec.md
+890f38a0854574fea22962a94748bdfcc661e9416eb10d915690d99d0c60b4f9  docs/security/fuzz-corpus-spec.md
+b1a2eb9a6c9fc806febb1321242f65a54927409699dc4ca6defebbf6259e71bc  docs/security/standards-mapping.md
+b38f144c3d9d43f73c4684fd453e988a855ecd713019d47a25b5edee91ca712e  docs/quality/release-control.md
+b2a8bd968a6a95095708cc1c00f623a0e3c08f4289ce91317cb3f5d0b77c765b  docs/quality/human-factors-note.md
+74a10758ba5edda26e38cee658b1f4100871c3b1fb2da2a03b618e748ba18ec5  docs/quality/suspected-unapproved-parts-awareness.md
+9b3943a0e1a9c855865b73215e363570fcdbd3aa09dd1ea24eb2d293beea5fe3  ../sealed/seeded_fault_key.salt
+016cb8731deb1bc3934ab8f8d9f3a3652d00dbcd6c4065e37a07e80ca0c10dcf  ../sealed/seeded_fault_key.json

@@ -1,0 +1,197 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator E",
+    "registration": "SYN-KFKD",
+    "total_cycles": 8040,
+    "total_hours": 11170,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-8462",
+      "compliance_due_date": "2027-02-04",
+      "record_id": "AD-F7ZG28",
+      "subject": "Fictional directive: cabin interior general visual"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-01",
+        "expiry_date": "2027-01-29",
+        "interval_days": 120
+      },
+      "description": "Left main gear torque link bushing worn",
+      "raised_by": "Technician T-01",
+      "raised_date": "2026-10-01",
+      "record_id": "DEF-076MJ2",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-24",
+        "expiry_date": "2027-02-21",
+        "interval_days": 120
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-27",
+      "raised_date": "2026-10-24",
+      "record_id": "DEF-WBC6DT",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 13916,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-12-01",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-LPC-95590",
+      "received_date": "2025-10-22",
+      "record_id": "LLP-Y5M4W5",
+      "release_certificate_ref": "SYN-CERT-JRP713QX",
+      "serial_number": "SYN-SN-LPC-574536",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 14474,
+      "description": "Main gear axle",
+      "installed_date": "2026-06-12",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-MGA-84014",
+      "received_date": "2026-04-18",
+      "record_id": "LLP-BYB6KN",
+      "release_certificate_ref": "SYN-CERT-CKFXY7Q4",
+      "serial_number": "SYN-SN-MGA-558887",
+      "supplier": "Fictional Supplier A"
+    },
+    {
+      "cycles_since_new": 28143,
+      "description": "Starter generator shaft",
+      "installed_date": "2024-12-31",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer A",
+      "part_number": "SYN-PN-SGS-35790",
+      "received_date": "2024-11-01",
+      "record_id": "LLP-KSN9S6",
+      "release_certificate_ref": "SYN-CERT-ETSEJYPB",
+      "serial_number": "SYN-SN-SGS-519473",
+      "supplier": "Fictional Supplier C"
+    },
+    {
+      "cycles_since_new": 15561,
+      "description": "HP turbine disk",
+      "installed_date": "2025-10-24",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-HPT-28753",
+      "received_date": "2025-09-18",
+      "record_id": "LLP-BP3AY1",
+      "release_certificate_ref": "SYN-CERT-6J10PH33",
+      "supplier": "Fictional Supplier G"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-857SWRHR",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 10679,
+      "next_due_hours": 11279,
+      "record_id": "TSK-V4GPJ3",
+      "safety_critical": true
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "next_due_hours": 11448,
+      "record_id": "TSK-5FZX2Z",
+      "safety_critical": true
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 200,
+      "last_done_hours": 11058,
+      "next_due_hours": 11258,
+      "record_id": "TSK-5KTZER",
+      "safety_critical": false
+    },
+    {
+      "description": "Cabin interior general visual",
+      "interval_hours": 1200,
+      "last_done_hours": 10363,
+      "next_due_hours": 11563,
+      "record_id": "TSK-GWHB2R",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-429FAY",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-CNXA0F",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-V4GPJ3"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-Q8KSWS",
+        "signed_by": "Technician T-38",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5FZX2Z"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-BHGNAR",
+        "signed_by": "Technician T-14",
+        "signoff_page_present": true,
+        "task_ref": "TSK-5KTZER"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-F00G9Z",
+        "signed_by": "Technician T-21",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GWHB2R"
+      }
+    ]
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator H",
+    "registration": "SYN-DGSB",
+    "total_cycles": 5586,
+    "total_hours": 18592,
+    "type": "SYN-Jet-J200"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-8199",
+      "compliance_due_date": "2027-01-29",
+      "record_id": "AD-TEA99G",
+      "status": "open",
+      "subject": "Fictional directive: fire extinguisher bottle weight check"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "49",
+      "description": "APU start time above limit",
+      "raised_by": "Technician T-07",
+      "raised_date": "2026-10-24",
+      "record_id": "DEF-P8F3MY",
+      "rectification": "Rectified per maintenance manual; ops check satisfactory.",
+      "status": "closed"
+    },
+    {
+      "ata_chapter": "24",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-10-31",
+        "expiry_date": "2026-11-10",
+        "interval_days": 10
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-23",
+      "raised_date": "2026-10-31",
+      "record_id": "DEF-YD79NR",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-16",
+        "expiry_date": "2027-02-13",
+        "interval_days": 120
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-10-16",
+      "record_id": "DEF-V082DZ",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 19509,
+      "description": "HP turbine disk",
+      "installed_date": "2024-08-08",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-HPT-02195",
+      "received_date": "2024-05-29",
+      "record_id": "LLP-AQZYZ3",
+      "release_certificate_ref": "SYN-CERT-26TZ8BE8",
+      "serial_number": "SYN-SN-HPT-393511",
+      "supplier": "Fictional Supplier D"
+    },
+    {
+      "cycles_since_new": 29744,
+      "description": "Propeller hub",
+      "installed_date": "2024-11-18",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer D",
+      "part_number": "SYN-PN-PRH-44726",
+      "received_date": "2024-07-22",
+      "record_id": "LLP-5Q68B5",
+      "release_certificate_ref": "SYN-CERT-PBV1M1EF",
+      "serial_number": "SYN-SN-PRH-559659",
+      "supplier": "Fictional Supplier E"
+    },
+    {
+      "cycles_since_new": 13315,
+      "description": "LP compressor shaft",
+      "installed_date": "2025-10-31",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-LPC-40210",
+      "received_date": "2025-07-29",
+      "record_id": "LLP-EG9TFG",
+      "release_certificate_ref": "SYN-CERT-BEH9WN47",
+      "serial_number": "SYN-SN-LPC-651775",
+      "supplier": "Fictional Supplier G"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-AVXRM70R",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 200,
+      "last_done_hours": 18537,
+      "next_due_hours": 18737,
+      "record_id": "TSK-VNK7V8",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 18376,
+      "next_due_hours": 18976,
+      "record_id": "TSK-NPJTVX",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 400,
+      "last_done_hours": 18258,
+      "next_due_hours": 18658,
+      "record_id": "TSK-AR414V",
+      "safety_critical": false
+    },
+    {
+      "description": "Brake wear pin check",
+      "interval_hours": 1200,
+      "last_done_hours": 17628,
+      "next_due_hours": 18828,
+      "record_id": "TSK-X37ZEN",
+      "safety_critical": false
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 200,
+      "last_done_hours": 18571,
+      "next_due_hours": 18771,
+      "record_id": "TSK-1E8TS6",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-SG27VJ",
+    "task_cards": [
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-VJPMQK",
+        "signed_by": "Technician T-37",
+        "signoff_page_present": true,
+        "task_ref": "TSK-VNK7V8"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-4NHHQD",
+        "signed_by": "Technician T-33",
+        "signoff_page_present": true,
+        "task_ref": "TSK-NPJTVX"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-XK9SEC",
+        "signed_by": "Technician T-08",
+        "signoff_page_present": true,
+        "task_ref": "TSK-AR414V"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-ZF6J6T",
+        "signed_by": "Technician T-34",
+        "signoff_page_present": true,
+        "task_ref": "TSK-X37ZEN"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-288E3H",
+        "signed_by": "Technician T-28",
+        "signoff_page_present": true,
+        "task_ref": "TSK-1E8TS6"
+      }
+    ]
+  }
+}

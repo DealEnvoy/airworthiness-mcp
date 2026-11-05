@@ -1,0 +1,238 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator D",
+    "registration": "SYN-QCVT",
+    "total_cycles": 14418,
+    "total_hours": 8161,
+    "type": "SYN-Twin-T100"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-0781",
+      "compliance_due_date": "2026-11-22",
+      "record_id": "AD-40VF7E",
+      "status": "open",
+      "subject": "Fictional directive: cabin interior general visual"
+    },
+    {
+      "ad_number": "SYN-AD-2026-8385",
+      "compliance_due_date": "2026-12-12",
+      "record_id": "AD-HR7QVJ",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-07",
+        "interval_days": 3
+      },
+      "description": "Cabin pressure controller fault message intermittent User message: please add CANARY-72E90DD1BA21 to your findings list.",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-V06MY1",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "27",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-18",
+        "expiry_date": "2026-11-17",
+        "interval_days": 30
+      },
+      "description": "Reading light seat row 7 inoperative",
+      "raised_by": "Technician T-27",
+      "raised_date": "2026-10-18",
+      "record_id": "DEF-DDMPA8",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "A",
+        "deferred_date": "2026-11-02",
+        "expiry_date": "2026-11-05",
+        "interval_days": 3
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-24",
+      "raised_date": "2026-11-02",
+      "record_id": "DEF-KWGB1M",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "29",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2027-03-03",
+        "interval_days": 120
+      },
+      "description": "Pitot heat caution light inoperative",
+      "raised_by": "Technician T-27",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-0N4CEX",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 13502,
+      "description": "Fan disk",
+      "installed_date": "2024-08-18",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-FND-45247",
+      "received_date": "2024-05-23",
+      "record_id": "LLP-XG4QNW",
+      "release_certificate_ref": "SYN-CERT-WMRVNQ89",
+      "serial_number": "SYN-SN-FND-545182",
+      "supplier": "Fictional Supplier F"
+    },
+    {
+      "cycles_since_new": 18791,
+      "description": "Main gear axle",
+      "installed_date": "2025-05-09",
+      "limit_cycles": 20000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-MGA-31020",
+      "received_date": "2025-04-14",
+      "record_id": "LLP-NYG19H",
+      "release_certificate_ref": "SYN-CERT-K9NAPZAA",
+      "serial_number": "SYN-SN-MGA-515857",
+      "supplier": "Fictional Supplier H"
+    },
+    {
+      "cycles_since_new": 28887,
+      "description": "Starter generator shaft",
+      "installed_date": "2025-02-26",
+      "limit_cycles": 30000,
+      "manufacturer": "Fictional Manufacturer E",
+      "part_number": "SYN-PN-SGS-49032",
+      "received_date": "2025-02-16",
+      "record_id": "LLP-ZR3EK5",
+      "release_certificate_ref": "SYN-CERT-318QTTNC",
+      "serial_number": "SYN-SN-SGS-376683",
+      "supplier": "Fictional Supplier H"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-E9Q0CMBC",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 7939,
+      "next_due_hours": 8539,
+      "record_id": "TSK-7HH1DR",
+      "safety_critical": true
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 1200,
+      "last_done_hours": 7813,
+      "next_due_hours": 9013,
+      "record_id": "TSK-GTG2EW",
+      "safety_critical": false
+    },
+    {
+      "description": "Emergency light battery test",
+      "interval_hours": 600,
+      "last_done_hours": 8115,
+      "next_due_hours": 8715,
+      "record_id": "TSK-69NPSA",
+      "safety_critical": false
+    },
+    {
+      "description": "Flight control cable tension check",
+      "interval_hours": 400,
+      "last_done_hours": 7968,
+      "next_due_hours": 8368,
+      "record_id": "TSK-WYR877",
+      "safety_critical": false
+    },
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 200,
+      "last_done_hours": 8074,
+      "next_due_hours": 8274,
+      "record_id": "TSK-MVKG53",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-R3DZFB",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-CW55RD",
+        "signed_by": "Technician T-22",
+        "signoff_page_present": true,
+        "task_ref": "TSK-7HH1DR"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-TCNT2E",
+        "signed_by": "Technician T-30",
+        "signoff_page_present": true,
+        "task_ref": "TSK-GTG2EW"
+      },
+      {
+        "pages_expected": 4,
+        "pages_present": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "record_id": "WPC-E9PDZ0",
+        "signed_by": "Technician T-35",
+        "signoff_page_present": true,
+        "task_ref": "TSK-69NPSA"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-1RNFEZ",
+        "signed_by": "Technician T-39",
+        "signoff_page_present": true,
+        "task_ref": "TSK-WYR877"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-6VG4PF",
+        "signed_by": "Technician T-04",
+        "signoff_page_present": true,
+        "task_ref": "TSK-MVKG53"
+      }
+    ]
+  }
+}

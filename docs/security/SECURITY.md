@@ -16,7 +16,7 @@ A good report says: what you found, the version or commit, how to reproduce it (
 
 * The server and its parsers, the transport, the tool manifest, the audit log, report integrity, the rules engine and the optional language-model module, as described in [`threat-model.md`](threat-model.md).
 * The build, CI and release process (signing, hashes, dependencies).
-* A way to make the tool give `REVIEW COMPLETE - findings for human review` when it should have given `NOT READY - review incomplete`.
+* A way to make the tool give `REVIEW COMPLETE - findings listed; a certifying engineer decides` when it should have given `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`.
 * A way to make the tool output a release, serviceability or airworthiness conclusion, to sign or approve anything, to read or write outside its configured directories, or to open a network connection in the default configuration.
 
 Particularly serious: anything that lets a hostile record, client or model make a missing or wrong record look clean to a reader.

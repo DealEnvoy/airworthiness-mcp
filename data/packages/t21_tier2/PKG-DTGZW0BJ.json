@@ -1,0 +1,197 @@
+{
+  "aircraft": {
+    "operator": "Fictional Operator G",
+    "registration": "SYN-JJLZ",
+    "total_cycles": 14389,
+    "total_hours": 22277,
+    "type": "SYN-Turboprop-P300"
+  },
+  "airworthiness_directives": [
+    {
+      "ad_number": "SYN-AD-2026-5911",
+      "compliance_due_date": "2027-05-06",
+      "record_id": "AD-WWNXX0",
+      "status": "open",
+      "subject": "Fictional directive: brake wear pin check"
+    },
+    {
+      "ad_number": "SYN-AD-2026-0728",
+      "compliance_due_date": "2027-02-10",
+      "record_id": "AD-3YHSEQ",
+      "status": "open",
+      "subject": "Fictional directive: engine borescope inspection"
+    }
+  ],
+  "attachments": [],
+  "defects": [
+    {
+      "ata_chapter": "32",
+      "deferral": {
+        "category": "D",
+        "deferred_date": "2026-10-23",
+        "expiry_date": "2027-02-20",
+        "interval_days": 120
+      },
+      "description": "Cabin pressure controller fault message intermittent",
+      "raised_by": "Technician T-19",
+      "raised_date": "2026-10-23",
+      "record_id": "DEF-NWEXV2",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "34",
+      "deferral": {
+        "category": "B",
+        "deferred_date": "2026-11-04",
+        "expiry_date": "2026-11-14",
+        "interval_days": 10
+      },
+      "description": "Lavatory smoke detector test fail",
+      "raised_by": "Technician T-37",
+      "raised_date": "2026-11-04",
+      "record_id": "DEF-ZAFWPF",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "21",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-11-03",
+        "expiry_date": "2026-12-03",
+        "interval_days": 30
+      },
+      "description": "Fuel quantity indication fluctuates on tank 1",
+      "raised_by": "Technician T-04",
+      "raised_date": "2026-11-03",
+      "record_id": "DEF-X9MB01",
+      "status": "open"
+    },
+    {
+      "ata_chapter": "49",
+      "deferral": {
+        "category": "C",
+        "deferred_date": "2026-10-18",
+        "expiry_date": "2026-11-17",
+        "interval_days": 30
+      },
+      "description": "Hydraulic sight glass reads low on system 2",
+      "raised_by": "Technician T-16",
+      "raised_date": "2026-10-18",
+      "record_id": "DEF-MHS5EZ",
+      "status": "open"
+    }
+  ],
+  "life_limited_parts": [
+    {
+      "cycles_since_new": 20461,
+      "description": "HP turbine disk",
+      "installed_date": "2025-04-11",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer C",
+      "part_number": "SYN-PN-HPT-79356",
+      "received_date": "2024-12-10",
+      "record_id": "LLP-HX09EG",
+      "release_certificate_ref": "SYN-CERT-ZV424A2F",
+      "serial_number": "SYN-SN-HPT-829472",
+      "supplier": "Fictional Supplier G"
+    },
+    {
+      "cycles_since_new": 15147,
+      "description": "HP turbine disk",
+      "installed_date": "2026-04-24",
+      "limit_cycles": 15000,
+      "manufacturer": "Fictional Manufacturer B",
+      "part_number": "SYN-PN-HPT-54290",
+      "received_date": "2026-02-06",
+      "record_id": "LLP-VCR12S",
+      "release_certificate_ref": "SYN-CERT-AXHYPVJN",
+      "serial_number": "SYN-SN-HPT-055761",
+      "supplier": "Fictional Supplier B"
+    },
+    {
+      "cycles_since_new": 24096,
+      "description": "Propeller hub",
+      "installed_date": "2026-04-16",
+      "limit_cycles": 25000,
+      "manufacturer": "Fictional Manufacturer F",
+      "part_number": "SYN-PN-PRH-94291",
+      "received_date": "2026-04-12",
+      "record_id": "LLP-4KK9GS",
+      "release_certificate_ref": "SYN-CERT-8ZKJXB6R",
+      "serial_number": "SYN-SN-PRH-932917",
+      "supplier": "Fictional Supplier E"
+    }
+  ],
+  "notice": "FICTIONAL SYNTHETIC DATA for airworthiness-mcp testing. Not a real aircraft, operator, person or record.",
+  "package_id": "PKG-DTGZW0BJ",
+  "reference_date": "2026-11-04",
+  "supplier_review_list": [
+    "Fictional Supplier XA",
+    "Fictional Supplier ZB"
+  ],
+  "tasks": [
+    {
+      "description": "Engine borescope inspection",
+      "interval_hours": 600,
+      "last_done_hours": 22101,
+      "next_due_hours": 22701,
+      "record_id": "TSK-Q4C8TZ",
+      "safety_critical": true
+    },
+    {
+      "description": "Fire extinguisher bottle weight check",
+      "interval_hours": 200,
+      "last_done_hours": 22167,
+      "next_due_hours": 22367,
+      "record_id": "TSK-7PMKP9",
+      "safety_critical": false
+    },
+    {
+      "description": "Propeller blade inspection",
+      "interval_hours": 1200,
+      "last_done_hours": 21074,
+      "next_due_hours": 22274,
+      "record_id": "TSK-K5693H",
+      "safety_critical": false
+    }
+  ],
+  "work_package": {
+    "record_id": "WP-X4SM55",
+    "task_cards": [
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-9V7KS0",
+        "signed_by": "Technician T-07",
+        "signoff_page_present": true,
+        "task_ref": "TSK-Q4C8TZ"
+      },
+      {
+        "pages_expected": 3,
+        "pages_present": [
+          1,
+          2,
+          3
+        ],
+        "record_id": "WPC-5KJB68",
+        "signed_by": "Technician T-05",
+        "signoff_page_present": true,
+        "task_ref": "TSK-7PMKP9"
+      },
+      {
+        "pages_expected": 2,
+        "pages_present": [
+          1,
+          2
+        ],
+        "record_id": "WPC-K5XVY8",
+        "signed_by": "Technician T-40",
+        "signoff_page_present": true,
+        "task_ref": "TSK-K5693H"
+      }
+    ]
+  }
+}
