@@ -2,7 +2,7 @@
 
 Text frozen at T01 (Freeze 1) on 5 Nov 2026 (Europe/London). Author: Isaac Adekunle. Drafted 4 Nov 2026.
 
-**Nothing in this plan has been run.** It sets out 66 tests (T01–T66), their pass/fail criteria and the order they run in. T01–T48 are the original set; T49–T66 are the security, fail-safe, design-rule and release-control tests added before the freeze (section 3a). **Freeze 1 (T01)** fixes every numeric threshold and pass/fail criterion in this file for the product tests, except where a line says "set before that stage" (nothing is frozen for those until the number is logged in `amendments.md`). The build-tool tests (section 6a, T47, the role-selection rules, the named fallback models and the T21 candidate list) are marked **open until Freeze 2** and are frozen in a second logged freeze after Isaac approves the model line-up (`preregistration.md`). After a freeze, a change needs a dated entry in `amendments.md`.
+**Nothing in this plan has been run.** It sets out 70 tests (T01–T70), their pass/fail criteria and the order they run in. T01–T48 are the original set; T49–T66 are the security, fail-safe, design-rule and release-control tests added before the freeze (section 3a); T67–T70 are the encryption, default-configuration, pseudonymisation and raw-records-warning tests for the deployment modes (`docs/deployment-modes.md`), added before the freeze (section 3b). **Freeze 1 (T01)** fixes every numeric threshold and pass/fail criterion in this file for the product tests, except where a line says "set before that stage" (nothing is frozen for those until the number is logged in `amendments.md`). The build-tool tests (section 6a, T47, the role-selection rules, the named fallback models and the T21 candidate list) are marked **open until Freeze 2** and are frozen in a second logged freeze after Isaac approves the model line-up (`preregistration.md`). After a freeze, a change needs a dated entry in `amendments.md`.
 
 ## 0. How to read this plan
 
@@ -19,7 +19,7 @@ Text frozen at T01 (Freeze 1) on 5 Nov 2026 (Europe/London). Author: Isaac Adeku
 * **Freezes.** Freeze 1 (T01) covers the product tests, the generated data, the sealed key and the lexicon. Freeze 2 covers the build-tool tests and is made after the model line-up is approved, before any build-tool test runs. Both are logged in `amendments.md`; the hashed files are listed in `PREREG_HASHES.txt`.
 * **Roles.** The build uses AI models as tools in separate *roles* (architect, design reviewer, lead implementer, second implementer, engineering, security and regulatory reviewers). How I chose them is in `methods.md`. Tests T18–T20, T23–T25, T27–T30, T32–T34, T36 and T46 check those build-tool choices; the rest check the product.
 * **Third-party figures** are *as reported in the cited source, retrieved/cited 4 Nov 2026; not independently verified*. Prices are list prices as reported at that date (USD per million tokens, input/output; see `methods.md` section 5). Costs are estimates; token volumes are my assumptions (section 9).
-* **Gap IDs** (G01–G47, P1–P3) refer to the gap list in section 11.
+* **Gap IDs** (G01–G48, P1–P3) refer to the gap list in section 11.
 
 ## 1. Summary table
 
@@ -92,12 +92,16 @@ Text frozen at T01 (Freeze 1) on 5 Nov 2026 (Europe/London). Author: Isaac Adeku
 | T64 | **MCP tool-surface integrity** (poisoning, description injection, rug-pull) | G45 | DET | free | 0 → 3 |
 | T65 | **Report human-factors rules** (zero-findings statement = hard fail) | G46 | DET | free | 0 → 3 |
 | T66 | Release gate (extends T35) (gate) | G37 G43 | DET + Isaac | free | 3 |
+| T67 | **No plaintext egress: network modes refuse non-TLS; default mode makes zero network connections** (extends T51, T62) | G48 | DET | free | 0 → 3 |
+| T68 | **Default configuration: model off, network off** (extends T57, T62) | G48 G44 | DET | free | 0 → 3 |
+| T69 | **Pseudonymisation leak test (mode C): planted identifiers never leave the machine** | G48 | DET | free | 0 → 3 |
+| T70 | Raw-records warning present in README, deployment document and client output (gate) | G48 | DET | free | 0 → 3 |
 
 Costs are estimates (section 9).
 
 ## 2. Fixed acceptance tests (hard fails)
 
-Written first (T06–T12), run inside every evaluation as disqualifiers, and run again on the built release candidate (T35). T13 (hash chain) is an eighth hard gate. Twelve further hard fails (T50, T51, T53, T54, T57–T62, T64, T65) and six gates (T49, T52, T55, T56, T63, T66) are defined in section 3a.
+Written first (T06–T12), run inside every evaluation as disqualifiers, and run again on the built release candidate (T35). T13 (hash chain) is an eighth hard gate. Twelve further hard fails (T50, T51, T53, T54, T57–T62, T64, T65) and six gates (T49, T52, T55, T56, T63, T66) are defined in section 3a. Three more hard fails (T67, T68, T69) and one more gate (T70) are defined in section 3b.
 
 | Hard fail | Test | Fixed criterion (frozen at T01) |
 |---|---|---|
@@ -232,7 +236,7 @@ Anything over a limit is not truncated or "best-efforted": it ends in `REVIEW IN
 ### T49 Whole-system threat model completeness (GATE)
 * **Checks:** that `docs/security/threat-model.md` covers the whole system and that every threat has a mitigation and a test.
 * **Method:** `tools/check_docs.py threat-model` parses the threat table. The threat model covers STRIDE across ten components (MCP client/host, transport, tool calls, record files, parsers, rules engine, optional LLM module, audit log, reports, build/CI/supply chain), plus all ten OWASP Top 10 for LLM Applications (2025) risks and the MCP-specific risks (tool poisoning, tool-description injection, rug-pull changes, confused deputy, excessive agency).
-* **Pass/fail:** (1) every one of the ten components has at least one threat row; (2) every STRIDE letter is either covered per component or marked "not applicable" with a reason; (3) LLM01–LLM10 and each MCP-specific risk has at least one row; (4) 0 rows with an empty mitigation; (5) 0 rows with no test ID; (6) every cited test ID exists in this plan; (7) every hard-fail test (T06–T13, T50, T51, T53, T54, T57–T62, T64, T65) is cited by at least one row; (8) the checker exits 0. Any failure = fail. The human security reviewer (T56) reviews the model; a script cannot judge whether the threats are the right ones.
+* **Pass/fail:** (1) every one of the ten components has at least one threat row; (2) every STRIDE letter is either covered per component or marked "not applicable" with a reason; (3) LLM01–LLM10 and each MCP-specific risk has at least one row; (4) 0 rows with an empty mitigation; (5) 0 rows with no test ID; (6) every cited test ID exists in this plan; (7) every hard-fail test (T06–T13, T50, T51, T53, T54, T57–T62, T64, T65, T67–T69) is cited by at least one row; (8) the checker exits 0. Any failure = fail. The human security reviewer (T56) reviews the model; a script cannot judge whether the threats are the right ones.
 
 ### T50 Fail-safe: no clean report on any failure (HARD FAIL)
 * **Checks:** that the tool can never produce a clean-looking report from a failed or partial review.
@@ -317,8 +321,39 @@ Anything over a limit is not truncated or "best-efforted": it ends in `REVIEW IN
 
 ### T66 Release gate (GATE; extends T35)
 * **Checks:** that nothing is released unless the evidence exists and Isaac has signed off.
-* **Method:** `docs/quality/release-control.md`. A release tag is made only when a release record lists: the commit; the pass records for every hard-fail test (T06–T13, T50, T51, T53, T54, T57–T62, T64, T65) and every gate (T49, T52, T55, T56, T63); the T14 SBOM and signature result; the T56 review records; and Isaac's sign-off note. A script checks the record is complete and that the hashes in it match the commit. The same script checks that CI workflow files pin every third-party action to a commit SHA and request least-privilege token permissions, and that a secret scan (gitleaks, or an equivalent recorded in the record) finds 0 secrets and the sealed key is not in the repository.
+* **Method:** `docs/quality/release-control.md`. A release tag is made only when a release record lists: the commit; the pass records for every hard-fail test (T06–T13, T50, T51, T53, T54, T57–T62, T64, T65, T67–T69) and every gate (T49, T52, T55, T56, T63, T70); the T14 SBOM and signature result; the T56 review records; and Isaac's sign-off note. A script checks the record is complete and that the hashes in it match the commit. The same script checks that CI workflow files pin every third-party action to a commit SHA and request least-privilege token permissions, and that a secret scan (gitleaks, or an equivalent recorded in the record) finds 0 secrets and the sealed key is not in the repository.
 * **Pass/fail:** record complete, hashes match, sign-off present. Any hard fail open = no release, no waiver.
+
+## 3b. Deployment-mode tests: encryption, default configuration, pseudonymisation, warning (Stage 0, deterministic; added before the freeze)
+
+These four tests (T67–T70) were added on 5 Nov 2026, before the T01 freeze, with Isaac's approval of the deployment design in `docs/deployment-modes.md`: mode A (default: command-line client and rules engine only; no model, no network), mode B (optional local IBM Granite for free-text reading, off by default) and mode C (Open WebUI or a private-cloud client, the organisation's choice). All are DET (no real model call, free; model and chat endpoints are local stubs). **Nothing has been built or run.** Mode C is not available in Stage 0 (T51, T52); T67 and T69 define what must pass before it can be added by a logged amendment.
+
+* **HARD FAIL** (T67, T68, T69): one failure = fail. No averaging, no waiver. Same rule as section 2.
+* **GATE** (T70): blocks any public release of the software until it passes; no waiver.
+
+**Frozen wording.** The raw-records warning is the string `raw_records_warning` in `data/t12_lexicon.json`: "WARNING: Never paste raw maintenance records into any chat or AI app. Use the command-line client, or a setup your organisation has approved." It is checked by the T12 lexicon rule like every other tool string.
+
+**Test data (T69).** `data/corpora/t69_leak_canaries.json`: 40 canary sets, each with a fictional registration, serial number, person name, licence number, operator and event date (and the expected relative day). Generated by `data/generate.py` (seed 20261104, its own random stream, the secret salt) so that no existing package or corpus file changes. `tools/check_data.py` checks that all values are unique, well-formed and absent from the 394 packages.
+
+### T67 No plaintext egress (HARD FAIL; extends T51, T62)
+* **Checks:** that nothing leaves the machine unencrypted in any mode that can use a network, and that the default mode makes no network connection at all.
+* **Method:** (a) **Default mode (A):** run the full corpus (394 packages, T06, T09, T11, T69 files) and the client start-up under the T10 harness (network namespace with no interfaces, `strace -f` on `socket`, `connect`, `bind`, `listen`, `accept`, `sendto`, `sendmsg`, `getaddrinfo` and DNS) with default configuration; (b) **Network modes (C, or any later HTTP mode), against local stub endpoints:** configure the client with a plaintext `http://`, `ws://`, `ftp://` or port-80 endpoint, a TLS 1.2 or older server, an expired certificate, a wrong host name, a self-signed certificate not in the trust store, a `https` to `http` redirect, a proxy setting that offers a plaintext tunnel, and a TLS failure followed by a fallback; run each with the T69 canary packages; (c) **Capture:** a packet capture of every network-mode run; (d) **Static scan:** `http://` literals outside an allow-list of documentation links, certificate-verification switches (`verify=False`, `CERT_NONE`, unverified contexts), and a minimum TLS version below 1.3. Destination rule: a destination that is not loopback or a Unix socket is "off the machine" and needs TLS 1.3 with certificate validation. A mode B model endpoint on loopback or a Unix socket may be unencrypted because the traffic stays on the machine; an endpoint that claims to be local but is bound to a non-loopback address is refused.
+* **Pass/fail:** 0 connection attempts and 0 DNS lookups in default mode; every downgrade case in (b) is refused with a non-zero exit and **0 application bytes sent**; in every capture 100% of TCP payload bytes to off-machine destinations are TLS records and 0 canary values (T69) appear in cleartext; static scan 0 hits; a valid TLS 1.3 stub with a test certificate authority is accepted (so the refusals are not just "always off"). Any single failure = fail.
+
+### T68 Default configuration: model off, network off (HARD FAIL; extends T57, T62, T15)
+* **Checks:** that a fresh install with no configuration is mode A.
+* **Method:** (a) install the core with no optional extras, no configuration file and no environment variables; dump the effective configuration: `mode: A`, `llm_module: off`, `network: off`, `pseudonymisation: n/a`; (b) run the corpus: every report states `"llm_module": "off"`, has no model-labelled item, and the T10 harness records 0 connection or DNS attempts; (c) set every plausible environment variable (for example any key, endpoint, model or "enable" variable) and re-run: still off; enabling mode B needs an explicit setting in the configuration file and prints the start-up notice with the T70 warning; (d) enabling mode C needs a further explicit setting that names a TLS endpoint and turns pseudonymisation on; mode C with pseudonymisation off, with a plaintext endpoint or without a region setting is refused at start-up; (e) no model weights are shipped, and none is downloaded at start-up or first use; (f) a missing, empty, malformed or unknown-valued configuration falls back to mode A or ends in `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`, never to a mode with a model or network on; (g) the core dependency tree contains no model package or client (T57 (b)).
+* **Pass/fail:** all seven checks clean. Any model call, any network attempt, any way to switch on a model or network without the explicit configuration-file setting = fail.
+
+### T69 Pseudonymisation leak test, mode C (HARD FAIL)
+* **Checks:** that no real registration, serial number, person name, licence number, operator or date reaches a chat or cloud model, and that the token key never leaves the machine.
+* **Method:** for each of the 40 canary sets in `data/corpora/t69_leak_canaries.json`, insert the values into a copy of a clean generated package at three positions: the structured fields, a free-text note, and the text of an attachment. Run mode C against a local stub chat endpoint behind a test TLS server whose key the harness holds, so every outbound payload can be read. Capture all outbound material: URL, query, headers, body, tool-call arguments and results, error and log messages sent, and any metadata. Search it for every `must_not_appear` string in these forms: exact; case-folded; separators and whitespace removed; Unicode-normalised; URL-encoded; JSON-escaped; base64 at three offsets; hexadecimal; and the parts of an identifier (surname alone; digits of a licence number; serial without prefix). Also search for the hash of each value (SHA-256 and its first 8 and 16 hex characters) and for the token key and mapping table. Check that dates appear only as relative days equal to `expected_relative_day`. De-pseudonymise each stub answer locally and check the original values are restored. **Controls:** (i) with pseudonymisation switched off by a test-only switch, the detector must find every canary (40 of 40), which proves the detector works; (ii) a forced mapping error must stop the run with `REVIEW INCOMPLETE - checks could not finish; do not rely on this report` and send 0 bytes.
+* **Pass/fail:** 0 occurrences of any canary string, any encoded form listed above, any value hash, the token key or the mapping table in any outbound payload; every date shown as the correct relative day; round trip 40 of 40; control (i) 40 of 40; control (ii) 0 bytes sent. Any single leak = fail, no waiver. **Stated limit, not a pass criterion:** the test proves that planted values are caught. It cannot prove that unplanted identifying detail in free text is caught, and pseudonymised data is still personal data (`docs/deployment-modes.md` section 4.2, legal check needed).
+
+### T70 Raw-records warning present (GATE)
+* **Checks:** that every reader and every user of the client is told not to paste raw records into a chat or AI app.
+* **Method:** the frozen string `raw_records_warning` (`data/t12_lexicon.json`), compared after whitespace normalisation, must appear (a) in `README.md`; (b) in `docs/deployment-modes.md`; (c) in the output of the client's `--help`; (d) in the start-up notice whenever mode B or mode C is switched on; and (e) match no T12 forbidden pattern. Parts (a), (b) and (e) are checked now by `python3 tools/check_docs.py warning`; parts (c) and (d) are checked by code once the client exists.
+* **Pass/fail:** present in 100% of the four places; 0 starts of mode B or C without the notice. Any miss = fail.
 
 ## 4. Stage 1–2: seeded-fault evaluation
 
@@ -350,8 +385,8 @@ Anything over a limit is not truncated or "best-efforted": it ends in `REVIEW IN
 ## 5. Stage 3: release candidate
 
 ### T35 Final gate run on the release candidate
-* **Method:** after the build, re-run T06–T13, T14 and the section 3a tests (T49–T66, those that apply to a built release candidate) on the release-candidate tag (an annotated tag; the commit hash is recorded in the release record).
-* **Pass/fail:** every hard gate passes. No averaging, no waiver. Section 3a tests (T49–T66) are re-run on the same tag as part of T66.
+* **Method:** after the build, re-run T06–T13, T14 and the section 3a and 3b tests (T49–T70, those that apply to a built release candidate) on the release-candidate tag (an annotated tag; the commit hash is recorded in the release record).
+* **Pass/fail:** every hard gate passes. No averaging, no waiver. Section 3a and 3b tests (T49–T70) are re-run on the same tag as part of T66.
 
 ### T37 Optional human mini-study
 * **Checks:** whether the report helps human reviewers.
@@ -361,7 +396,7 @@ Anything over a limit is not truncated or "best-efforted": it ends in `REVIEW IN
 ## 6. Order of execution
 
 1. **Day 0:** T01 freeze (Freeze 1), T04 and T05 harness, T34 first step (open the pricing page). **Freeze 2** (build-tool tests, role rules and fallbacks) follows Isaac's approval of the model line-up and comes before T18.
-2. **Day 0–1, no model calls:** T02, T03, T06–T17, T45, T48 set-up, and the section 3a set-up (T49–T55, T57–T62, T64–T66; T56 and T63 need people's time and a logged data addition respectively).
+2. **Day 0–1, no model calls:** T02, T03, T06–T17, T45, T48 set-up, and the section 3a and 3b set-up (T49–T55, T57–T62, T64–T70; T56 and T63 need people's time and a logged data addition respectively).
 3. **Day 1, availability and panel checks:** T18 (decides everything downstream), T19, T20, T36. **Checkpoint 1:** if a role's primary and fallback both fail T18, stop.
 4. **Day 1–3, Stage 1 (Argon work first; starts once I set its spending limit):** T21 tier 1, T25, T26, T28, T29, T32, T46, T47; T38–T44 free tier. **Checkpoint 2:** drop any candidate failing a hard gate, T28 or T29; keep the top 3 for T21 tier 2.
 5. **Day 3–6, Stage 2 (Argon target 20 Nov, hard stop 28 Nov; starts once I set its spending limit):** T21 tier 2, T22, T23, T24, T27, T30, T31; runtime paid tier only under section 7.5 step 4. **Checkpoint 3:** fix the roles with the rules in section 6a and the T20 result.
@@ -510,6 +545,8 @@ No performance figures are claimed for any candidate. Everything below is **to v
   * All figures as reported, cited 4 Nov 2026; not independently verified. Vendor-supplied figures do not count towards qualifying; only T38 does.
 * **Runtime paid tier cost:** 84 packages each for Argon and Wonder (48 for T38, 16 for T39, 20 for T43) at 30k input / 12k output tokens (high: output × 2.5): **estimate $45.36–$90.72** (assumption-based).
 
+**Design decision of 5 Nov 2026 (`docs/deployment-modes.md`).** The default product is the command-line client with the rules engine only (mode A). The optional local model for free-text reading (mode B, off by default) is **IBM Granite**, with **Mistral** as second choice (Apache 2.0 cards, read model by model). This names the designated local candidates; it does not change the tiers above, the tests T38–T45 or the pass criterion in 7.4. A model still ships in mode B only if it passes them; otherwise the project ships mode A only. The rules engine decides every finding in every mode.
+
 ### 7.3 Tests
 
 All scoring is by code against the sealed key. Every candidate runs with the T45 defences on; model-level results are also recorded with the defences reporting but not masking, so it is clear what the model does and what the architecture catches. Any hard criterion failed = the candidate is out.
@@ -575,7 +612,7 @@ Computed by an arithmetic-only script (no model calls). List prices and assumpti
 
 | Stage | Tests included | Low (USD) | High (USD) |
 |---|---|---|---|
-| 0 | T01–T17, T34, T45, T48 set-up; T49–T55, T57–T62, T64–T66 set-up | 0 | 0 |
+| 0 | T01–T17, T34, T45, T48 set-up; T49–T55, T57–T62, T64–T70 set-up | 0 | 0 |
 | 1 | T18, T19, T20 (paid optional), T21 tier 1, T25, T26, T28, T29, T32, T36, T46, T47 | 58.96 | 232.45 |
 | 2 | T21 tier 2, T22, T23, T24, T27, T30, runtime paid tier (optional) | 156.36 | 485.04 |
 | 3 | T33 | 1.20 | 19.20 |
@@ -594,7 +631,7 @@ If funds are short, the order of cuts in section 10 applies. Argon rows double i
 
 ## 11. Gap list
 
-Gaps raised in the scoring panel's reports (G01–G32), process gaps I found while merging them (P1–P3), gaps from the late report (G33–G36) and gaps found in the pre-freeze security, quality and regulatory review (G37–G47).
+Gaps raised in the scoring panel's reports (G01–G32), process gaps I found while merging them (P1–P3), gaps from the late report (G33–G36) and gaps found in the pre-freeze security, quality and regulatory review (G37–G48).
 
 | ID | Gap |
 |---|---|
@@ -645,6 +682,7 @@ Gaps raised in the scoring panel's reports (G01–G32), process gaps I found whi
 | G45 | MCP tool surface: tool poisoning, description injection, rug-pull changes |
 | G46 | Human factors: a tired reader could misread a report or an empty report |
 | G47 | Suspected unapproved (counterfeit) part awareness missing from parts checks |
+| G48 | Deployment modes: nothing proved about encryption in transit, the default configuration, pseudonymisation before any chat model, or the warning against pasting raw records |
 | P1 | Claude Fable 5.1 failed to start three times |
 | P2 | Two panel reports available only as summaries |
 | P3 | Free hosted routes unreliable beyond one model |
@@ -676,6 +714,6 @@ Gaps raised in the scoring panel's reports (G01–G32), process gaps I found whi
 | G41 | T54, T13 | G42 | T55 |
 | G43 | T56, T66 | G44 | T57–T62 |
 | G45 | T64 | G46 | T65 |
-| G47 | T63 | | |
+| G47 | T63 | G48 | T67–T70 |
 | P1 | T18, T36 | P2 | T20 |
 | P3 | T19, T20 | | |

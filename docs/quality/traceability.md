@@ -1,6 +1,6 @@
 # Traceability
 
-Date: 4 Nov 2026 (Europe/London). Owner: Isaac Adekunle. Status: seeded with the requirements that exist now. Rules are not written yet, so rule rows name rule families; **rule IDs are assigned when the rules are written** and this table is then updated.
+Date: 4 Nov 2026 (Europe/London); updated 5 Nov 2026 (REQ-33 to REQ-37). Owner: Isaac Adekunle. Status: seeded with the requirements that exist now. Rules are not written yet, so rule rows name rule families; **rule IDs are assigned when the rules are written** and this table is then updated.
 
 Chain: requirement, then source or rule, then test ID. Every requirement has at least one test in `docs/trial-plan.md`. Security threats are traced separately in `docs/security/threat-model.md` (threat row to mitigation to test ID); the requirements below point to them.
 
@@ -38,6 +38,11 @@ Chain: requirement, then source or rule, then test ID. Every requirement has at 
 | REQ-30 | Pre-registration: criteria frozen and fingerprinted before any test | `docs/preregistration.md` | `verify_prereg.py`, hash list | T01 |
 | REQ-31 | Python safeguards in CI | `docs/trial-plan.md` T48 | CI gate | T48, T47 |
 | REQ-32 | Seeded-fault evaluation against clean twins (394 generated packages in 8 sets, including the T63 and T11 sets) | `data/generate.py` (seed 20261104) | Generator, sealed key | T21, T08, T38, T41 |
+| REQ-33 | Default mode: command-line client and rules engine only; model off, network off; enabling anything needs an explicit setting | `docs/deployment-modes.md` section 2 | Default configuration | T68, T67, T57 |
+| REQ-34 | No plaintext egress: every off-machine connection is TLS 1.3 with certificate checks; default mode makes no connection | `docs/security/threat-model.md` section 7 | Transport rules | T67, T52 |
+| REQ-35 | Mode C sends only pseudonymised data; the key never leaves the machine | `docs/deployment-modes.md` section 4 | Pseudonymiser | T69 |
+| REQ-36 | Warning against pasting raw records into chat or AI apps in README, deployment document and client output | `docs/deployment-modes.md` | Frozen lexicon string | T70 |
+| REQ-37 | Optional local model (IBM Granite first, Mistral second) reads free text only and never decides a finding | `docs/deployment-modes.md` section 3 | Module separation | T57, T38–T45 |
 
 ## Maintenance
 

@@ -9,7 +9,7 @@ Contents:
 - `generate.py` (version 1.1.0) - the synthetic record generator. It takes the public seed and a **secret salt**; every random stream is derived from `sha256("airworthiness-mcp|<seed>|<label>|" + salt)`. Without the salt the seeded faults cannot be reproduced from the public seed.
 - `t12_lexicon.json` - the T12 forbidden-wording lexicon, scope, required disclaimer and frozen tool strings.
 - `packages/` - 394 generated work packages in 8 sets, with `MANIFEST.sha256`.
-- `corpora/` - the T06 (35 cases: 25 fabrications and 10 genuine, plus a fictional regulation bundle), T09 (40 prompts) and T11 (60 payloads x 3 positions) corpora, with `MANIFEST.sha256`.
+- `corpora/` - the T06 (35 cases: 25 fabrications and 10 genuine, plus a fictional regulation bundle), T09 (40 prompts) T11 (60 payloads x 3 positions) and T69 (40 fictional leak-canary sets: registration, serial number, name, licence number, operator and date, used to test pseudonymisation in mode C; its own random stream, so no other data changed) corpora, with `MANIFEST.sha256`.
 - The **seeded-fault key** (the answers) and the **salt** are written outside the repository (`../sealed/seeded_fault_key.json`, `../sealed/seeded_fault_key.salt`; the repository ignores `*.salt` and `seeded_fault_key*`). Their SHA-256 fingerprints are recorded at the T01 freeze (`PREREG_HASHES.txt`). Both are published with the results.
 
 Regulatory source texts used for quotation checks (T02) will be stored with their URL, retrieval date and SHA-256 fingerprint.

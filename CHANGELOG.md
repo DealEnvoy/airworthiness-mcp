@@ -4,6 +4,16 @@ All notable changes to this repository are recorded here. Dates are in Europe/Lo
 
 ## [Unreleased]
 
+### 2026-11-05 - Deployment modes, encryption and key handling (before the T01 freeze; freeze package re-prepared locally, not tagged)
+- Approved design decision (Isaac): the default is the simple command-line client with the rules engine only (mode A: read-only, deterministic, no model, no network). IBM Granite is the optional local model for free-text reading, off by default (mode B; Mistral second choice). Open WebUI and private-cloud setups are documented as supported options for organisations that want chat (mode C), with pseudonymisation, TLS, no-retention terms, and the organisation's own sign-off. The rules engine decides every finding in every mode.
+- Added `docs/deployment-modes.md` with the three modes, the Granite licence and governance verification (sources and dates, unverified items marked [N]), the Mistral caveat, and a prominent warning against pasting raw maintenance records into any chat or AI app.
+- `docs/security/threat-model.md`: new section 7 "Encryption and key handling" (TLS 1.3, encryption at rest with organisation-held keys, the pseudonymisation key never leaving the machine, rotation and storage, no protection during cloud inference, confidential computing as an option); new threat rows TM-70 to TM-79; Maintenance is now section 8.
+- `docs/trial-plan.md`: 4 new tests T67–T70 (section 3b). Hard fails: T67 (no plaintext egress; default mode makes zero connections), T68 (default configuration: model off, network off), T69 (pseudonymisation leak test with planted identifiers). Gate: T70 (raw-records warning in README, deployment document and client output). Plan is now 70 tests; hard fails 15, gates 7; new gap G48.
+- Data: `data/generate.py` adds the T69 leak-canary corpus (`data/corpora/t69_leak_canaries.json`, 40 canary sets) on its own random stream. Every existing package and corpus file and the sealed key are byte-identical. `tools/check_data.py` checks the new corpus.
+- `tools/check_docs.py`: T67–T69 added to the hard-fail list; `warning` check added (T70, documents); `docs/deployment-modes.md` added to the overclaim scan. `data/t12_lexicon.json`: frozen string `raw_records_warning`.
+- Updated: README (plain description, deployment modes, warning), both SECURITY.md files, standards mapping, risk register (R-C09 to R-C12), traceability (REQ-33 to REQ-37), statement of applicability, AI Act self-assessment (model off by default; Article 50 only when a model is on), preregistration, release-control (hard-fail and gate lists), methods (cost table row), data README.
+- `PREREG_HASHES.txt` regenerated (new fingerprint; `docs/deployment-modes.md` added to the frozen list). Nothing tagged, pushed or timestamped.
+
 ### 2026-11-05 - T01 freeze package (Freeze 1), prepared locally
 - Decisions on the nine open freeze items applied. Freeze 1 covers the product tests; the build-tool tests are frozen separately in Freeze 2 (`docs/amendments.md`).
 - Data: `data/generate.py` 1.1.0 uses a secret salt (the sealed key and salt are outside the repository; only their SHA-256 fingerprints are listed). Twin packages no longer differ on the safety-critical flag. Boundary rules fixed (at or above a limit is a fault; a deferral expiring today is expired; a repeat defect is three or more).

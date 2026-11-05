@@ -47,7 +47,7 @@ Scope for this statement: the airworthiness-mcp repository, its tests and test d
 | A.5.31 | Legal, statutory, regulatory and contractual requirements | Yes | Regulatory position documented, marked not legal advice | docs/regulatory-path.md; docs/ai-act-self-assessment.md | Designed |
 | A.5.32 | Intellectual property rights | Yes | MIT licence; dependency licences to be listed in the SBOM | LICENSE; T14 | Planned |
 | A.5.33 | Protection of records | Yes | Audit log and reports protected from alteration (tamper-evident) | T13, T54 | Designed |
-| A.5.34 | Privacy and protection of PII | Yes | Synthetic data only; data-protection checklist before any real data | T14, T62 | Planned |
+| A.5.34 | Privacy and protection of PII | Yes | Synthetic data only; data-protection checklist before any real data; pseudonymised data is still personal data (legal check) | T14, T62, T69 | Planned |
 | A.5.35 | Independent review of information security | Yes | Independent human security review before release | T56 | Designed |
 | A.5.36 | Compliance with policies, rules and standards for information security | Yes | Release gate checks policies and tests | T66 | Designed |
 | A.5.37 | Documented operating procedures | Yes | Operating procedures documented in README and release-control | release-control.md | Planned |
@@ -98,8 +98,8 @@ Scope for this statement: the airworthiness-mcp repository, its tests and test d
 | A.8.8 | Management of technical vulnerabilities | Yes | Dependency audit; advisory process | T14 | Designed |
 | A.8.9 | Configuration management | Yes | Pinned toolchain; rule-set and manifest hashes checked at start-up | T14, T64 | Designed |
 | A.8.10 | Information deletion | Yes | The tool stores no record data; audit log holds identifiers and hashes only | T54, T62 | Designed |
-| A.8.11 | Data masking | Yes | Stage 0 uses synthetic data; masking is not needed in the tool; adopters use their own | T62 | Planned |
-| A.8.12 | Data leakage prevention | Yes | No egress; no telemetry; output limited to cited fields | T62, T53 | Designed |
+| A.8.11 | Data masking | Yes | Stage 0 uses synthetic data; mode C pseudonymises registrations, serials, names, licence numbers and operators locally before anything is sent | T62, T69 | Planned |
+| A.8.12 | Data leakage prevention | Yes | Default mode: no egress, no telemetry; output limited to cited fields; a warning against pasting raw records | T62, T53, T67, T70 | Designed |
 | A.8.13 | Information backup | Yes | Source in version control; audit-log backup is the operator's | To complete | To complete |
 | A.8.14 | Redundancy of information processing facilities | To complete | To complete | – | To complete |
 | A.8.15 | Logging | Yes | Hash-chained audit log of every run | T13 | Designed |
@@ -107,13 +107,13 @@ Scope for this statement: the airworthiness-mcp repository, its tests and test d
 | A.8.17 | Clock synchronization | Yes | Audit entries carry time in a stated zone (Europe/London) and UTC offset | T13 | Planned |
 | A.8.18 | Use of privileged utility programs | To complete | To complete | – | To complete |
 | A.8.19 | Installation of software on operational systems | To complete | To complete | – | To complete |
-| A.8.20 | Networks security | Yes | No network listener or connection | T51, T10 | Designed |
-| A.8.21 | Security of network services | Yes | No network services used | T51, T62 | Designed |
+| A.8.20 | Networks security | Yes | No network listener or connection in the default mode; any other mode uses TLS 1.3 only | T51, T10, T67 | Designed |
+| A.8.21 | Security of network services | Yes | No network services used by default; optional services only by explicit setting, TLS 1.3 | T51, T62, T67, T68 | Designed |
 | A.8.22 | Segregation of networks | Not applicable now | No network components; revisit if HTTP mode is ever added (T52) | T52 | Not applicable now |
 | A.8.23 | Web filtering | Not applicable now | The tool makes no web requests | T62 | Not applicable now |
-| A.8.24 | Use of cryptography | Yes | SHA-256 hashes for integrity; signing of releases; no encryption of data is implemented; any future HTTP mode requires TLS | T14, T52, T54 | Designed |
+| A.8.24 | Use of cryptography | Yes | SHA-256 hashes for integrity; signing of releases; TLS 1.3 for any off-machine connection; encrypted storage with organisation-held keys required of the operator; no home-made file encryption; pseudonymisation key kept on the machine (threat model section 7) | T14, T52, T54, T67, T69 | Designed |
 | A.8.25 | Secure development life cycle | Yes | Pre-registered test plan, threat model, security tests, independent review | docs/trial-plan.md | Designed |
-| A.8.26 | Application security requirements | Yes | Security requirements are tests T49–T66 | docs/trial-plan.md section 3a | Designed |
+| A.8.26 | Application security requirements | Yes | Security requirements are tests T49–T70 | docs/trial-plan.md sections 3a and 3b | Designed |
 | A.8.27 | Secure system architecture and engineering principles | Yes | Fail-safe, least-privilege, stdio-only, rules-engine core | T50, T51, T57 | Designed |
 | A.8.28 | Secure coding | Yes | Strict parsing, no unsafe deserialisation, static analysis in CI | T47, T48, T53 | Designed |
 | A.8.29 | Security testing in development and acceptance | Yes | Fuzzing, planted failures, tamper tests, transport tests, human penetration test | T50, T51, T53, T54, T56 | Designed |

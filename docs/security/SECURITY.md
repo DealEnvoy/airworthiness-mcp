@@ -1,6 +1,6 @@
 # Security policy and vulnerability disclosure
 
-Author: Isaac Adekunle. Date: 4 Nov 2026 (Europe/London). Status: written before the software exists; applies from the first public release of any code.
+Author: Isaac Adekunle. Date: 4 Nov 2026 (Europe/London); updated 5 Nov 2026 for the deployment modes. Status: written before the software exists; applies from the first public release of any code.
 
 ## 1. How to report a vulnerability
 
@@ -16,6 +16,7 @@ A good report says: what you found, the version or commit, how to reproduce it (
 
 * The server and its parsers, the transport, the tool manifest, the audit log, report integrity, the rules engine and the optional language-model module, as described in [`threat-model.md`](threat-model.md).
 * The build, CI and release process (signing, hashes, dependencies).
+* The deployment modes in [`../deployment-modes.md`](../deployment-modes.md): that the default configuration has the model and the network off; that no network mode sends anything unencrypted (TLS 1.3 only, no fallback); that the pseudonymisation of mode C does not let registrations, serial numbers, names, licence numbers or operators leave the machine; and that the pseudonymisation key never leaves the machine (see [`threat-model.md`](threat-model.md) section 7).
 * A way to make the tool give `REVIEW COMPLETE - findings listed; a certifying engineer decides` when it should have given `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`.
 * A way to make the tool output a release, serviceability or airworthiness conclusion, to sign or approve anything, to read or write outside its configured directories, or to open a network connection in the default configuration.
 
@@ -24,6 +25,9 @@ Particularly serious: anything that lets a hostile record, client or model make 
 ## 3. What is not in scope
 
 * Whether a maintenance record is true. The tool checks completeness; it cannot tell that a record was forged before it arrived.
+* How an adopting organisation stores its records, reports and logs, and how it holds its encryption keys. The tool requires encrypted storage with organisation-held keys but cannot check it (threat model section 7).
+* A cloud provider's own handling of data in mode C (retention, region, staff access). That is for the organisation's agreement with the provider.
+* Raw records pasted by a person into a chat or AI app outside the tool. The tool carries a warning against it and cannot stop it.
 * Weaknesses in the host machine, the MCP client application, other MCP servers in the same host, or a language model run by someone else.
 * Findings that need an attacker who already has write access to the audit log directory and the report directory and rewrites both consistently (documented limit; see T13 and T54), unless the report claims otherwise.
 * Reports about real aircraft records: the project uses synthetic data only. Please do not send real records.
@@ -57,5 +61,6 @@ Good-faith research on your own copy of the code, using synthetic data, is welco
 
 * [`threat-model.md`](threat-model.md): STRIDE, OWASP Top 10 for LLM Applications and MCP-specific risks, each with a mitigation and a test.
 * [`planted-failure-set-spec.md`](planted-failure-set-spec.md) and [`fuzz-corpus-spec.md`](fuzz-corpus-spec.md): the fail-safe and fuzz test specifications.
+* [`../deployment-modes.md`](../deployment-modes.md): modes A, B and C, with the raw-records warning.
 * [`standards-mapping.md`](standards-mapping.md): alignment, not compliance.
 * [`../regulatory-path.md`](../regulatory-path.md): regulatory position (not legal advice).

@@ -148,7 +148,7 @@ All figures are USD estimates, computed by a small arithmetic script with no mod
 
 | Stage | Tests | Low (USD) | High (USD) |
 |---|---|---|---|
-| 0 | T01–T17, T34, T45, T48 set-up; T49–T55, T57–T62, T64–T66 set-up | 0 | 0 |
+| 0 | T01–T17, T34, T45, T48 set-up; T49–T55, T57–T62, T64–T70 set-up | 0 | 0 |
 | 1 | T18, T19, T20 (paid part optional), T21 tier 1, T25, T26, T28, T29, T32, T36, T46, T47 (runtime free tier $0) | 58.96 | 232.45 |
 | 2 | T21 tier 2, T22, T23, T24, T27, T30, runtime paid tier (optional, gated) | 156.36 | 485.04 |
 | 3 | T33 | 1.20 | 19.20 |

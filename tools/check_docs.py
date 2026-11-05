@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Document checks for trial tests T49 and T55 (and spec sanity for T50, T53, and the T12 lexicon strings).
+"""Document checks for trial tests T49, T55 and T70 (and spec sanity for T50, T53, and the T12 lexicon strings).
 
 Usage:
     python3 tools/check_docs.py threat-model   # T49
     python3 tools/check_docs.py security-docs  # T55 (script part; manual item stays with Isaac)
     python3 tools/check_docs.py specs          # T50 / T53 specification sanity
     python3 tools/check_docs.py lexicon        # T12: frozen tool strings vs the lexicon; document hits (information only)
+    python3 tools/check_docs.py warning        # T70 (documents): raw-records warning in README and deployment-modes.md
     python3 tools/check_docs.py all
 
 Standard library only. Reads files, writes nothing, makes no network call.
@@ -25,7 +26,8 @@ TM = os.path.join(ROOT, "docs", "security", "threat-model.md")
 HARD_FAIL = (["T%02d" % n for n in range(6, 14)]
              + ["T50", "T51", "T53", "T54"]
              + ["T%d" % n for n in range(57, 63)]
-             + ["T64", "T65"])
+             + ["T64", "T65"]
+             + ["T67", "T68", "T69"])
 LLM_TAGS = ["LLM%02d" % n for n in range(1, 11)]
 MCP_TAGS = ["MCP-TP", "MCP-TDI", "MCP-RP", "MCP-CD", "MCP-EA"]
 STRIDE = ["S", "T", "R", "I", "D", "E"]
@@ -137,6 +139,7 @@ OVERCLAIM = re.compile(
     r"|\baccredited (against|to)\b|\bconforms? to\b|\bmeets? (the )?(requirements|all|every)\b", re.I)
 PLACE = [
     "SECURITY.md", "README.md", "docs/regulatory-path.md", "docs/ai-act-self-assessment.md",
+    "docs/deployment-modes.md",
 ]
 
 
@@ -299,9 +302,39 @@ def check_lexicon():
     return errs
 
 
+def check_warning():
+    """T70, document part: the frozen raw-records warning is in README.md and docs/deployment-modes.md, is the
+    string in the lexicon, matches no forbidden pattern, and the deployment document covers modes A, B and C."""
+    errs = []
+    lex, pats = lexicon_patterns()
+    w = lex.get("frozen_tool_strings", {}).get("raw_records_warning")
+    if not w:
+        return ["lexicon has no frozen string raw_records_warning"]
+    for pid, rx in pats:
+        if rx.search(norm(w)):
+            errs.append("raw_records_warning matches %s" % pid)
+    for rel in ("README.md", "docs/deployment-modes.md"):
+        p = os.path.join(ROOT, rel)
+        if not os.path.exists(p):
+            errs.append("%s is missing" % rel)
+        elif norm(w) not in norm(read(p)).replace("**", ""):
+            errs.append("%s does not contain the raw-records warning verbatim" % rel)
+    dm = os.path.join(ROOT, "docs", "deployment-modes.md")
+    if os.path.exists(dm):
+        t = read(dm)
+        for head in ("## 2. Mode A (DEFAULT)", "## 3. Mode B (OPTIONAL)", "## 4. Mode C (SUPPORTED"):
+            if head not in t:
+                errs.append("deployment-modes.md has no section starting %r" % head)
+        for need in ("TLS 1.3", "Apache 2.0", "[N]", "legal check", "Mistral", "Part-IS"):
+            if need not in t:
+                errs.append("deployment-modes.md does not mention %r" % need)
+    print("warning: raw-records warning checked in README.md and docs/deployment-modes.md")
+    return errs
+
+
 def main(argv):
     cmds = {"threat-model": check_threat_model, "security-docs": check_security_docs, "specs": check_specs,
-            "lexicon": check_lexicon}
+            "lexicon": check_lexicon, "warning": check_warning}
     if len(argv) != 2 or (argv[1] != "all" and argv[1] not in cmds):
         print(__doc__)
         return 2

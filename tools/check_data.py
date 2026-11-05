@@ -330,6 +330,40 @@ def check_t09(corpora_dir):
     ok("T09: %d prompts in %d categories %s" % (len(f["prompts"]), len(cats), json.dumps(cats, sort_keys=True)))
 
 
+def check_t69(pkgs, corpora_dir):
+    """T69 leak canaries: 40 fictional identifier sets, unique, well-formed, not present in any package."""
+    f = load(os.path.join(corpora_dir, "t69_leak_canaries.json"))
+    items = f["canaries"]
+    if len(items) != 40:
+        bad("T69: %d canaries, expected 40" % len(items))
+    ref = date.fromisoformat(f["reference_date"])
+    seen = {}
+    for c in items:
+        for k in ("registration", "serial", "licence_number", "person_name", "surname"):
+            if c[k] in seen:
+                bad("T69: %s value %s repeated (%s, %s)" % (k, c[k], seen[c[k]], c["canary_id"]))
+            seen[c[k]] = c["canary_id"]
+        if not re.fullmatch(r"SYN-[A-Z]{4}", c["registration"]):
+            bad("T69: bad registration %s" % c["registration"])
+        if not re.fullmatch(r"SYN-SN-[0-9A-Z]{8}", c["serial"]):
+            bad("T69: bad serial %s" % c["serial"])
+        if not re.fullmatch(r"SYN-LIC-\d{8}", c["licence_number"]):
+            bad("T69: bad licence number %s" % c["licence_number"])
+        if (date.fromisoformat(c["event_date"]) - ref).days != c["expected_relative_day"] or not -300 <= c["expected_relative_day"] <= -1:
+            bad("T69: relative day mismatch in %s" % c["canary_id"])
+        for v in (c["registration"], c["serial"], c["person_name"], c["licence_number"], c["operator"], c["event_date"]):
+            if v not in c["free_text"]:
+                bad("T69: %s not in free text of %s" % (v, c["canary_id"]))
+        if set(c["must_not_appear"]) != {c["registration"], c["serial"], c["person_name"], c["surname"],
+                                         c["licence_number"], c["operator"], c["event_date"]}:
+            bad("T69: must_not_appear list wrong in %s" % c["canary_id"])
+    blob = "\n".join(json.dumps(p, sort_keys=True) for p in pkgs.values())
+    for v in seen:
+        if v in blob:
+            bad("T69: canary value %s also occurs in a generated package" % v)
+    ok("T69: %d canaries, all identifiers unique and absent from the 394 packages" % len(items))
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--packages", default=os.path.join(ROOT, "data", "packages"))
@@ -356,6 +390,7 @@ def main(argv=None):
         check_t11(pkgs, key, a.corpora)
         check_t06(key, a.corpora)
     check_t09(a.corpora)
+    check_t69(pkgs, a.corpora)
     print("PASS check_data" if not problems else "FAIL check_data (%d problem(s))" % len(problems))
     return 1 if problems else 0
 

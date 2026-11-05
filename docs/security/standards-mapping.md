@@ -1,6 +1,6 @@
 # Standards mapping: alignment, not compliance
 
-Date: 4 Nov 2026 (Europe/London). Author: Isaac Adekunle.
+Date: 4 Nov 2026 (Europe/London); updated 5 Nov 2026 for the deployment modes and encryption and key handling. Author: Isaac Adekunle.
 
 **Alignment, not compliance.** This page shows how the project's design and tests line up with several security standards and frameworks. It does not say that the tool or the project meets, is certified to, or has been assessed against any of them. No audit has taken place. The mapping is Isaac's reading, is not legal advice, and is a design-stage plan: nothing has been built or run. Items marked [N] are not verified from an official source.
 
@@ -10,12 +10,12 @@ Certification to ISO standards is for an organisation. The project is not an org
 
 ## 1. OWASP Top 10 for LLM Applications (2025): alignment, not compliance
 
-Source: https://genai.owasp.org/llm-top-10/ (list names as published for the 2025 edition). The optional LLM module is off by default; the rules-engine core uses no model. Threat rows are in `threat-model.md`.
+Source: https://genai.owasp.org/llm-top-10/ (list names as published for the 2025 edition). The optional LLM module is off by default (mode A); the rules-engine core uses no model. Deployment modes are in `docs/deployment-modes.md`. Threat rows are in `threat-model.md`.
 
 | Risk | Name | How the design lines up | Tests | Threat rows | Status |
 |---|---|---|---|---|---|
 | LLM01 | Prompt Injection | The core reads no model. The optional module treats all record text as data, quotes it in labelled delimiters, validates output against a schema, and cannot remove a rule finding. Tested with a stub hostile model. | T11, T38, T45 | TM-21, TM-39, TM-62 | Designed |
-| LLM02 | Sensitive Information Disclosure | Local-first; no egress or telemetry; remote endpoint only by explicit setting with a warning in the report; audit log holds identifiers and hashes, no record text. | T38, T42, T62, T45 | TM-22, TM-40 | Designed |
+| LLM02 | Sensitive Information Disclosure | Local-first; no egress or telemetry; remote endpoint only by explicit setting with a warning in the report; audit log holds identifiers and hashes, no record text. Mode C (chat or private cloud) needs local pseudonymisation, TLS 1.3 and no-retention terms; a warning against pasting raw records. | T38, T42, T62, T45, T67, T68, T69, T70 | TM-22, TM-40, TM-71, TM-72, TM-73, TM-78 | Designed |
 | LLM03 | Supply Chain | Hash-pinned dependencies, SBOM, minimal dependencies; local model weights hash-pinned and served model id logged. | T14, T48, T42, T05 | TM-47, TM-63 | Designed |
 | LLM04 | Data and Model Poisoning | No training, no fine-tuning, no retrieval store; third-party models used as supplied. | T57 | TM-48 | Designed |
 | LLM05 | Improper Output Handling | Model output is schema-validated, rejected not repaired, and cannot change the rule layer; reports escape control characters and markup. | T45, T57, T40, T11, T53 | TM-42, TM-60 | Designed |
@@ -37,14 +37,14 @@ Source: https://csrc.nist.gov/pubs/sp/800/218/final (Feb 2022; practice-group an
 | PS: Protect the Software | PS.1 Protect all forms of code from unauthorized access and tampering | Frozen hash list and verify script; signed or timestamped tag (decision pending); protected branches before release | T01 | Designed (tag decision pending) |
 | PS | PS.2 Provide a mechanism for verifying software release integrity | Signed release, published hashes, rule-set and tool-manifest hashes checked at start-up | T14, T64, T66 | Designed |
 | PS | PS.3 Archive and protect each software release | Release record per release | T66, `docs/quality/release-control.md` | Designed |
-| PW: Produce Well-Secured Software | PW.1 Design software to meet security requirements and mitigate security risks | Whole-system threat model; fail-safe design; stdio only | T49, T50, T51 | Designed |
+| PW: Produce Well-Secured Software | PW.1 Design software to meet security requirements and mitigate security risks | Whole-system threat model; fail-safe design; stdio only; encryption and key handling section | T49, T50, T51, T67 | Designed |
 | PW | PW.2 Review the software design | Independent design review; human security reviewer reviews the threat model | T24, T56 | Designed |
 | PW | PW.4 Reuse existing, well-secured software | Minimal, pinned dependencies; SBOM; official MCP SDK for protocol framing | T14, T48 | Designed |
 | PW | PW.5 Create source code by adhering to secure coding practices | Strict parsing, no unsafe deserialisation, banned-function static rules | T47, T48, T53 | Designed |
 | PW | PW.6 Configure the compilation, interpreter, and build processes to improve executable security | Pinned toolchain; reproducible output; CI settings | T14, T48 | Planned |
 | PW | PW.7 Review and/or analyze human-readable code | Code review by independent model reviewers and by a human security reviewer | T26, T46, T56 | Designed |
-| PW | PW.8 Test executable code to identify vulnerabilities and verify compliance with security requirements | Fuzzing, planted failures, tamper tests, transport test | T50, T51, T53, T54 | Designed |
-| PW | PW.9 Configure software to have secure settings by default | Module off by default; no network; read-only; limits on | T57, T62 | Designed |
+| PW | PW.8 Test executable code to identify vulnerabilities and verify compliance with security requirements | Fuzzing, planted failures, tamper tests, transport test, no-plaintext-egress test, pseudonymisation leak test | T50, T51, T53, T54, T67, T69 | Designed |
+| PW | PW.9 Configure software to have secure settings by default | Default is mode A: model off, network off, read-only; limits on; enabling anything needs an explicit setting | T57, T62, T68 | Designed |
 | RV: Respond to Vulnerabilities | RV.1 Identify and confirm vulnerabilities on an ongoing basis | Dependency audit; reports through private advisories | T14, T55 | Designed |
 | RV | RV.2 Assess, prioritize, and remediate vulnerabilities | Corrective-action log with severity | `docs/quality/corrective-action-log.md` | Designed |
 | RV | RV.3 Analyze vulnerabilities to identify their root causes | Root cause field in every corrective action; new test added | `docs/quality/corrective-action-log.md` | Designed |
@@ -71,6 +71,8 @@ Source: ISO/IEC 27001:2022 Annex A has 93 controls in four themes (control title
 | A.7 Physical controls | 14 | Depends on the premises and equipment of a future organisation. Stage 0 is run on personal development machines. | To complete |
 | A.8 Technological controls | 34 | Most of the design work: access to source code, logging, secure development life cycle, secure coding, security testing, change management, vulnerability management, configuration management. | Designed in large part |
 
+Cryptography (A.8.24), data masking (A.8.11), data leakage prevention (A.8.12) and network security (A.8.20) are worked on in `threat-model.md` section 7 and tested by T67 to T69; the tool uses TLS 1.3 for any off-machine connection and relies on the operator's encrypted storage, and does not implement its own file encryption.
+
 Honest limit: ISO/IEC 27001 certifies an organisation's information security management system. A single-author open-source repository is not one. Using the Annex A themes here is a way to organise the groundwork.
 
 ## 5. EASA Part-IS: support for adopting organisations (alignment, not compliance)
@@ -81,13 +83,17 @@ Part-IS binds **organisations in scope** (for example Part-145 and Part-CAMO org
 
 | What an adopting organisation will ask | What the project provides (designed) | Tests / documents |
 |---|---|---|
-| Where does data go? | Local-first, no egress, no telemetry; remote LLM endpoint only by explicit setting and flagged in the report | T62 |
+| Where does data go? | Default mode: nowhere (no network, no model). Optional local model: stays on the machine. Chat or private cloud (mode C, the organisation's choice): pseudonymised first, TLS 1.3 only, no-retention terms, UK or EU region, data-processing agreement | T62, T67, T68, T69 |
+| Is data encrypted, and who holds the keys? | TLS 1.3 in transit; records, reports and logs to sit on storage encrypted with organisation-held keys; the pseudonymisation key never leaves the machine; the tool does not hide data from a cloud model during inference | T67, T69; `threat-model.md` section 7 |
+| Could staff paste records into a chat app? | Warning in README, deployment document, client help and start-up notice; the command-line client is the default. The tool cannot stop what a person does elsewhere | T70, `deployment-modes.md` |
 | What can it access? | Read-only; one configured package root; no write, sign or approve tool | T09, T53, T64 |
 | What does it store? | Audit log of identifiers, hashes and rule versions; no record text | T13, T54 |
 | Who can change it, and how do I know the version? | Signed releases, SBOM, pinned dependencies, manifest and rule-set hashes printed in every report | T14, T64, T66 |
 | How are vulnerabilities handled? | Private advisory route and a corrective-action process | `SECURITY.md`, T55 |
 | What if it fails? | Fail-safe: `REVIEW INCOMPLETE - checks could not finish; do not rely on this report`, never a clean report | T50 |
 | Supplier information page | **Planned**: a short page for adopters (data handled, retention, logging, update process) | To complete |
+
+Mode C is the adopting organisation's own decision and needs its sign-off within its Part-IS risk assessment where Part-IS applies. Pseudonymised data is still personal data under UK and EU GDPR as I understand it, which needs a legal check **[N]**.
 
 Not claimed: that using the tool makes any organisation meet Part-IS. That is the organisation's responsibility.
 

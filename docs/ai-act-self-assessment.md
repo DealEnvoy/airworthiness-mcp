@@ -1,6 +1,6 @@
 # EU AI Act self-assessment (Article 6)
 
-Date: 4 Nov 2026 (Europe/London). Author: Isaac Adekunle. Status: **self-assessment, not legal advice, not reviewed by a lawyer.** The reading of the Regulation is Isaac's. Evidence tags: **[V]** page opened and read; **[S]** search snippet only; **[N]** not verified from an official source. Items tagged [N] are unverified.
+Date: 4 Nov 2026 (Europe/London); updated 5 Nov 2026 for the deployment modes. Author: Isaac Adekunle. Status: **self-assessment, not legal advice, not reviewed by a lawyer.** The reading of the Regulation is Isaac's. Evidence tags: **[V]** page opened and read; **[S]** search snippet only; **[N]** not verified from an official source. Items tagged [N] are unverified.
 
 Text base: the EU AI Act Service Desk's display of the consolidated text of Regulation (EU) 2024/1689 as at 27 July 2026, including the Digital Omnibus on AI, Regulation (EU) 2026/1744 (**[V]** for the Service Desk pages cited below; the EUR-Lex act itself **[S]**).
 
@@ -11,7 +11,7 @@ airworthiness-mcp: an open-source, read-only, advisory Python MCP server that ch
 Two parts are assessed separately:
 
 * **Part 1: the rules-engine core** (deterministic, fixed rules defined by a person, no model).
-* **Part 2: the optional LLM module** (off by default, separate; reads record text and may add advisory findings).
+* **Part 2: the optional LLM module** (off by default, separate; reads record text and may add advisory findings). Under the deployment modes of 5 Nov 2026 (`docs/deployment-modes.md`) the default product, mode A, has **no language model at all**: the command-line client and rules engine only. A local model (mode B) is optional and off by default, and it only reads free text. A chat or private-cloud setup (mode C) is the adopting organisation's own choice and own deployment.
 
 ## 2. Verdict
 
@@ -47,6 +47,14 @@ The Act does not apply to AI systems released under free and open-source licence
 
 Provider duties under Article 53 fall on the model provider. Calling a third-party model, or running local inference without fine-tuning at large scale, does not make the tool's author a provider of a general-purpose AI model (Inference; thresholds in the Commission's scope guidelines, **[S]**). The project does not fine-tune any model.
 
+### 3.6a Deployment modes and Article 50 (added 5 Nov 2026)
+
+* **Mode A (default): no language model, so no AI-generated text, so Article 50 has nothing to attach to** in the product as shipped. The core is probably not an AI system at all (3.1).
+* **Mode B (optional, local model, off by default):** Article 50 (transparency) is relevant **only when the module is switched on**. The mitigation is the same as in 3.5: model-generated text is labelled visibly and in machine-readable form (T61), and the model never decides a finding (T57).
+* **Mode C (organisation's chat or private cloud):** the organisation chooses, deploys and signs off the chat system and the model, and so carries its own duties as deployer of that system. The project documents the safeguards (pseudonymisation, TLS 1.3, no-retention terms, UK or EU region, data-processing agreement) but does not provide the model. Whether the project's own duties change when a third party connects the tool to a chat model is **[N]**.
+* **Not re-checked in this update:** the exact scope and dates of Article 50 as amended; the statement in 3.5 stands as last read on 4 Nov 2026.
+* **Tests:** T68 checks the default configuration (model off); T61 checks the label; T69 and T67 cover data protection in mode C. They are not AI Act tests.
+
 ### 3.7 Timing
 
 Under the Digital Omnibus, high-risk rules for Annex III systems apply from 2 Dec 2027 and for Article 6(1) / Annex I systems from 2 Aug 2028 (**[V]**, https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113). Even if high-risk applied, nothing high-risk-specific would bind before those dates.
@@ -67,11 +75,12 @@ Each is a frozen test in `docs/trial-plan.md` section 3a.
 | Never score or rank individual people | T60 (hard fail) |
 | Language-model text is labelled visibly and in machine-readable form when the module is on | T61 |
 | Local-first: no egress, no telemetry unless explicitly configured | T62 |
+| Default configuration: model off, network off (mode A) | T68 (hard fail) |
 | Not used as a blocking step in a release workflow; no automatic sign-off | T09, T64 |
 
 ## 5. Re-assessment triggers
 
-Re-do this assessment before any of: targeting unmanned-aircraft design or production; adding any per-person analytics; adding any automatic release or sign-off, or use as a gating step; enabling the LLM module by default; adding retrieval or training on records; EASA or the Commission adopting acts that cover AI in maintenance; final (not draft) Commission Article 6 guidelines; changes to the Omnibus dates; a change to the scope of the open-source exclusion; a UK AI statute.
+Re-do this assessment before any of: making a language-model mode (B or C) the default; targeting unmanned-aircraft design or production; adding any per-person analytics; adding any automatic release or sign-off, or use as a gating step; enabling the LLM module by default; adding retrieval or training on records; EASA or the Commission adopting acts that cover AI in maintenance; final (not draft) Commission Article 6 guidelines; changes to the Omnibus dates; a change to the scope of the open-source exclusion; a UK AI statute.
 
 ## 6. Not verified
 

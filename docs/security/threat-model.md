@@ -1,6 +1,6 @@
 # Threat model: whole system
 
-Draft of 4 Nov 2026 (Europe/London). Author: Isaac Adekunle. Status: **design-stage threat model for a tool that has not been built.** Every mitigation below is a design commitment tested by a Stage 0 test (T49–T66 and earlier). Nothing has been run. A human security reviewer reviews this document before any public release (T56).
+Draft of 4 Nov 2026 (Europe/London); updated 5 Nov 2026 for the deployment modes (`docs/deployment-modes.md`) and the new section 7. Author: Isaac Adekunle. Status: **design-stage threat model for a tool that has not been built.** Every mitigation below is a design commitment tested by a Stage 0 test (T49–T70 and earlier). Nothing has been run. A human security reviewer reviews this document before any public release (T56).
 
 ## 1. Scope, assets and trust boundaries
 
@@ -123,6 +123,16 @@ Rule (T49): every row has a mitigation and at least one test ID that exists in `
 | TM-67 | C10 | T | – | AI build tools introduce a flaw, a backdoor or a shared blind spot; a model sandbox bypass. | Separate roles and families, mutation testing, differential testing, human security review; containment tests for any model that runs code. | T16, T25, T26, T29, T33, T56 |
 | TM-68 | C10 | I | – | A secret, including the sealed key, is committed. | Sealed key lives outside the repository and is git-ignored; secret scan in the release gate. | T01, T09, T66 |
 | TM-69 | C10 | T | – | Frozen test files or the hash list are altered after the freeze. | Hash list; unsigned annotated tag plus an OpenTimestamps proof and a public post of the hash-list fingerprint; verify script; changes only through `docs/amendments.md`. | T01 |
+| TM-70 | C2 | T, I | – | Downgrade or plaintext fallback: a network mode connects over plain HTTP, over TLS 1.2 or older, with an unchecked certificate, or after a redirect to plaintext, so a network observer can read or change records and reports. | A network mode refuses any off-machine endpoint that is not TLS 1.3 with certificate validation; there is no fallback and no redirect to plaintext; no switch turns certificate checks off; the default mode opens no connection at all. A loopback or Unix-socket model endpoint (mode B) is the only unencrypted path and it never leaves the machine. | T67, T52, T62 |
+| TM-71 | C7 | I | LLM02 | Identifying data reaches a chat or cloud model in mode C because pseudonymisation misses a registration, serial number, name, licence number, operator or date, a free-text mention, an encoded form or a metadata field. | Local pseudonymisation before anything is sent; dates become relative days; the run stops and sends nothing if mapping fails; mode C refuses to start with pseudonymisation off; leak test with 40 planted canary sets in many encoded forms. Stated limit: pseudonymised data is still personal data (legal check, `docs/deployment-modes.md` section 4.2). | T69, T68, T62 |
+| TM-72 | C7 | I | LLM02 | The pseudonymisation key or token table leaves the machine (in a payload, log, report, sync folder or cloud backup) and lets a reader re-identify people, aircraft or operators. | The key and the table are created and kept locally, encrypted at rest, never written to payloads, logs, reports or the audit log, and searched for in every outbound payload of the leak test. See section 7. | T69, T54, T62 |
+| TM-73 | C1 | I | LLM02 | A person pastes raw maintenance records into a chat or AI app outside the tool, where none of the tool's controls apply. | The command-line client is the default; the frozen raw-records warning is in the README, the deployment document, the client's help output and the start-up notice of modes B and C. Stated limit: the tool cannot control what a person does in another application. | T70, T68 |
+| TM-74 | C7 | E, I | LLM02 | A model or a network connection is switched on without anyone choosing it (default configuration, an environment variable, a malformed configuration file). | Default is mode A, model off and network off; enabling needs an explicit setting in the configuration file; an environment variable alone cannot enable anything; a bad configuration falls back to off or ends in the REVIEW INCOMPLETE status. | T68, T57, T62 |
+| TM-75 | C4 | I | – | Record files at rest are readable from a lost or stolen device, a backup or a shared drive. | The package folder must be on storage encrypted with keys held by the organisation (section 7); the tool is read-only and keeps no copy of record data. Stated limit: the tool cannot check how the operator stores records. | T62, T53 |
+| TM-76 | C8 | I | – | The audit log at rest is readable by someone who should not see it (it holds identifiers, hashes and times, never record text). | Entries hold no record free text; the log directory must be on encrypted storage with organisation-held keys (section 7); the hash chain gives integrity, not confidentiality. | T54, T62 |
+| TM-77 | C9 | I | – | Reports at rest or in transit (copied, e-mailed, stored in a shared folder) expose cited record values. | Reports quote cited field values only; the report directory must be on encrypted storage with organisation-held keys; sending a report anywhere is the operator's act, not a tool function (no send tool exists). | T62, T64 |
+| TM-78 | C7 | I | LLM02 | Encryption is assumed to protect data from a cloud model, but the model sees the text in clear while it answers. | Stated limit (section 7): TLS and encryption at rest do not hide data during inference. Mode C relies on pseudonymisation, no-retention terms, a UK or EU region and a DPA; confidential computing is an option the organisation may add. | T69, T67 |
+| TM-79 | C10 | I | – | Keys, tokens or provider credentials are committed to the repository, written into a plaintext configuration file, logged, or never rotated. | No credential or key in the repository (secret scan); credentials come from the organisation's secret store or the operating system's key store; the tool never logs them; rotation and storage rules in section 7. | T66, T68 |
 
 ## 5. STRIDE coverage matrix
 
@@ -130,16 +140,16 @@ Each cell lists the threat rows for that component and STRIDE letter, or says wh
 
 | Component | S | T | R | I | D | E |
 |---|---|---|---|---|---|---|
-| C1 MCP client / host application | TM-01 | TM-06 | TM-02 | TM-03 | TM-04 | TM-03, TM-05 |
-| C2 Transport | TM-07, TM-08, TM-10 | TM-07, TM-08, TM-09, TM-10 | N/A: Stdio has no remote parties to repudiate; run records are in the audit log (C8). | TM-07, TM-08 | TM-11 | TM-08 |
+| C1 MCP client / host application | TM-01 | TM-06 | TM-02 | TM-03, TM-73 | TM-04 | TM-03, TM-05 |
+| C2 Transport | TM-07, TM-08, TM-10 | TM-07, TM-08, TM-09, TM-10, TM-70 | N/A: Stdio has no remote parties to repudiate; run records are in the audit log (C8). | TM-07, TM-08, TM-70 | TM-11 | TM-08 |
 | C3 Tool calls (MCP tool surface) | TM-17 | TM-12, TM-17, TM-18, TM-19 | TM-15 | TM-14 | TM-16 | TM-12, TM-13 |
-| C4 Record files (input data) | TM-21 | TM-20 | TM-24 | TM-22 | TM-23 | TM-25 |
+| C4 Record files (input data) | TM-21 | TM-20 | TM-24 | TM-22, TM-75 | TM-23 | TM-25 |
 | C5 Parsers | TM-30 | TM-27, TM-31 | N/A: Parsers keep no state of their own; every parse outcome, including rejection, is recorded in the audit log (C8). | TM-29 | TM-26 | TM-28 |
 | C6 Rules engine | TM-37 | TM-32, TM-33, TM-36 | TM-35, TM-38 | TM-36 | TM-34 | N/A: The rules engine has no privileges beyond reading the parsed package; guessed-field defaults are covered as tampering and disclosure. |
-| C7 Optional LLM module | TM-45 | TM-39, TM-41, TM-42, TM-47, TM-48, TM-49 | TM-50 | TM-40, TM-46 | TM-44 | TM-39, TM-43 |
-| C8 Audit log | N/A: The log is local and written only by the tool; forged entries are covered as tampering. | TM-51, TM-52 | TM-52 | TM-53 | TM-54 | TM-55 |
-| C9 Reports | TM-57 | TM-56, TM-60, TM-62 | TM-59 | TM-58 | TM-61 | TM-60 |
-| C10 Build, CI and supply chain | TM-63, TM-64 | TM-63, TM-64, TM-67, TM-69 | TM-66 | TM-68 | N/A: No hosted service to deny; a stalled CI run delays a release and has no safety effect. | TM-65 |
+| C7 Optional LLM module | TM-45 | TM-39, TM-41, TM-42, TM-47, TM-48, TM-49 | TM-50 | TM-40, TM-46, TM-71, TM-72, TM-74, TM-78 | TM-44 | TM-39, TM-43, TM-74 |
+| C8 Audit log | N/A: The log is local and written only by the tool; forged entries are covered as tampering. | TM-51, TM-52 | TM-52 | TM-53, TM-76 | TM-54 | TM-55 |
+| C9 Reports | TM-57 | TM-56, TM-60, TM-62 | TM-59 | TM-58, TM-77 | TM-61 | TM-60 |
+| C10 Build, CI and supply chain | TM-63, TM-64 | TM-63, TM-64, TM-67, TM-69 | TM-66 | TM-68, TM-79 | N/A: No hosted service to deny; a stalled CI run delays a release and has no safety effect. | TM-65 |
 
 ## 6. Residual risks and honest limits
 
@@ -148,8 +158,28 @@ Each cell lists the threat rows for that component and STRIDE letter, or says wh
 * **Prompt injection cannot be proved impossible.** The design makes the language-model module advisory, checked by code and optional, so a successful injection cannot remove a rule finding or approve anything. The core engine reads no language model.
 * **Host and client behaviour is outside the tool.** Adopters must assess the host, the client and any other servers in the same host.
 * **No security review has happened yet.** The model-assisted reviews in the trial (T26, T29, T46, T47) are build-tool checks, not a substitute for the human security reviewer (T56).
+* **Encryption has limits.** It does not hide data from a cloud model during inference, and the tool cannot check that the operator encrypted the disks that hold records, reports and logs (section 7).
+* **Pseudonymisation lowers risk, it does not remove it.** Unplanted identifying detail in free text may still get through, and pseudonymised data is still personal data (legal check needed).
 * **Real data.** Stage 0 uses synthetic data only. Any use on real records needs a separate data-protection assessment by the adopting organisation.
 
-## 7. Maintenance
+## 7. Encryption and key handling
+
+Added 5 Nov 2026 with the deployment modes (`docs/deployment-modes.md`). Design commitments, tested where a test exists (T67–T69) and otherwise stated as the operator's duty. Nothing is built. Encryption choices below are for review by the human security reviewer (T56); none of this is a claim of compliance with any standard.
+
+**Where each mode stands.** Mode A (default) opens no connection, so there is no data in transit to protect; at-rest rules below still apply. Mode B keeps everything on the machine. Mode C is the only mode that sends data off the machine.
+
+1. **TLS in transit.** Every off-machine connection uses **TLS 1.3 with certificate validation**. The client refuses plaintext, older TLS versions, unverifiable certificates, redirects to plaintext and any fallback after a failed handshake, and sends no application byte first (T67). Certificate checks cannot be switched off. A loopback or Unix-socket endpoint for the local model (mode B) is allowed without TLS only because the traffic never leaves the machine; an endpoint bound to a non-loopback address is treated as off-machine.
+2. **Encryption at rest for records, reports and logs.** The tool does not implement its own file encryption (no home-made cryptography). The package folder, the report directory and the audit-log directory must sit on storage encrypted by the operator's platform (full-disk or volume encryption, or an encrypted file share), with **keys held by the organisation**, not by the author or by any vendor. The tool is read-only on records, keeps no copy of record text, and writes only to the two configured directories. Backups of those directories need the same protection. This is a requirement stated to adopters; the tool cannot check it.
+3. **Organisation-held keys.** Disk, backup, share and cloud-tenancy keys belong to the adopting organisation and follow its key-management policy. The author never holds, sees or escrows them. Where the organisation uses a private-cloud client, customer-managed keys are preferred; whether a given provider offers them was not verified **[N]**.
+4. **The pseudonymisation key never leaves the machine (mode C).** The table that maps tokens back to real registrations, serials, names, licence numbers and operators is created locally, used only locally, and never appears in any outbound payload, log, report, audit-log entry, error message or synchronised folder (T69 searches for it in every payload). Tokens are random, not hashes of the value, so a value cannot be recomputed from its token (T69 searches for value hashes). The table is stored encrypted at rest with a vetted library or the operating system's key store; the exact construction is a design choice for the security reviewer.
+5. **Key and credential storage.** No key, token, passphrase or provider credential is stored in the repository (secret scan, T66), in a plaintext configuration file, in a report or in a log. They come from the organisation's secret store or the operating system's key store, with the narrowest file permissions the platform offers. The tool never prints them.
+6. **Rotation.** Provider credentials and organisation-held storage keys are rotated under the organisation's policy and at once after any suspected exposure. The pseudonymisation table can be replaced at any time: tokens are per-installation, so replacing the table breaks the link to old tokens; reports and chat transcripts made under the old table can then no longer be re-identified, which the organisation must accept before it rotates. Backups of old keys are kept only as long as the organisation needs to read old reports.
+7. **Encryption does not hide data from a cloud model during inference.** TLS and encryption at rest protect data on the wire and on disk. A hosted model must read the text to answer it, so it sees the pseudonymised text in clear for the length of the request. Mode C therefore relies on pseudonymisation (T69), no-retention terms, a UK or EU region and a data-processing agreement, and not on encryption alone (TM-78).
+8. **Confidential computing is an option, not a requirement.** An organisation may choose a provider that processes inside a hardware-protected enclave to reduce exposure during inference. What that protects, and whether a given provider offers it with proof of attestation, was not verified here **[N]**, and it is not part of any test.
+9. **Pseudonymised data is still personal data** under UK and EU GDPR as I understand it. This needs a legal check **[N]** and is the organisation's decision (`docs/deployment-modes.md` section 4.2).
+
+Not covered by this section: the host's own security, the chat front end's storage and telemetry (Open WebUI was not reviewed **[N]**), and the organisation's information-security risk assessment, including EASA Part-IS where it applies to that organisation.
+
+## 8. Maintenance
 
 The threat model is re-reviewed at every change to the transport, the tool manifest, the parser, the audit log, the report format or the optional module, and before any release (`docs/quality/release-control.md`). Changes after the freeze are logged amendments.

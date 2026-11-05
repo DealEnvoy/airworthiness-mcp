@@ -9,8 +9,8 @@ Date: 4 Nov 2026 (Europe/London). Owner: Isaac Adekunle. Test: T66 (gate), exten
 ## 2. Preconditions for a release
 
 1. Frozen hash list verified (`python3 verify_prereg.py` exits 0); any change since the freeze is a dated entry in `docs/amendments.md`.
-2. Pass records for every **hard-fail test**: T06–T13, T50, T51, T53, T54, T57–T62, T64, T65. One open hard fail means no release and no waiver.
-3. Pass records for every **gate**: T49, T52, T55, T56, T63.
+2. Pass records for every **hard-fail test**: T06–T13, T50, T51, T53, T54, T57–T62, T64, T65, T67–T69. One open hard fail means no release and no waiver.
+3. Pass records for every **gate**: T49, T52, T55, T56, T63, T70.
 4. T14: SBOM generated, dependencies pinned by hash, signature verified in a clean environment, data-protection checklist done.
 5. T56: three review records (certifying engineer, CAMO or quality, security) complete with competence recorded; no open high or critical finding unless Isaac accepted the risk in writing with a reason; re-test after fixes done.
 6. T66 script: record complete, hashes match the commit; CI workflows pin third-party actions to commit SHAs and use least-privilege token permissions; secret scan finds 0 secrets; the sealed key is not in the repository.
@@ -26,8 +26,8 @@ Copy this block into `docs/quality/releases/<version>.md` for each release.
 ```
 Release: <version>            Date (Europe/London): <date and time>
 Commit: <full hash>           Tag: <name>
-Hard-fail tests (T06-T13, T50, T51, T53, T54, T57-T62, T64, T65): <pass record path / hash for each>
-Gates (T49, T52, T55, T56, T63): <pass record path / hash for each>
+Hard-fail tests (T06-T13, T50, T51, T53, T54, T57-T62, T64, T65, T67-T69): <pass record path / hash for each>
+Gates (T49, T52, T55, T56, T63, T70): <pass record path / hash for each>
 T14 SBOM and signature result: <path / hash>
 Review records (T56): certifying engineer <path>, CAMO or quality <path>, security <path>
 Open findings and accepted risks: <list, each with reason and date>
